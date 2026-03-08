@@ -1,0 +1,524 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.0"><meta name="description" content="怎么做到随时随地创作。"><meta property="og:type" content="website"><meta property="og:title" content="我的跨平台写作方案：Obsidian + 坚果云 | UEnt26 Blog"><meta property="og:description" content="怎么做到随时随地创作。"><meta property="og:url" content="https://umamed26.github.io/posts/%E6%88%91%E7%9A%84%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%86%99%E4%BD%9C%E6%96%B9%E6%A1%88obsidian-%E5%9D%9A%E6%9E%9C%E4%BA%91/"><meta property="og:site_name" content="UEnt26 Blog"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="我的跨平台写作方案：Obsidian + 坚果云 | UEnt26 Blog"><meta name="twitter:description" content="怎么做到随时随地创作。"><meta name="theme-color" content="#c45237" data-theme-color data-light-theme-color="#c45237" data-dark-theme-color="#0f151c"><link rel="canonical" href="https://umamed26.github.io/posts/%E6%88%91%E7%9A%84%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%86%99%E4%BD%9C%E6%96%B9%E6%A1%88obsidian-%E5%9D%9A%E6%9E%9C%E4%BA%91/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><script>
+      (() => {
+        const STORAGE_KEY = "uent26-theme";
+        const LIGHT = "light";
+        const DARK = "dark";
+        const root = document.documentElement;
+        const themeColorMeta = document.querySelector("meta[data-theme-color]");
+        const LIGHT_THEME_COLOR = themeColorMeta?.getAttribute("data-light-theme-color") ?? "#c45237";
+        const DARK_THEME_COLOR = themeColorMeta?.getAttribute("data-dark-theme-color") ?? "#0f151c";
+
+        const getStoredTheme = () => {
+          try {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored === LIGHT || stored === DARK) {
+              return stored;
+            }
+          } catch {}
+          return null;
+        };
+
+        const storedTheme = getStoredTheme();
+        const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+        const theme = storedTheme ?? preferredTheme;
+        root.setAttribute("data-theme", theme);
+        if (themeColorMeta) {
+          themeColorMeta.setAttribute("content", theme === DARK ? DARK_THEME_COLOR : LIGHT_THEME_COLOR);
+        }
+      })();
+    </script><title>我的跨平台写作方案：Obsidian + 坚果云 | UEnt26 Blog</title><style>.code-block-wrapper[data-astro-cid-m4nqdpfe]{padding:clamp(.95rem,1.4vw,1.25rem);border-radius:22px;border:1px solid rgba(218,205,184,.92);background:radial-gradient(circle at 95% 4%,rgba(31,120,117,.14),transparent 26%),linear-gradient(160deg,#fffffff5,#f6eedfeb);box-shadow:inset 0 0 0 1px #ffffff7a,0 20px 46px #4c38201f}.code-block-wrapper[data-astro-cid-m4nqdpfe] pre{box-shadow:inset 0 0 0 1px #ffffff1f}html[data-theme=dark] .code-block-wrapper[data-astro-cid-m4nqdpfe]{border-color:#2d3b4bf2;background:radial-gradient(circle at 95% 4%,rgba(86,198,194,.16),transparent 28%),linear-gradient(160deg,#18232ef5,#111923eb);box-shadow:inset 0 0 0 1px #56c6c21f,0 20px 46px #00000057}html[data-theme=dark] .code-block-wrapper[data-astro-cid-m4nqdpfe] pre{box-shadow:inset 0 0 0 1px #56c6c233}
+.comments[data-astro-cid-qdzwzgpn]{margin-top:2rem;padding:1rem}h2[data-astro-cid-qdzwzgpn]{margin-top:0;margin-bottom:.9rem;font-size:1.1rem}.fallback[data-astro-cid-qdzwzgpn]{color:var(--text-soft);margin:.4rem 0 0;font-size:.9rem}
+</style>
+<link rel="stylesheet" href="/_astro/about.DvsY5t4q.css">
+<style>.tag-pill[data-astro-cid-marlabwr]{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:.35rem;font-size:.82rem;color:var(--accent-cyan);border:1px solid rgba(31,120,117,.24);background:linear-gradient(120deg,#1f78751a,#1f78750a);border-radius:999px;padding:.27rem .68rem;line-height:1.2;transition:transform .24s var(--ease-out),border-color .24s var(--ease-out),box-shadow .24s var(--ease-out)}.tag-pill[data-astro-cid-marlabwr]:before{content:"";position:absolute;inset:0;transform:translate(-110%);background:linear-gradient(120deg,transparent,rgba(31,120,117,.2),transparent);transition:transform .42s var(--ease-out);pointer-events:none}a[data-astro-cid-marlabwr].tag-pill:hover{transform:translateY(-1px);border-color:#1f787570;box-shadow:0 8px 18px #4c382024}a[data-astro-cid-marlabwr].tag-pill:hover:before{transform:translate(110%)}.tag-pill[data-astro-cid-marlabwr] small[data-astro-cid-marlabwr]{color:var(--text-soft)}html[data-theme=dark] .tag-pill[data-astro-cid-marlabwr]{border-color:#56c6c24d;background:linear-gradient(120deg,#56c6c229,#56c6c212);color:var(--accent-cyan-soft)}html[data-theme=dark] .tag-pill[data-astro-cid-marlabwr]:before{background:linear-gradient(120deg,transparent,rgba(86,198,194,.28),transparent)}html[data-theme=dark] a[data-astro-cid-marlabwr].tag-pill:hover{border-color:#56c6c280;box-shadow:0 8px 18px #00000052}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.1qW7t8zW.css"></head> <body data-astro-cid-37fxchfa> <a class="skip-link" href="#main-content" data-astro-cid-37fxchfa>跳到正文</a> <div class="reading-progress" data-reading-progress aria-hidden="true" data-astro-cid-37fxchfa> <span class="reading-progress-bar" data-reading-progress-bar data-astro-cid-37fxchfa></span> </div> <div class="site-decor" aria-hidden="true" data-astro-cid-37fxchfa> <span class="wash wash-a" data-astro-cid-37fxchfa></span> <span class="wash wash-b" data-astro-cid-37fxchfa></span> <span class="line-overlay" data-astro-cid-37fxchfa></span> <span class="noise-overlay" data-astro-cid-37fxchfa></span> </div> <header class="site-header" data-astro-cid-37fxchfa> <div class="container nav-wrap" data-nav-shell data-nav-open="false" data-astro-cid-37fxchfa> <a class="brand" href="/" data-astro-cid-37fxchfa> <strong data-astro-cid-37fxchfa>UEnt26</strong> <span data-astro-cid-37fxchfa>Notes from the Frontend Desk</span> </a> <div class="header-actions" data-astro-cid-37fxchfa> <a class="header-tool" href="/search/" data-astro-cid-37fxchfa>搜索</a> <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换到夜间模式" aria-pressed="false" data-astro-cid-37fxchfa> <span class="theme-toggle-dot" aria-hidden="true" data-astro-cid-37fxchfa></span> <span data-theme-toggle-label data-astro-cid-37fxchfa>夜间</span> </button> <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu" aria-label="展开导航" data-astro-cid-37fxchfa> <span class="nav-toggle-bars" aria-hidden="true" data-astro-cid-37fxchfa> <span data-astro-cid-37fxchfa></span> <span data-astro-cid-37fxchfa></span> <span data-astro-cid-37fxchfa></span> </span> <span class="nav-toggle-label" data-astro-cid-37fxchfa>菜单</span> </button> </div> <nav id="site-menu" class="site-nav" aria-label="主导航" data-site-nav data-astro-cid-37fxchfa> <ul class="nav-list" data-astro-cid-37fxchfa> <li data-astro-cid-37fxchfa> <a class="nav-link" href="/" data-astro-cid-37fxchfa> 首页 </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/archive/" data-astro-cid-37fxchfa> 文章 </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/projects/" data-astro-cid-37fxchfa> 项目 </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/now/" data-astro-cid-37fxchfa> Now </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/about/" data-astro-cid-37fxchfa> 关于 </a> </li> </ul> </nav> </div> </header> <main id="main-content" tabindex="-1" class="container page-content" data-astro-cid-37fxchfa>  <article class="stack post-shell" data-reading-root data-astro-cid-egg7nqdx> <header class="surface post-header" data-reveal data-astro-cid-egg7nqdx> <p class="section-kicker" data-astro-cid-egg7nqdx>Article</p> <h1 class="page-title" data-astro-cid-egg7nqdx>我的跨平台写作方案：Obsidian + 坚果云</h1> <p class="muted summary" data-astro-cid-egg7nqdx>怎么做到随时随地创作。</p> </header> <section class="surface meta-band" data-reveal style="--reveal-delay: 80ms;" data-astro-cid-egg7nqdx> <div class="meta-row" data-astro-cid-egg7nqdx> <span class="meta-label" data-astro-cid-egg7nqdx>发布</span> <time datetime="2026-03-05T00:00:00.000Z" data-astro-cid-egg7nqdx> 2026/3/5 </time> </div>  <div class="meta-row meta-row-wrap" data-astro-cid-egg7nqdx> <span class="meta-label" data-astro-cid-egg7nqdx>分类</span> <span data-astro-cid-egg7nqdx>技术</span> </div>  <div class="meta-row meta-row-wrap" data-astro-cid-egg7nqdx> <span class="meta-label" data-astro-cid-egg7nqdx>系列</span> <span data-astro-cid-egg7nqdx>workflow</span> </div>  <div class="meta-tags" data-astro-cid-egg7nqdx> <a class="tag-pill" href="/tags/tools/" data-astro-cid-marlabwr><span data-astro-cid-marlabwr>#tools</span></a> </div> </section>   <div class="lock-content" data-lock-content data-locked="false" data-astro-cid-egg7nqdx> <div class="article-layout" data-reveal style="--reveal-delay: 160ms;" data-astro-cid-egg7nqdx> <div class="surface post-content" data-astro-cid-egg7nqdx> <div class="prose code-block-wrapper" data-astro-cid-m4nqdpfe>  <h1 id="1-写作的痛点灵感总在不该来的时候来">1. 写作的痛点：灵感总在不该来的时候来</h1>
+<p>作为一名半桶水的创作者，我偶尔最大的困扰从来不是没灵感，而是灵感来了，但笔记不在身边。</p>
+<ul>
+<li>坐在电脑前想写的时候，脑子一片空白。</li>
+<li>好不容易躺平在床上，或者在地铁里被挤成照片时，脑子里突然冒出绝妙的对话或情节转折——然后掏出手机打开某款App发现和电脑上的文稿完全割裂，的灵感已经在解锁屏幕的瞬间蒸发了一半。</li>
+<li>用U盘来回拷贝？石器时代的操作。同步盘冲突文件比我的草稿还多。而在Windows上跑iCloud就像去南极随便抓一只凑企鹅学飞行，勉强扑腾两下就摔了。</li>
+</ul>
+<p>我需要的，是一个<strong>打开就能写，写完不用管，换设备继续写</strong>的无缝环境。——一个能包容我懒癌晚期、拖延症末期以及间歇性码字冲动的智能保姆。</p>
+<p>于是，我搭建了一套基于Obsidian + 坚果云的跨平台写作系统。它不一定最酷，但足够稳定、足够自由，而且<strong>完全免费</strong>（如果你利用好Obsidian的同步插件生态并且愿意花5分钟动动手指的话）。</p>
+<h1 id="2-为什么是这个组合">2. 为什么是这个组合？</h1>
+<p>在选择工具时，我对比过几种方案：</p>
+<ul>
+<li><strong>Obsidian官方同步服务：</strong> 体验很丝滑，但需要付费订阅，对学生党/月卡党不太友好。（每月几美元省下来够我买几箱可乐了。）</li>
+<li><strong>iCloud：</strong> 苹果用户的心头好，但在Windows上表现得像个蹒跚学步的婴儿，且容易因同步机制导致笔记冲突或丢失。<del>何况我也没那套全家桶。</del></li>
+<li><strong>Git：</strong> 适合那些即使写个言情小说也要搞Branch和Pull Request的硬核人士。<del>毕竟我只是想写东西，不想思考如何解决合并冲突。。</del></li>
+</ul>
+<p>最终我选择了 <strong>Obsidian（负责写）+ 坚果云（负责传）+ Remotely Save 插件（负责连接）</strong> 的组合。</p>
+<p><strong>为什么是坚果云？</strong></p>
+<ul>
+<li><strong>速度快：</strong> 国内服务器，上传下载基本跑满带宽。</li>
+<li><strong>稳定：</strong> 很少遇到同步冲突。</li>
+<li><strong>便宜量大：</strong> 免费版的带宽对个人来讲够用了。</li>
+<li><strong>WebDAV协议：</strong> 这是关键。它像一个通用语言，让Obsidian插件能和坚果云顺畅对话。不需要学什么复杂的API，也不用看那些把文档写得像天书一样的开发指南。</li>
+</ul>
+<h1 id="3-手把手配置指南">3. 手把手配置指南</h1>
+<p>如果你也想搭建这套系统，跟着下面几步走就好。</p>
+<h2 id="第一步安装核心插件remotely-save">第一步：安装核心插件——Remotely Save</h2>
+<p>在Obsidian的社区插件市场里，搜索并安装 <strong>Remotely Save</strong>。
+<em>（如果你无法访问插件市场，可以从 GitHub 手动下载安装。）</em></p>
+<h2 id="第二步获取坚果云的第三方应用密码">第二步：获取坚果云的“第三方应用密码”</h2>
+<p>这是最容易被卡住的一步，但其实很简单。</p>
+<ol>
+<li>登录坚果云网页版，进入【账户信息】。</li>
+<li>点击【安全选项】，找到【第三方应用管理】。</li>
+<li>点击【添加应用】，随便起个名字（比如“怎么防止自己挖一万个坑不填”）。</li>
+<li>系统会生成一串<strong>服务器地址、账号、应用密码</strong>。注意：这里生成的是<strong>应用密码</strong>，不是你的登录密码。把它复制下来，保存好。丢了也没事，无非是再生成一次。</li>
+</ol>
+<h2 id="第三步配置-remotely-save-插件">第三步：配置 Remotely Save 插件</h2>
+<ol>
+<li>回到 Obsidian，打开 Remotely Save 的设置。</li>
+<li><strong>远程服务类型：</strong> 选择 “WebDAV”。</li>
+<li><strong>WebDAV 链接：</strong> 粘贴刚才复制的<strong>服务器地址</strong>。</li>
+<li><strong>用户名：</strong> 粘贴刚才复制的<strong>账号</strong>（通常是你的坚果云邮箱）。</li>
+<li><strong>密码：</strong> 粘贴刚才复制的<strong>应用密码</strong>（不是你的邮箱密码，真的。）。</li>
+<li>点击【检查】，如果提示“成功”，说明配置好了。</li>
+<li>在【同步设置】里，建议开启 <strong>“定时自动同步”</strong>（比如每5分钟一次），并打开 <strong>“启动时同步”</strong> 和 <strong>“关闭时同步”</strong>。这样基本可以做到无感同步。</li>
+</ol>
+<h2 id="第四步在手机上配置">第四步：在手机上配置</h2>
+<p>在手机端（iOS或Android）安装Obsidian，新建一个空库，然后安装Remotely Save插件，填入完全一样的信息。稍等片刻，你的小说库就会从云端下载到手机里。</p>
+<h1 id="4-一些实用的小建议">4. 一些实用的小建议</h1>
+<p>使用这套方案几个月后，我总结了几点经验，也许对你有帮助：</p>
+<ol>
+<li><strong>关于同步频率：</strong> 不建议设置“实时同步”（如果插件支持的话），每1-5分钟同步一次足够了。写作时疯狂同步反而会干扰思路，甚至可能造成性能问题或者烧流量。除非你喜欢看着右下角的通知不停冒，并以此为乐。</li>
+<li><strong>关于冲突：</strong> 虽然坚果云+Remotely Save很稳定，但偶尔（比如在信号不好的地方）可能会出现同步冲突。Obsidian会自动生成冲突文件（如“文件名 的冲突副本”）。我一般每周清理一次库，检查有没有这类文件，确认无误后删除。</li>
+<li><strong>关于备份：</strong> 坚果云本身有文件历史版本功能，可以找回30天内修改过的版本。这相当于多了一层保险。如果写得不满意想回退，去坚果云网页版找回旧版本就行。（这个功能救过我很多次，让我有勇气把第一章删了重写二十遍。是的，我还在写第一章。）</li>
+<li><strong>关于手机写作体验：</strong> 手机端只适合记录“那个人死了”这种突发灵感。至于他怎么死的，死状如何，周围人的心理描写，请滚回电脑前写。毕竟很显然，手机能做的，电脑能做的更好，而手机做得最出色的是让你在想写作时点开短视频。</li>
+</ol>
+<h1 id="5-结语">5. 结语</h1>
+<p>这套Obsidian + 坚果云的方案，没有华丽的界面，也没有昂贵的订阅费，它只是安静地待在那里，让我的小说库始终处于最新状态，让我在任何想写的时候都能立刻开始。</p>
+<p>如果你也是 Obsidian 用户，并且正在寻找一套跨平台同步方案，不妨试试这个组合。如果你有更好的写作工具搭配，欢迎在评论区交流。</p>
+<p>如果你在配置过程中遇到了问题，也可以留言，我会在能力范围内帮你解答——不过大概率我只会回一句“重启试试”。</p>  </div>  </div> <div class="toc-wrap" data-astro-cid-egg7nqdx> <aside class="surface toc" data-astro-cid-obewoz47> <p class="toc-title" data-astro-cid-obewoz47>目录</p> <ul data-astro-cid-obewoz47> <li class="depth d-2" data-astro-cid-obewoz47> <a href="#第一步安装核心插件remotely-save" data-astro-cid-obewoz47>第一步：安装核心插件——Remotely Save</a> </li><li class="depth d-2" data-astro-cid-obewoz47> <a href="#第二步获取坚果云的第三方应用密码" data-astro-cid-obewoz47>第二步：获取坚果云的“第三方应用密码”</a> </li><li class="depth d-2" data-astro-cid-obewoz47> <a href="#第三步配置-remotely-save-插件" data-astro-cid-obewoz47>第三步：配置 Remotely Save 插件</a> </li><li class="depth d-2" data-astro-cid-obewoz47> <a href="#第四步在手机上配置" data-astro-cid-obewoz47>第四步：在手机上配置</a> </li> </ul> </aside>  </div> </div>  <section class="stack related-section" data-reveal style="--reveal-delay: 220ms;" data-astro-cid-egg7nqdx> <div data-astro-cid-egg7nqdx> <p class="section-kicker" data-astro-cid-egg7nqdx>Keep Reading</p> <h2 class="section-title" data-astro-cid-egg7nqdx>相关文章</h2> </div> <div class="related-grid" data-astro-cid-egg7nqdx> <article class="surface related-card" data-astro-cid-egg7nqdx> <p class="related-meta" data-astro-cid-egg7nqdx> <time datetime="2026-03-08T00:00:00.000Z" data-astro-cid-egg7nqdx> 2026/3/8 </time>   </p> <h3 class="related-title" data-astro-cid-egg7nqdx> <a href="/posts/hello-astro/" data-astro-cid-egg7nqdx>站点重构日志：内容和项目开始合流</a> </h3> <p class="muted related-desc" data-astro-cid-egg7nqdx>记录这次把博客升级成“内容品牌 + 项目作品集 + 实验入口”个人站的起点。</p> <div class="related-tags" aria-label="文章标签" data-astro-cid-egg7nqdx> <a class="tag-pill" href="/tags/tags/" data-astro-cid-marlabwr><span data-astro-cid-marlabwr>#tags</span></a> </div> </article><article class="surface related-card related-card-hidden" data-astro-cid-egg7nqdx> <p class="related-meta" data-astro-cid-egg7nqdx> <time datetime="2026-03-05T00:00:00.000Z" data-astro-cid-egg7nqdx> 2026/3/5 </time>  <span data-astro-cid-egg7nqdx>彩蛋内容</span> </p> <h3 class="related-title" data-astro-cid-egg7nqdx> <a href="/posts/hidden-vault/" data-astro-cid-egg7nqdx>隐藏档案：Alpha计划</a> </h3> <p class="muted related-desc" data-astro-cid-egg7nqdx>需要解锁才能阅读的隐藏文章。</p> <div class="related-tags" aria-label="文章标签" data-astro-cid-egg7nqdx> <a class="tag-pill" href="/tags/secret/" data-astro-cid-marlabwr><span data-astro-cid-marlabwr>#secret</span></a><a class="tag-pill" href="/tags/unlock/" data-astro-cid-marlabwr><span data-astro-cid-marlabwr>#unlock</span></a> </div> </article><article class="surface related-card" data-astro-cid-egg7nqdx> <p class="related-meta" data-astro-cid-egg7nqdx> <time datetime="2026-03-05T00:00:00.000Z" data-astro-cid-egg7nqdx> 2026/3/5 </time>   </p> <h3 class="related-title" data-astro-cid-egg7nqdx> <a href="/posts/unlock-clue/" data-astro-cid-egg7nqdx>解锁线索：ALPHA-42</a> </h3> <p class="muted related-desc" data-astro-cid-egg7nqdx>一段公开文章，包含隐藏文章的解锁码。</p> <div class="related-tags" aria-label="文章标签" data-astro-cid-egg7nqdx> <a class="tag-pill" href="/tags/unlock/" data-astro-cid-marlabwr><span data-astro-cid-marlabwr>#unlock</span></a><a class="tag-pill" href="/tags/guide/" data-astro-cid-marlabwr><span data-astro-cid-marlabwr>#guide</span></a> </div> </article> </div> </section> <div data-reveal style="--reveal-delay: 260ms;" data-astro-cid-egg7nqdx> <section class="surface comments" aria-label="评论区" data-astro-cid-qdzwzgpn> <h2 data-astro-cid-qdzwzgpn>评论</h2> <div id="giscus-root" data-repo="Umamed26/UEnt26-Blog" data-repo-id="R_kgDOReQi8g" data-category="General" data-category-id="DIC_kwDOReQi8s4C3rEW" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-lang="zh-CN" data-loading="lazy" data-astro-cid-qdzwzgpn></div> <p id="giscus-fallback" class="fallback" hidden data-astro-cid-qdzwzgpn>评论暂时未加载，请稍后重试。</p> <script>
+    (() => {
+      const root = document.getElementById("giscus-root");
+      const fallback = document.getElementById("giscus-fallback");
+      const getTheme = () =>
+        document.documentElement.getAttribute("data-theme") === "dark" ? "dark_dimmed" : "light";
+
+      if (!(root instanceof HTMLElement)) {
+        return;
+      }
+
+      const applyTheme = () => {
+        const frame = document.querySelector("iframe.giscus-frame");
+        if (!(frame instanceof HTMLIFrameElement) || !frame.contentWindow) {
+          return;
+        }
+
+        frame.contentWindow.postMessage(
+          {
+            giscus: {
+              setConfig: {
+                theme: getTheme()
+              }
+            }
+          },
+          "https://giscus.app"
+        );
+      };
+
+      const script = document.createElement("script");
+      script.src = "https://giscus.app/client.js";
+      script.async = true;
+      script.crossOrigin = "anonymous";
+      script.setAttribute("data-theme", getTheme());
+
+      for (const attribute of root.attributes) {
+        if (attribute.name.startsWith("data-") && attribute.name !== "data-theme") {
+          script.setAttribute(attribute.name, attribute.value);
+        }
+      }
+
+      script.onerror = () => {
+        if (fallback instanceof HTMLElement) {
+          fallback.hidden = false;
+        }
+      };
+
+      script.onload = () => {
+        applyTheme();
+      };
+
+      window.addEventListener("theme:changed", applyTheme);
+      root.appendChild(script);
+    })();
+  </script> </section>  </div> </div> </article> <script>(function(){const isHidden = false;
+
+    (() => {
+      const STORAGE_KEY = "uent26-unlock-codes";
+      const normalize = (value) => String(value ?? "").trim().toLowerCase();
+
+      const setupRevealCopy = () => {
+        const revealCode = document.querySelector("[data-reveal-code]");
+        const copyButton = document.querySelector("[data-reveal-copy]");
+
+        if (!(revealCode instanceof HTMLElement) || !(copyButton instanceof HTMLButtonElement) || !navigator.clipboard) {
+          return;
+        }
+
+        copyButton.addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText(revealCode.textContent?.trim() ?? "");
+            copyButton.textContent = "已复制";
+            window.setTimeout(() => {
+              copyButton.textContent = "复制";
+            }, 1400);
+          } catch {}
+        });
+      };
+
+      const getStoredCodes = () => {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if (!raw) {
+            return new Set();
+          }
+          const parsed = JSON.parse(raw);
+          if (!Array.isArray(parsed)) {
+            return new Set();
+          }
+          return new Set(parsed.map((item) => normalize(item)).filter(Boolean));
+        } catch {
+          return new Set();
+        }
+      };
+
+      const setStoredCodes = (codes) => {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify([...codes]));
+        } catch {}
+      };
+
+      setupRevealCopy();
+
+      const lockContent = document.querySelector("[data-lock-content]");
+      const lockPanel = document.querySelector("[data-lock-panel]");
+
+      const setUnlockedState = (unlocked) => {
+        if (lockContent instanceof HTMLElement) {
+          lockContent.setAttribute("data-locked", unlocked ? "false" : "true");
+          lockContent.setAttribute("aria-hidden", unlocked ? "false" : "true");
+        }
+
+        if (lockPanel instanceof HTMLElement) {
+          if (unlocked) {
+            lockPanel.setAttribute("hidden", "");
+          } else {
+            lockPanel.removeAttribute("hidden");
+          }
+        }
+      };
+
+      if (!isHidden) {
+        setUnlockedState(true);
+        return;
+      }
+
+      const payloadNode = document.getElementById("hidden-content-payload");
+      const unlockForm = document.querySelector("[data-unlock-form]");
+      const unlockInput = document.querySelector("[data-unlock-input]");
+      const unlockFeedback = document.querySelector("[data-unlock-feedback]");
+      const hiddenContent = document.querySelector("[data-hidden-content]");
+      const hiddenStatus = document.querySelector("[data-hidden-status]");
+
+      let payload = null;
+      try {
+        payload = payloadNode ? JSON.parse(payloadNode.textContent || "null") : null;
+      } catch {
+        payload = null;
+      }
+
+      const setFeedback = (message, isError = false) => {
+        if (unlockFeedback instanceof HTMLElement) {
+          unlockFeedback.textContent = message;
+          unlockFeedback.dataset.state = isError ? "error" : "success";
+        }
+      };
+
+      const base64ToBytes = (value) => Uint8Array.from(atob(value), (char) => char.charCodeAt(0));
+
+      const decryptContent = async (code) => {
+        if (!payload || !window.crypto?.subtle) {
+          throw new Error("unsupported");
+        }
+
+        const encoder = new TextEncoder();
+        const keyMaterial = await window.crypto.subtle.importKey(
+          "raw",
+          encoder.encode(normalize(code)),
+          "PBKDF2",
+          false,
+          ["deriveKey"]
+        );
+        const key = await window.crypto.subtle.deriveKey(
+          {
+            name: "PBKDF2",
+            salt: base64ToBytes(payload.salt),
+            iterations: payload.iterations,
+            hash: "SHA-256"
+          },
+          keyMaterial,
+          { name: "AES-GCM", length: 256 },
+          false,
+          ["decrypt"]
+        );
+        const decrypted = await window.crypto.subtle.decrypt(
+          { name: "AES-GCM", iv: base64ToBytes(payload.iv) },
+          key,
+          base64ToBytes(payload.ciphertext)
+        );
+
+        return new TextDecoder().decode(decrypted);
+      };
+
+      const revealContent = (html) => {
+        if (hiddenContent instanceof HTMLElement) {
+          hiddenContent.innerHTML = html;
+        }
+
+        if (hiddenStatus instanceof HTMLElement) {
+          hiddenStatus.textContent = "";
+          hiddenStatus.hidden = true;
+        }
+
+        setUnlockedState(true);
+      };
+
+      const tryUnlock = async (rawCode, persist = false) => {
+        const code = normalize(rawCode);
+        if (!code) {
+          setFeedback("请输入解锁码。", true);
+          return false;
+        }
+
+        try {
+          const html = await decryptContent(code);
+          if (persist) {
+            const codes = getStoredCodes();
+            codes.add(code);
+            setStoredCodes(codes);
+            window.dispatchEvent(new CustomEvent("unlock:changed"));
+          }
+          revealContent(html);
+          setFeedback("已解锁，正文已加载。", false);
+          return true;
+        } catch {
+          setFeedback("解锁码无效，或当前浏览器暂不支持本地解密。", true);
+          return false;
+        }
+      };
+
+      const tryStoredCodes = async () => {
+        for (const code of getStoredCodes()) {
+          const unlocked = await tryUnlock(code, false);
+          if (unlocked) {
+            return true;
+          }
+        }
+        setUnlockedState(false);
+        return false;
+      };
+
+      setUnlockedState(false);
+      void tryStoredCodes();
+
+      if (unlockForm instanceof HTMLFormElement) {
+        unlockForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+          const code = unlockInput instanceof HTMLInputElement ? unlockInput.value : "";
+          void tryUnlock(code, true).then((success) => {
+            if (success && unlockInput instanceof HTMLInputElement) {
+              unlockInput.value = "";
+            }
+          });
+        });
+      }
+
+      window.addEventListener("unlock:changed", () => {
+        if (lockContent instanceof HTMLElement && lockContent.getAttribute("data-locked") === "true") {
+          void tryStoredCodes();
+        }
+      });
+    })();
+  })();</script>  </main> <footer class="site-footer" data-astro-cid-37fxchfa> <div class="container footer-wrap" data-astro-cid-37fxchfa> <div class="footer-copy" data-astro-cid-37fxchfa> <p class="copyright" data-astro-cid-37fxchfa>© 2026 UEnt26. All rights reserved.</p> <p class="footer-note" data-astro-cid-37fxchfa>文章优先，项目与实验作为延伸入口。</p> </div> <ul class="footer-links" aria-label="站点入口" data-astro-cid-37fxchfa> <li data-astro-cid-37fxchfa><a href="/search/" data-astro-cid-37fxchfa>搜索</a></li><li data-astro-cid-37fxchfa><a href="/tags/" data-astro-cid-37fxchfa>标签</a></li><li data-astro-cid-37fxchfa><a href="/guestbook/" data-astro-cid-37fxchfa>留言</a></li><li data-astro-cid-37fxchfa><a href="/contact/" data-astro-cid-37fxchfa>联系</a></li><li data-astro-cid-37fxchfa><a href="/rss.xml" data-astro-cid-37fxchfa>RSS</a></li> </ul> <ul class="social-list" aria-label="社交链接" data-astro-cid-37fxchfa> <li data-astro-cid-37fxchfa><a href="https://github.com/Umamed26/UEnt26-Blog" data-astro-cid-37fxchfa>GitHub</a></li> </ul> </div> </footer> <script>
+      (() => {
+        const STORAGE_KEY = "uent26-theme";
+        const LIGHT = "light";
+        const DARK = "dark";
+        const root = document.documentElement;
+        const toggle = document.querySelector("[data-theme-toggle]");
+        const toggleLabel = document.querySelector("[data-theme-toggle-label]");
+        const themeColorMeta = document.querySelector("meta[data-theme-color]");
+        const LIGHT_THEME_COLOR = themeColorMeta?.getAttribute("data-light-theme-color") ?? "#c45237";
+        const DARK_THEME_COLOR = themeColorMeta?.getAttribute("data-dark-theme-color") ?? "#0f151c";
+
+        if (!(toggle instanceof HTMLButtonElement) || !(toggleLabel instanceof HTMLElement)) {
+          return;
+        }
+
+        const getStoredTheme = () => {
+          try {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored === LIGHT || stored === DARK) {
+              return stored;
+            }
+          } catch {}
+          return null;
+        };
+
+        const setStoredTheme = (theme) => {
+          try {
+            localStorage.setItem(STORAGE_KEY, theme);
+          } catch {}
+        };
+
+        const applyTheme = (theme) => {
+          const isDark = theme === DARK;
+          root.setAttribute("data-theme", theme);
+          toggle.setAttribute("aria-pressed", String(isDark));
+          toggle.setAttribute("aria-label", isDark ? "切换到日间模式" : "切换到夜间模式");
+          toggleLabel.textContent = isDark ? "日间" : "夜间";
+          if (themeColorMeta) {
+            themeColorMeta.setAttribute("content", isDark ? DARK_THEME_COLOR : LIGHT_THEME_COLOR);
+          }
+          window.dispatchEvent(new CustomEvent("theme:changed", { detail: { theme } }));
+        };
+
+        const initial = root.getAttribute("data-theme") === DARK ? DARK : LIGHT;
+        applyTheme(initial);
+
+        toggle.addEventListener("click", () => {
+          const next = root.getAttribute("data-theme") === DARK ? LIGHT : DARK;
+          setStoredTheme(next);
+          applyTheme(next);
+        });
+
+        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        const handleSystemChange = (event) => {
+          if (getStoredTheme()) {
+            return;
+          }
+          applyTheme(event.matches ? DARK : LIGHT);
+        };
+
+        if (typeof mediaQuery.addEventListener === "function") {
+          mediaQuery.addEventListener("change", handleSystemChange);
+        } else if (typeof mediaQuery.addListener === "function") {
+          mediaQuery.addListener(handleSystemChange);
+        }
+      })();
+    </script> <script>
+      (() => {
+        const shell = document.querySelector("[data-nav-shell]");
+        const nav = document.querySelector("[data-site-nav]");
+        const toggle = document.querySelector("[data-nav-toggle]");
+        const desktopMedia = window.matchMedia("(min-width: 901px)");
+
+        if (!(shell instanceof HTMLElement) || !(nav instanceof HTMLElement) || !(toggle instanceof HTMLButtonElement)) {
+          return;
+        }
+
+        const setOpen = (open) => {
+          shell.setAttribute("data-nav-open", String(open));
+          toggle.setAttribute("aria-expanded", String(open));
+          toggle.setAttribute("aria-label", open ? "收起导航" : "展开导航");
+        };
+
+        const syncMenuState = () => {
+          if (desktopMedia.matches) {
+            shell.setAttribute("data-nav-open", "true");
+            toggle.setAttribute("aria-expanded", "false");
+            return;
+          }
+
+          setOpen(false);
+        };
+
+        toggle.addEventListener("click", () => {
+          const next = shell.getAttribute("data-nav-open") !== "true";
+          setOpen(next);
+        });
+
+        nav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            if (!desktopMedia.matches) {
+              setOpen(false);
+            }
+          });
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && shell.getAttribute("data-nav-open") === "true" && !desktopMedia.matches) {
+            setOpen(false);
+            toggle.focus();
+          }
+        });
+
+        if (typeof desktopMedia.addEventListener === "function") {
+          desktopMedia.addEventListener("change", syncMenuState);
+        } else if (typeof desktopMedia.addListener === "function") {
+          desktopMedia.addListener(syncMenuState);
+        }
+
+        syncMenuState();
+      })();
+    </script>  <script>
+  (() => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const revealNodes = [...document.querySelectorAll("[data-reveal]")];
+
+    if (revealNodes.length > 0) {
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealNodes.forEach((node) => node.setAttribute("data-revealed", "true"));
+      } else {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (!entry.isIntersecting) {
+                continue;
+              }
+              entry.target.setAttribute("data-revealed", "true");
+              observer.unobserve(entry.target);
+            }
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+        );
+
+        revealNodes.forEach((node) => observer.observe(node));
+      }
+    }
+
+    const progressRoot = document.querySelector("[data-reading-root]");
+    const progressWrap = document.querySelector("[data-reading-progress]");
+    const progressBar = document.querySelector("[data-reading-progress-bar]");
+
+    if (!progressWrap || !progressBar) {
+      return;
+    }
+
+    if (!progressRoot) {
+      progressWrap.classList.remove("is-active");
+      progressBar.style.transform = "scaleX(0)";
+      return;
+    }
+
+    progressWrap.classList.add("is-active");
+
+    const updateReadingProgress = () => {
+      const rootRect = progressRoot.getBoundingClientRect();
+      const viewport = window.innerHeight || document.documentElement.clientHeight;
+      const total = Math.max(progressRoot.scrollHeight - viewport * 0.7, 1);
+      const current = Math.min(Math.max(-rootRect.top, 0), total);
+      const ratio = total === 0 ? 0 : current / total;
+      progressBar.style.transform = `scaleX(${Math.max(0, Math.min(1, ratio))})`;
+    };
+
+    updateReadingProgress();
+    window.addEventListener("scroll", updateReadingProgress, { passive: true });
+    window.addEventListener("resize", updateReadingProgress, { passive: true });
+  })();
+</script> </body></html> 

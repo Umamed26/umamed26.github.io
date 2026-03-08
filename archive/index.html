@@ -1,0 +1,929 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.0"><meta name="description" content="技术写作、游戏项目与个人实验的混合型个人站。"><meta property="og:type" content="website"><meta property="og:title" content="归档 | UEnt26 Blog"><meta property="og:description" content="技术写作、游戏项目与个人实验的混合型个人站。"><meta property="og:url" content="https://umamed26.github.io/archive/"><meta property="og:site_name" content="UEnt26 Blog"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="归档 | UEnt26 Blog"><meta name="twitter:description" content="技术写作、游戏项目与个人实验的混合型个人站。"><meta name="theme-color" content="#c45237" data-theme-color data-light-theme-color="#c45237" data-dark-theme-color="#0f151c"><link rel="canonical" href="https://umamed26.github.io/archive/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><script>
+      (() => {
+        const STORAGE_KEY = "uent26-theme";
+        const LIGHT = "light";
+        const DARK = "dark";
+        const root = document.documentElement;
+        const themeColorMeta = document.querySelector("meta[data-theme-color]");
+        const LIGHT_THEME_COLOR = themeColorMeta?.getAttribute("data-light-theme-color") ?? "#c45237";
+        const DARK_THEME_COLOR = themeColorMeta?.getAttribute("data-dark-theme-color") ?? "#0f151c";
+
+        const getStoredTheme = () => {
+          try {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored === LIGHT || stored === DARK) {
+              return stored;
+            }
+          } catch {}
+          return null;
+        };
+
+        const storedTheme = getStoredTheme();
+        const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+        const theme = storedTheme ?? preferredTheme;
+        root.setAttribute("data-theme", theme);
+        if (themeColorMeta) {
+          themeColorMeta.setAttribute("content", theme === DARK ? DARK_THEME_COLOR : LIGHT_THEME_COLOR);
+        }
+      })();
+    </script><title>归档 | UEnt26 Blog</title><link rel="stylesheet" href="/_astro/about.DvsY5t4q.css">
+<link rel="stylesheet" href="/_astro/archive.9sEFOjG8.css"></head> <body data-astro-cid-37fxchfa> <a class="skip-link" href="#main-content" data-astro-cid-37fxchfa>跳到正文</a> <div class="reading-progress" data-reading-progress aria-hidden="true" data-astro-cid-37fxchfa> <span class="reading-progress-bar" data-reading-progress-bar data-astro-cid-37fxchfa></span> </div> <div class="site-decor" aria-hidden="true" data-astro-cid-37fxchfa> <span class="wash wash-a" data-astro-cid-37fxchfa></span> <span class="wash wash-b" data-astro-cid-37fxchfa></span> <span class="line-overlay" data-astro-cid-37fxchfa></span> <span class="noise-overlay" data-astro-cid-37fxchfa></span> </div> <header class="site-header" data-astro-cid-37fxchfa> <div class="container nav-wrap" data-nav-shell data-nav-open="false" data-astro-cid-37fxchfa> <a class="brand" href="/" data-astro-cid-37fxchfa> <strong data-astro-cid-37fxchfa>UEnt26</strong> <span data-astro-cid-37fxchfa>Notes from the Frontend Desk</span> </a> <div class="header-actions" data-astro-cid-37fxchfa> <a class="header-tool" href="/search/" data-astro-cid-37fxchfa>搜索</a> <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换到夜间模式" aria-pressed="false" data-astro-cid-37fxchfa> <span class="theme-toggle-dot" aria-hidden="true" data-astro-cid-37fxchfa></span> <span data-theme-toggle-label data-astro-cid-37fxchfa>夜间</span> </button> <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu" aria-label="展开导航" data-astro-cid-37fxchfa> <span class="nav-toggle-bars" aria-hidden="true" data-astro-cid-37fxchfa> <span data-astro-cid-37fxchfa></span> <span data-astro-cid-37fxchfa></span> <span data-astro-cid-37fxchfa></span> </span> <span class="nav-toggle-label" data-astro-cid-37fxchfa>菜单</span> </button> </div> <nav id="site-menu" class="site-nav" aria-label="主导航" data-site-nav data-astro-cid-37fxchfa> <ul class="nav-list" data-astro-cid-37fxchfa> <li data-astro-cid-37fxchfa> <a class="nav-link" href="/" data-astro-cid-37fxchfa> 首页 </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link active" href="/archive/" data-astro-cid-37fxchfa> 文章 </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/projects/" data-astro-cid-37fxchfa> 项目 </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/now/" data-astro-cid-37fxchfa> Now </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/about/" data-astro-cid-37fxchfa> 关于 </a> </li> </ul> </nav> </div> </header> <main id="main-content" tabindex="-1" class="container page-content" data-astro-cid-37fxchfa>  <section class="stack archive-page" data-reveal data-astro-cid-qma2cssl> <div class="archive-head" data-astro-cid-qma2cssl> <div data-astro-cid-qma2cssl> <p class="section-kicker" data-astro-cid-qma2cssl>Archive Lab</p> <h1 class="page-title" data-astro-cid-qma2cssl>归档</h1> </div> <p class="muted" data-archive-overview data-astro-cid-qma2cssl>
+当前共有 4 篇文章，支持按年份、分类、标签与关键词快速定位；更细的条件收在高级筛选里。
+</p> </div>  <section class="surface filter-panel" data-archive-filter data-astro-cid-qma2cssl> <div class="filter-panel-head" data-astro-cid-qma2cssl> <div data-astro-cid-qma2cssl> <p class="section-kicker" data-astro-cid-qma2cssl>Archive Console</p> <h2 class="filter-panel-title" data-astro-cid-qma2cssl>筛选工作台</h2> </div> <p class="muted filter-panel-copy" data-astro-cid-qma2cssl>
+把时间、分类、标签和关键词组合起来，像整理档案一样快速定位内容。
+</p> </div> <div class="filter-layout" data-astro-cid-qma2cssl> <section class="filter-block filter-block-primary" data-astro-cid-qma2cssl> <div class="filter-block-head" data-astro-cid-qma2cssl> <div data-astro-cid-qma2cssl> <p class="filter-block-kicker" data-astro-cid-qma2cssl>常用筛选</p> <p class="filter-block-note" data-astro-cid-qma2cssl>先用年份、分类、标签和关键词缩小范围，再决定是否打开高级筛选。</p> </div> </div> <div class="filter-grid filter-grid-basic" data-astro-cid-qma2cssl> <label class="field" data-astro-cid-qma2cssl> <span data-astro-cid-qma2cssl>年份</span> <select data-archive-year data-astro-cid-qma2cssl> <option value="all" data-astro-cid-qma2cssl>全部年份</option> <option value="2026" data-astro-cid-qma2cssl>2026 年</option> </select> </label> <label class="field" data-astro-cid-qma2cssl> <span data-astro-cid-qma2cssl>分类</span> <select data-archive-category data-astro-cid-qma2cssl> <option value="all" data-astro-cid-qma2cssl>全部分类</option> <option value="meta" data-astro-cid-qma2cssl>站点</option><option value="tech" data-astro-cid-qma2cssl>技术</option> </select> </label> <label class="field field-wide" data-astro-cid-qma2cssl> <span data-astro-cid-qma2cssl>关键词</span> <input type="search" placeholder="搜索标题、摘要或标签" inputmode="search" autocomplete="off" data-archive-query data-astro-cid-qma2cssl> </label> </div> <div class="tag-advanced filter-block tag-block-inline" data-astro-cid-qma2cssl> <div class="tag-advanced-head filter-block-head" data-astro-cid-qma2cssl> <div data-astro-cid-qma2cssl> <p class="filter-block-kicker" data-astro-cid-qma2cssl>标签组合</p> <p class="filter-block-note" data-astro-cid-qma2cssl>默认使用“匹配任一标签”；需要 AND / OR 切换时到高级筛选里调整。</p> </div> <button class="tag-clear-btn" type="button" data-archive-clear-tags data-astro-cid-qma2cssl>清空标签</button> </div> <div class="tag-chip-list" data-archive-tag-chips data-astro-cid-qma2cssl> <button type="button" class="tag-chip tag-chip-neutral" data-archive-tag-button="guide" aria-pressed="false" aria-label="标签 guide，1 篇文章" data-astro-cid-qma2cssl> <span class="tag-chip-name" data-astro-cid-qma2cssl>guide</span> <span class="tag-chip-count" data-astro-cid-qma2cssl>01</span> </button><button type="button" class="tag-chip tag-chip-neutral" data-archive-tag-button="secret" aria-pressed="false" aria-label="标签 secret，1 篇文章" data-astro-cid-qma2cssl> <span class="tag-chip-name" data-astro-cid-qma2cssl>secret</span> <span class="tag-chip-count" data-astro-cid-qma2cssl>01</span> </button><button type="button" class="tag-chip tag-chip-neutral" data-archive-tag-button="tags" aria-pressed="false" aria-label="标签 tags，1 篇文章" data-astro-cid-qma2cssl> <span class="tag-chip-name" data-astro-cid-qma2cssl>tags</span> <span class="tag-chip-count" data-astro-cid-qma2cssl>01</span> </button><button type="button" class="tag-chip tag-chip-neutral" data-archive-tag-button="tools" aria-pressed="false" aria-label="标签 tools，1 篇文章" data-astro-cid-qma2cssl> <span class="tag-chip-name" data-astro-cid-qma2cssl>tools</span> <span class="tag-chip-count" data-astro-cid-qma2cssl>01</span> </button><button type="button" class="tag-chip tag-chip-warm" data-archive-tag-button="unlock" aria-pressed="false" aria-label="标签 unlock，2 篇文章" data-astro-cid-qma2cssl> <span class="tag-chip-name" data-astro-cid-qma2cssl>unlock</span> <span class="tag-chip-count" data-astro-cid-qma2cssl>02</span> </button> </div> </div> </section> <details class="filter-advanced" data-astro-cid-qma2cssl> <summary data-astro-cid-qma2cssl>高级筛选</summary> <div class="filter-advanced-grid" data-astro-cid-qma2cssl> <label class="field" data-astro-cid-qma2cssl> <span data-astro-cid-qma2cssl>分组方式</span> <select data-archive-granularity data-astro-cid-qma2cssl> <option value="year" data-astro-cid-qma2cssl>按年</option> <option value="month" data-astro-cid-qma2cssl>按月</option> <option value="day" data-astro-cid-qma2cssl>按天</option> </select> </label> <label class="field" data-astro-cid-qma2cssl> <span data-astro-cid-qma2cssl>月份</span> <select data-archive-month data-astro-cid-qma2cssl> <option value="all" data-astro-cid-qma2cssl>全部月份</option> </select> </label> <label class="field" data-astro-cid-qma2cssl> <span data-astro-cid-qma2cssl>日期</span> <select data-archive-day data-astro-cid-qma2cssl> <option value="all" data-astro-cid-qma2cssl>全部日期</option> </select> </label> <label class="field" data-astro-cid-qma2cssl> <span data-astro-cid-qma2cssl>排序</span> <select data-archive-sort data-astro-cid-qma2cssl> <option value="desc" data-astro-cid-qma2cssl>最新优先</option> <option value="asc" data-astro-cid-qma2cssl>最早优先</option> </select> </label> <label class="field" data-astro-cid-qma2cssl> <span data-astro-cid-qma2cssl>标签模式</span> <select data-archive-tag-mode data-astro-cid-qma2cssl> <option value="or" data-astro-cid-qma2cssl>匹配任一标签 (OR)</option> <option value="and" data-astro-cid-qma2cssl>必须包含全部标签 (AND)</option> </select> </label> <label class="field field-wide" data-astro-cid-qma2cssl> <span data-astro-cid-qma2cssl>起始日期</span> <input type="date" min="2026-03-05" max="2026-03-08" data-archive-start-date data-astro-cid-qma2cssl> </label> <label class="field field-wide" data-astro-cid-qma2cssl> <span data-astro-cid-qma2cssl>结束日期</span> <input type="date" min="2026-03-05" max="2026-03-08" data-archive-end-date data-astro-cid-qma2cssl> </label> <label class="check-field check-field-advanced" data-astro-cid-qma2cssl> <input type="checkbox" data-archive-updated data-astro-cid-qma2cssl> <span data-astro-cid-qma2cssl>仅看有更新记录</span> </label> </div> </details> </div> <div class="filter-actions" data-astro-cid-qma2cssl> <div class="filter-status" data-astro-cid-qma2cssl> <p class="muted filter-hint" data-astro-cid-qma2cssl>默认只露出常用筛选；需要更细的时间和分组条件时再展开高级选项。</p> </div> <div class="filter-summary-card" data-astro-cid-qma2cssl> <p class="filter-summary-label" data-astro-cid-qma2cssl>结果概览</p> <p class="muted result-summary" data-archive-summary data-astro-cid-qma2cssl>
+显示 4 / 4 篇，按年分组。
+</p> </div> <button class="reset-btn" type="button" data-archive-reset data-astro-cid-qma2cssl>
+重置全部筛选
+</button> </div> </section> <div class="stack archive-results" data-archive-output data-astro-cid-qma2cssl> <section class="surface archive-group" data-astro-cid-qma2cssl> <h2 class="archive-heading" data-astro-cid-qma2cssl> <span class="archive-dot" data-astro-cid-qma2cssl></span> <span class="archive-heading-text" data-astro-cid-qma2cssl>2026 年</span> <span class="archive-heading-count" data-astro-cid-qma2cssl>4 篇</span> </h2> <ul class="archive-list" data-astro-cid-qma2cssl> <li class="archive-item" data-astro-cid-qma2cssl> <div class="archive-item-main" data-astro-cid-qma2cssl> <a href="/posts/hello-astro/" data-astro-cid-qma2cssl>站点重构日志：内容和项目开始合流</a> <p class="archive-desc muted" data-astro-cid-qma2cssl>记录这次把博客升级成“内容品牌 + 项目作品集 + 实验入口”个人站的起点。</p> <div class="archive-tags archive-info-row" data-astro-cid-qma2cssl>  <span class="archive-info-chip" data-astro-cid-qma2cssl>站点</span>  <a class="archive-info-chip" href="/projects/uent26-blog/" data-astro-cid-qma2cssl>
+项目 · UEnt26 Blog </a> </div> <div class="archive-tags" data-astro-cid-qma2cssl> <a class="archive-tag" href="/tags/tags/" data-astro-cid-qma2cssl>
+#tags </a> </div> </div> <div class="archive-meta" data-astro-cid-qma2cssl> <time datetime="2026-03-08T00:00:00.000Z" data-astro-cid-qma2cssl>2026/3/8</time>  </div> </li><li class="archive-item" data-astro-cid-qma2cssl> <div class="archive-item-main" data-astro-cid-qma2cssl> <a href="/posts/hidden-vault/" data-astro-cid-qma2cssl>隐藏档案：Alpha计划</a> <p class="archive-desc muted" data-astro-cid-qma2cssl>需要解锁才能阅读的隐藏文章。</p> <div class="archive-tags archive-info-row" data-astro-cid-qma2cssl> <span class="archive-info-chip archive-info-chip-hidden" data-astro-cid-qma2cssl>彩蛋内容</span> <span class="archive-info-chip" data-astro-cid-qma2cssl>站点</span> <span class="archive-info-chip" data-astro-cid-qma2cssl>系列 · unlock-demo</span> <a class="archive-info-chip" href="/projects/uent26-blog/" data-astro-cid-qma2cssl>
+项目 · UEnt26 Blog </a> </div> <div class="archive-tags" data-astro-cid-qma2cssl> <a class="archive-tag" href="/tags/secret/" data-astro-cid-qma2cssl>
+#secret </a><a class="archive-tag" href="/tags/unlock/" data-astro-cid-qma2cssl>
+#unlock </a> </div> </div> <div class="archive-meta" data-astro-cid-qma2cssl> <time datetime="2026-03-05T00:00:00.000Z" data-astro-cid-qma2cssl>2026/3/5</time>  </div> </li><li class="archive-item" data-astro-cid-qma2cssl> <div class="archive-item-main" data-astro-cid-qma2cssl> <a href="/posts/unlock-clue/" data-astro-cid-qma2cssl>解锁线索：ALPHA-42</a> <p class="archive-desc muted" data-astro-cid-qma2cssl>一段公开文章，包含隐藏文章的解锁码。</p> <div class="archive-tags archive-info-row" data-astro-cid-qma2cssl>  <span class="archive-info-chip" data-astro-cid-qma2cssl>站点</span> <span class="archive-info-chip" data-astro-cid-qma2cssl>系列 · unlock-demo</span> <a class="archive-info-chip" href="/projects/uent26-blog/" data-astro-cid-qma2cssl>
+项目 · UEnt26 Blog </a> </div> <div class="archive-tags" data-astro-cid-qma2cssl> <a class="archive-tag" href="/tags/unlock/" data-astro-cid-qma2cssl>
+#unlock </a><a class="archive-tag" href="/tags/guide/" data-astro-cid-qma2cssl>
+#guide </a> </div> </div> <div class="archive-meta" data-astro-cid-qma2cssl> <time datetime="2026-03-05T00:00:00.000Z" data-astro-cid-qma2cssl>2026/3/5</time>  </div> </li><li class="archive-item" data-astro-cid-qma2cssl> <div class="archive-item-main" data-astro-cid-qma2cssl> <a href="/posts/我的跨平台写作方案obsidian-坚果云/" data-astro-cid-qma2cssl>我的跨平台写作方案：Obsidian + 坚果云</a> <p class="archive-desc muted" data-astro-cid-qma2cssl>怎么做到随时随地创作。</p> <div class="archive-tags archive-info-row" data-astro-cid-qma2cssl>  <span class="archive-info-chip" data-astro-cid-qma2cssl>技术</span> <span class="archive-info-chip" data-astro-cid-qma2cssl>系列 · workflow</span>  </div> <div class="archive-tags" data-astro-cid-qma2cssl> <a class="archive-tag" href="/tags/tools/" data-astro-cid-qma2cssl>
+#tools </a> </div> </div> <div class="archive-meta" data-astro-cid-qma2cssl> <time datetime="2026-03-05T00:00:00.000Z" data-astro-cid-qma2cssl>2026/3/5</time>  </div> </li> </ul> </section> </div> <script type="application/json" id="archive-data">{"items":[{"slug":"hello-astro","href":"/posts/hello-astro/","title":"站点重构日志：内容和项目开始合流","description":"记录这次把博客升级成“内容品牌 + 项目作品集 + 实验入口”个人站的起点。","hidden":false,"tags":["tags"],"category":"meta","categoryLabel":"站点","series":null,"project":"uent26-blog","projectLabel":"UEnt26 Blog","year":"2026","month":"03","day":"08","monthKey":"2026-03","dayKey":"2026-03-08","dateISO":"2026-03-08T00:00:00.000Z","dateKey":"2026-03-08","dateLabel":"2026/3/8","updatedDateISO":null,"updatedDateLabel":null,"timestamp":1772928000000},{"slug":"hidden-vault","href":"/posts/hidden-vault/","title":"隐藏档案：Alpha计划","description":"需要解锁才能阅读的隐藏文章。","hidden":true,"tags":["secret","unlock"],"category":"meta","categoryLabel":"站点","series":"unlock-demo","project":"uent26-blog","projectLabel":"UEnt26 Blog","year":"2026","month":"03","day":"05","monthKey":"2026-03","dayKey":"2026-03-05","dateISO":"2026-03-05T00:00:00.000Z","dateKey":"2026-03-05","dateLabel":"2026/3/5","updatedDateISO":null,"updatedDateLabel":null,"timestamp":1772668800000},{"slug":"unlock-clue","href":"/posts/unlock-clue/","title":"解锁线索：ALPHA-42","description":"一段公开文章，包含隐藏文章的解锁码。","hidden":false,"tags":["unlock","guide"],"category":"meta","categoryLabel":"站点","series":"unlock-demo","project":"uent26-blog","projectLabel":"UEnt26 Blog","year":"2026","month":"03","day":"05","monthKey":"2026-03","dayKey":"2026-03-05","dateISO":"2026-03-05T00:00:00.000Z","dateKey":"2026-03-05","dateLabel":"2026/3/5","updatedDateISO":null,"updatedDateLabel":null,"timestamp":1772668800000},{"slug":"我的跨平台写作方案obsidian-坚果云","href":"/posts/我的跨平台写作方案obsidian-坚果云/","title":"我的跨平台写作方案：Obsidian + 坚果云","description":"怎么做到随时随地创作。","hidden":false,"tags":["tools"],"category":"tech","categoryLabel":"技术","series":"workflow","project":null,"projectLabel":null,"year":"2026","month":"03","day":"05","monthKey":"2026-03","dayKey":"2026-03-05","dateISO":"2026-03-05T00:00:00.000Z","dateKey":"2026-03-05","dateLabel":"2026/3/5","updatedDateISO":null,"updatedDateLabel":null,"timestamp":1772668800000}],"allTags":["guide","secret","tags","tools","unlock"],"allCategories":[{"value":"meta","label":"站点"},{"value":"tech","label":"技术"}]}</script> <script>(function(){const tagBaseHref = "/tags/";
+const projectBaseHref = "/projects/";
+
+          (() => {
+            const dataNode = document.getElementById("archive-data");
+            const output = document.querySelector("[data-archive-output]");
+            const overview = document.querySelector("[data-archive-overview]");
+            const tagChipList = document.querySelector("[data-archive-tag-chips]");
+
+            if (
+              !(dataNode instanceof HTMLScriptElement) ||
+              !(output instanceof HTMLElement) ||
+              !(overview instanceof HTMLElement) ||
+              !(tagChipList instanceof HTMLElement)
+            ) {
+              return;
+            }
+
+            let payload = null;
+            try {
+              payload = JSON.parse(dataNode.textContent || "{}");
+            } catch {
+              return;
+            }
+
+            const allItems = Array.isArray(payload?.items) ? payload.items : [];
+            if (!Array.isArray(allItems) || allItems.length === 0) {
+              return;
+            }
+
+            const getVisibleItems = () => allItems;
+
+            const granularitySelect = document.querySelector("[data-archive-granularity]");
+            const yearSelect = document.querySelector("[data-archive-year]");
+            const monthSelect = document.querySelector("[data-archive-month]");
+            const daySelect = document.querySelector("[data-archive-day]");
+            const sortSelect = document.querySelector("[data-archive-sort]");
+            const categorySelect = document.querySelector("[data-archive-category]");
+            const tagModeSelect = document.querySelector("[data-archive-tag-mode]");
+            const queryInput = document.querySelector("[data-archive-query]");
+            const startDateInput = document.querySelector("[data-archive-start-date]");
+            const endDateInput = document.querySelector("[data-archive-end-date]");
+            const updatedCheckbox = document.querySelector("[data-archive-updated]");
+            const clearTagsButton = document.querySelector("[data-archive-clear-tags]");
+            const resetButton = document.querySelector("[data-archive-reset]");
+            const summary = document.querySelector("[data-archive-summary]");
+
+            if (
+              !(granularitySelect instanceof HTMLSelectElement) ||
+              !(yearSelect instanceof HTMLSelectElement) ||
+              !(monthSelect instanceof HTMLSelectElement) ||
+              !(daySelect instanceof HTMLSelectElement) ||
+              !(sortSelect instanceof HTMLSelectElement) ||
+              !(categorySelect instanceof HTMLSelectElement) ||
+              !(tagModeSelect instanceof HTMLSelectElement) ||
+              !(queryInput instanceof HTMLInputElement) ||
+              !(startDateInput instanceof HTMLInputElement) ||
+              !(endDateInput instanceof HTMLInputElement) ||
+              !(updatedCheckbox instanceof HTMLInputElement) ||
+              !(clearTagsButton instanceof HTMLButtonElement) ||
+              !(resetButton instanceof HTMLButtonElement) ||
+              !(summary instanceof HTMLElement)
+            ) {
+              return;
+            }
+
+            const defaultState = {
+              granularity: "year",
+              year: "all",
+              month: "all",
+              day: "all",
+              sort: "desc",
+              category: "all",
+              query: "",
+              updatedOnly: false,
+              startDate: "",
+              endDate: "",
+              tagMode: "or"
+            };
+
+            const state = {
+              ...defaultState,
+              selectedTags: new Set()
+            };
+
+            const getCategoryOptions = (items) =>
+              [...new Map(
+                items
+                  .filter((item) => item?.category && item?.categoryLabel)
+                  .map((item) => [item.category, { value: item.category, label: item.categoryLabel }])
+              ).values()].sort((left, right) => left.label.localeCompare(right.label, "zh-Hans-CN"));
+
+            const getTagOptions = (items) =>
+              [...new Set(items.flatMap((item) => (Array.isArray(item.tags) ? item.tags : [])))].sort((left, right) =>
+                left.localeCompare(right, "zh-Hans-CN")
+              );
+
+            const tagCloudOffsets = ["0rem", "-0.04rem", "0.03rem", "-0.02rem"];
+            const getTagTone = (normalized) => {
+              if (normalized >= 0.68) {
+                return "warm";
+              }
+              if (normalized >= 0.3) {
+                return "cool";
+              }
+              return "neutral";
+            };
+
+            const getDateBounds = (items) => {
+              if (items.length === 0) {
+                return { min: "", max: "" };
+              }
+
+              const sortedKeys = items.map((item) => item.dateKey).sort();
+              return { min: sortedKeys[0], max: sortedKeys[sortedKeys.length - 1] };
+            };
+
+            const allCategoryOptions = getCategoryOptions(allItems);
+
+            const applyQueryPreset = () => {
+              const params = new URLSearchParams(window.location.search);
+              const category = normalizeKeyword(params.get("category") || "");
+              if (category && allCategoryOptions.some((item) => item?.value === category)) {
+                state.category = category;
+              }
+
+              const query = params.get("q");
+              if (query) {
+                state.query = query;
+              }
+            };
+
+            const granularityLabelMap = {
+              year: "年",
+              month: "月",
+              day: "日"
+            };
+
+            const compareDesc = (left, right) => (left === right ? 0 : left > right ? -1 : 1);
+            const unique = (values) => [...new Set(values)];
+            const normalizeKeyword = (value) => value.trim().toLowerCase();
+            const formatTagCount = (count) => String(count).padStart(2, "0");
+
+            const setSelectOptions = (select, stateKey, options, allLabel) => {
+              while (select.firstChild) {
+                select.removeChild(select.firstChild);
+              }
+
+              select.append(new Option(allLabel, "all"));
+              for (const option of options) {
+                select.append(new Option(option.label, option.value));
+              }
+
+              const current = state[stateKey];
+              const exists = current !== "all" && options.some((option) => option.value === current);
+              state[stateKey] = exists ? current : "all";
+              select.value = state[stateKey];
+            };
+
+            const formatMonthLabel = (value) => {
+              const [year, month] = value.split("-");
+              return `${year} 年 ${month} 月`;
+            };
+
+            const formatDayLabel = (value) => {
+              const [year, month, day] = value.split("-");
+              return `${year} 年 ${month} 月 ${day} 日`;
+            };
+
+            const syncCategorySelect = (items) => {
+              setSelectOptions(categorySelect, "category", getCategoryOptions(items), "全部分类");
+            };
+
+            const syncDateBounds = (items) => {
+              const { min, max } = getDateBounds(items);
+
+              if (min && max) {
+                startDateInput.min = min;
+                startDateInput.max = max;
+                endDateInput.min = min;
+                endDateInput.max = max;
+              } else {
+                startDateInput.removeAttribute("min");
+                startDateInput.removeAttribute("max");
+                endDateInput.removeAttribute("min");
+                endDateInput.removeAttribute("max");
+              }
+
+              if (state.startDate && (min === "" || state.startDate < min || state.startDate > max)) {
+                state.startDate = "";
+              }
+
+              if (state.endDate && (min === "" || state.endDate < min || state.endDate > max)) {
+                state.endDate = "";
+              }
+
+              startDateInput.value = state.startDate;
+              endDateInput.value = state.endDate;
+            };
+
+            const syncDateSelectCollections = (items) => {
+              const years = unique(items.map((item) => item.year)).sort((a, b) => Number(b) - Number(a));
+              setSelectOptions(
+                yearSelect,
+                "year",
+                years.map((year) => ({ value: year, label: `${year} 年` })),
+                "全部年份"
+              );
+
+              const yearItems = items.filter((item) => state.year === "all" || item.year === state.year);
+              const months = unique(yearItems.map((item) => item.monthKey)).sort(compareDesc);
+              setSelectOptions(
+                monthSelect,
+                "month",
+                months.map((value) => ({ value, label: formatMonthLabel(value) })),
+                "全部月份"
+              );
+
+              const monthItems = yearItems.filter(
+                (item) => state.month === "all" || item.monthKey === state.month
+              );
+              const days = unique(monthItems.map((item) => item.dayKey)).sort(compareDesc);
+              setSelectOptions(
+                daySelect,
+                "day",
+                days.map((value) => ({ value, label: formatDayLabel(value) })),
+                "全部日期"
+              );
+            };
+
+            const syncTagButtons = (items) => {
+              const tags = getTagOptions(items);
+              const availableTagSet = new Set(tags);
+              const tagCounts = new Map(tags.map((tag) => [tag, 0]));
+
+              for (const item of items) {
+                for (const tag of item.tags ?? []) {
+                  if (tagCounts.has(tag)) {
+                    tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1);
+                  }
+                }
+              }
+
+              const countValues = [...tagCounts.values()];
+              const maxCount = countValues.length > 0 ? Math.max(...countValues) : 1;
+              const minCount = countValues.length > 0 ? Math.min(...countValues) : 1;
+
+              for (const tag of [...state.selectedTags]) {
+                if (!availableTagSet.has(tag)) {
+                  state.selectedTags.delete(tag);
+                }
+              }
+
+              tagChipList.replaceChildren();
+
+              tags.forEach((tag) => {
+                const count = tagCounts.get(tag) ?? 0;
+                const normalized = maxCount === minCount ? 0.55 : (count - minCount) / (maxCount - minCount);
+                const button = document.createElement("button");
+                button.type = "button";
+                button.className = `tag-chip tag-chip-${getTagTone(normalized)}`;
+                button.dataset.archiveTagButton = tag;
+                button.setAttribute("aria-label", `标签 ${tag}，${count} 篇文章`);
+                const isActive = state.selectedTags.has(tag);
+                button.setAttribute("aria-pressed", String(isActive));
+                button.classList.toggle("is-active", isActive);
+
+                const name = document.createElement("span");
+                name.className = "tag-chip-name";
+                name.textContent = tag;
+
+                const countNode = document.createElement("span");
+                countNode.className = "tag-chip-count";
+                countNode.textContent = formatTagCount(count);
+
+                button.append(name, countNode);
+                tagChipList.append(button);
+              });
+            };
+
+            const matchDateFilter = (item) => {
+              if (state.year !== "all" && item.year !== state.year) {
+                return false;
+              }
+              if (state.month !== "all" && item.monthKey !== state.month) {
+                return false;
+              }
+              if (state.day !== "all" && item.dayKey !== state.day) {
+                return false;
+              }
+              if (state.startDate && item.dateKey < state.startDate) {
+                return false;
+              }
+              if (state.endDate && item.dateKey > state.endDate) {
+                return false;
+              }
+              return true;
+            };
+
+            const matchCategoryFilter = (item) =>
+              state.category === "all" ? true : item.category === state.category;
+
+            const matchTagFilter = (item) => {
+              if (state.selectedTags.size === 0) {
+                return true;
+              }
+              if (state.tagMode === "and") {
+                for (const tag of state.selectedTags) {
+                  if (!item.tags.includes(tag)) {
+                    return false;
+                  }
+                }
+                return true;
+              }
+              for (const tag of state.selectedTags) {
+                if (item.tags.includes(tag)) {
+                  return true;
+                }
+              }
+              return false;
+            };
+
+            const matchKeyword = (item, keyword) => {
+              if (!keyword) {
+                return true;
+              }
+              if (item.title.toLowerCase().includes(keyword)) {
+                return true;
+              }
+              if ((item.description || "").toLowerCase().includes(keyword)) {
+                return true;
+              }
+              if ((item.categoryLabel || "").toLowerCase().includes(keyword)) {
+                return true;
+              }
+              if ((item.series || "").toLowerCase().includes(keyword)) {
+                return true;
+              }
+              if ((item.projectLabel || "").toLowerCase().includes(keyword)) {
+                return true;
+              }
+              return item.tags.some((tag) => tag.includes(keyword));
+            };
+
+            const getFilteredItems = (items) =>
+              items
+                .filter(matchDateFilter)
+                .filter(matchCategoryFilter)
+                .filter((item) => (state.updatedOnly ? Boolean(item.updatedDateISO) : true))
+                .filter(matchTagFilter)
+                .filter((item) => matchKeyword(item, normalizeKeyword(state.query)))
+                .sort((a, b) => (state.sort === "desc" ? b.timestamp - a.timestamp : a.timestamp - b.timestamp));
+
+            const getGroupKey = (item) => {
+              if (state.granularity === "month") {
+                return item.monthKey;
+              }
+              if (state.granularity === "day") {
+                return item.dayKey;
+              }
+              return item.year;
+            };
+
+            const getGroupLabel = (key) => {
+              if (state.granularity === "month") {
+                return formatMonthLabel(key);
+              }
+              if (state.granularity === "day") {
+                return formatDayLabel(key);
+              }
+              return `${key} 年`;
+            };
+
+            const groupItems = (items) => {
+              const map = new Map();
+
+              for (const item of items) {
+                const key = getGroupKey(item);
+                const group = map.get(key) ?? [];
+                group.push(item);
+                map.set(key, group);
+              }
+
+              const direction = state.sort === "desc" ? -1 : 1;
+              return [...map.entries()]
+                .map(([key, groupedItems]) => ({ key, label: getGroupLabel(key), items: groupedItems }))
+                .sort((left, right) => (left.key === right.key ? 0 : (left.key > right.key ? 1 : -1) * direction));
+            };
+
+            const createGroupNode = (group) => {
+              const groupNode = document.createElement("section");
+              groupNode.className = "surface archive-group";
+
+              const heading = document.createElement("h2");
+              heading.className = "archive-heading";
+              const dot = document.createElement("span");
+              dot.className = "archive-dot";
+              const headingText = document.createElement("span");
+              headingText.className = "archive-heading-text";
+              headingText.textContent = group.label;
+              const headingCount = document.createElement("span");
+              headingCount.className = "archive-heading-count";
+              headingCount.textContent = `${group.items.length} 篇`;
+              heading.append(dot, headingText, headingCount);
+
+              const list = document.createElement("ul");
+              list.className = "archive-list";
+
+              for (const item of group.items) {
+                const listItem = document.createElement("li");
+                listItem.className = "archive-item";
+
+                const main = document.createElement("div");
+                main.className = "archive-item-main";
+                const title = document.createElement("a");
+                title.href = item.href;
+                title.textContent = item.title;
+                main.append(title);
+
+                if (item.description) {
+                  const description = document.createElement("p");
+                  description.className = "archive-desc muted";
+                  description.textContent = item.description;
+                  main.append(description);
+                }
+
+                const infoWrap = document.createElement("div");
+                infoWrap.className = "archive-tags archive-info-row";
+
+                if (item.hidden) {
+                  const hiddenNode = document.createElement("span");
+                  hiddenNode.className = "archive-info-chip archive-info-chip-hidden";
+                  hiddenNode.textContent = "彩蛋内容";
+                  infoWrap.append(hiddenNode);
+                }
+
+                const categoryNode = document.createElement("span");
+                categoryNode.className = "archive-info-chip";
+                categoryNode.textContent = item.categoryLabel;
+                infoWrap.append(categoryNode);
+
+                if (item.series) {
+                  const seriesNode = document.createElement("span");
+                  seriesNode.className = "archive-info-chip";
+                  seriesNode.textContent = `系列 · ${item.series}`;
+                  infoWrap.append(seriesNode);
+                }
+
+                if (item.project && item.projectLabel) {
+                  const projectNode = document.createElement("a");
+                  projectNode.className = "archive-info-chip";
+                  projectNode.href = `${projectBaseHref}${encodeURIComponent(item.project)}/`;
+                  projectNode.textContent = `项目 · ${item.projectLabel}`;
+                  infoWrap.append(projectNode);
+                }
+
+                main.append(infoWrap);
+
+                if (item.tags.length > 0) {
+                  const tagWrap = document.createElement("div");
+                  tagWrap.className = "archive-tags";
+                  for (const tag of item.tags) {
+                    const tagNode = document.createElement("a");
+                    tagNode.className = "archive-tag";
+                    tagNode.href = `${tagBaseHref}${encodeURIComponent(String(tag).trim().toLowerCase())}/`;
+                    tagNode.textContent = `#${tag}`;
+                    tagWrap.append(tagNode);
+                  }
+                  main.append(tagWrap);
+                }
+
+                const meta = document.createElement("div");
+                meta.className = "archive-meta";
+                const pubDate = document.createElement("time");
+                pubDate.dateTime = item.dateISO;
+                pubDate.textContent = item.dateLabel;
+                meta.append(pubDate);
+
+                if (item.updatedDateISO && item.updatedDateLabel) {
+                  const updated = document.createElement("span");
+                  updated.className = "updated-note";
+                  updated.textContent = `更新于 ${item.updatedDateLabel}`;
+                  meta.append(updated);
+                }
+
+                listItem.append(main, meta);
+                list.append(listItem);
+              }
+
+              groupNode.append(heading, list);
+              return groupNode;
+            };
+
+            const updateSummary = (filteredCount, groupCount, totalCount) => {
+              const tagArray = [...state.selectedTags];
+              const categoryInfo =
+                state.category !== "all"
+                  ? `；分类: ${categorySelect.options[categorySelect.selectedIndex]?.text || state.category}`
+                  : "";
+              const tagInfo =
+                tagArray.length > 0
+                  ? `；标签(${state.tagMode.toUpperCase()}): ${tagArray.map((tag) => `#${tag}`).join(", ")}`
+                  : "";
+              const rangeInfo =
+                state.startDate || state.endDate
+                  ? `；范围: ${state.startDate || "..."} ~ ${state.endDate || "..."}`
+                  : "";
+              summary.textContent = `显示 ${filteredCount} / ${totalCount} 篇，按${
+                granularityLabelMap[state.granularity]
+              }分组共 ${groupCount} 组${categoryInfo}${tagInfo}${rangeInfo}。`;
+            };
+
+            const updateOverview = (items) => {
+              const categoryCount = getCategoryOptions(items).length;
+              const tagCount = getTagOptions(items).length;
+              overview.textContent = `支持按年、月、日、日期区间、分类、标签与关键词的组合筛选。当前共有 ${items.length} 篇文章，${categoryCount} 个分类，${tagCount} 个标签。`;
+            };
+
+            const syncQueryPreset = () => {
+              const params = new URLSearchParams(window.location.search);
+              if (state.category !== "all") {
+                params.set("category", state.category);
+              } else {
+                params.delete("category");
+              }
+
+              const normalizedQuery = state.query.trim();
+              if (normalizedQuery) {
+                params.set("q", normalizedQuery);
+              } else {
+                params.delete("q");
+              }
+
+              const nextSearch = params.toString();
+              const nextUrl = nextSearch ? `${window.location.pathname}?${nextSearch}` : window.location.pathname;
+              window.history.replaceState({}, "", nextUrl);
+            };
+
+            const render = () => {
+              const visibleItems = getVisibleItems();
+              syncCategorySelect(visibleItems);
+              syncDateSelectCollections(visibleItems);
+              syncDateBounds(visibleItems);
+              syncTagButtons(visibleItems);
+              updateOverview(visibleItems);
+
+              const filtered = getFilteredItems(visibleItems);
+              const groups = groupItems(filtered);
+              output.replaceChildren();
+
+              if (groups.length === 0) {
+                const empty = document.createElement("p");
+                empty.className = "surface empty muted";
+                empty.textContent = "没有匹配结果，试试放宽筛选条件。";
+                output.append(empty);
+              } else {
+                for (const group of groups) {
+                  output.append(createGroupNode(group));
+                }
+              }
+
+              updateSummary(filtered.length, groups.length, visibleItems.length);
+              syncQueryPreset();
+            };
+
+            const normalizeDateRange = () => {
+              if (state.startDate && state.endDate && state.startDate > state.endDate) {
+                state.endDate = state.startDate;
+                endDateInput.value = state.endDate;
+              }
+            };
+
+            const bindControls = () => {
+              granularitySelect.addEventListener("change", () => {
+                state.granularity = granularitySelect.value;
+                render();
+              });
+
+              yearSelect.addEventListener("change", () => {
+                state.year = yearSelect.value;
+                state.month = "all";
+                state.day = "all";
+                render();
+              });
+
+              monthSelect.addEventListener("change", () => {
+                state.month = monthSelect.value;
+                state.day = "all";
+                render();
+              });
+
+              daySelect.addEventListener("change", () => {
+                state.day = daySelect.value;
+                render();
+              });
+
+              sortSelect.addEventListener("change", () => {
+                state.sort = sortSelect.value;
+                render();
+              });
+
+              categorySelect.addEventListener("change", () => {
+                state.category = categorySelect.value;
+                render();
+              });
+
+              tagModeSelect.addEventListener("change", () => {
+                state.tagMode = tagModeSelect.value;
+                render();
+              });
+
+              queryInput.addEventListener("input", () => {
+                state.query = queryInput.value;
+                render();
+              });
+
+              startDateInput.addEventListener("change", () => {
+                state.startDate = startDateInput.value;
+                normalizeDateRange();
+                render();
+              });
+
+              endDateInput.addEventListener("change", () => {
+                state.endDate = endDateInput.value;
+                if (state.startDate && state.endDate && state.startDate > state.endDate) {
+                  state.startDate = state.endDate;
+                  startDateInput.value = state.startDate;
+                }
+                render();
+              });
+
+              updatedCheckbox.addEventListener("change", () => {
+                state.updatedOnly = updatedCheckbox.checked;
+                render();
+              });
+
+              tagChipList.addEventListener("click", (event) => {
+                const target = event.target;
+                if (!(target instanceof Element)) {
+                  return;
+                }
+
+                const button = target.closest("[data-archive-tag-button]");
+                if (!(button instanceof HTMLButtonElement)) {
+                  return;
+                }
+
+                const tag = button.dataset.archiveTagButton;
+                if (!tag) {
+                  return;
+                }
+
+                if (state.selectedTags.has(tag)) {
+                  state.selectedTags.delete(tag);
+                } else {
+                  state.selectedTags.add(tag);
+                }
+                render();
+              });
+
+              clearTagsButton.addEventListener("click", () => {
+                state.selectedTags.clear();
+                render();
+              });
+
+              resetButton.addEventListener("click", () => {
+                state.granularity = defaultState.granularity;
+                state.year = defaultState.year;
+                state.month = defaultState.month;
+                state.day = defaultState.day;
+                state.sort = defaultState.sort;
+                state.category = defaultState.category;
+                state.query = defaultState.query;
+                state.updatedOnly = defaultState.updatedOnly;
+                state.startDate = defaultState.startDate;
+                state.endDate = defaultState.endDate;
+                state.tagMode = defaultState.tagMode;
+                state.selectedTags.clear();
+
+                granularitySelect.value = state.granularity;
+                sortSelect.value = state.sort;
+                categorySelect.value = state.category;
+                tagModeSelect.value = state.tagMode;
+                queryInput.value = state.query;
+                updatedCheckbox.checked = state.updatedOnly;
+                startDateInput.value = state.startDate;
+                endDateInput.value = state.endDate;
+                render();
+              });
+            };
+
+            applyQueryPreset();
+
+            granularitySelect.value = state.granularity;
+            sortSelect.value = state.sort;
+            categorySelect.value = state.category;
+            tagModeSelect.value = state.tagMode;
+            queryInput.value = state.query;
+            updatedCheckbox.checked = state.updatedOnly;
+            startDateInput.value = state.startDate;
+            endDateInput.value = state.endDate;
+
+            bindControls();
+            render();
+          })();
+        })();</script>  </section>  </main> <footer class="site-footer" data-astro-cid-37fxchfa> <div class="container footer-wrap" data-astro-cid-37fxchfa> <div class="footer-copy" data-astro-cid-37fxchfa> <p class="copyright" data-astro-cid-37fxchfa>© 2026 UEnt26. All rights reserved.</p> <p class="footer-note" data-astro-cid-37fxchfa>文章优先，项目与实验作为延伸入口。</p> </div> <ul class="footer-links" aria-label="站点入口" data-astro-cid-37fxchfa> <li data-astro-cid-37fxchfa><a href="/search/" data-astro-cid-37fxchfa>搜索</a></li><li data-astro-cid-37fxchfa><a href="/tags/" data-astro-cid-37fxchfa>标签</a></li><li data-astro-cid-37fxchfa><a href="/guestbook/" data-astro-cid-37fxchfa>留言</a></li><li data-astro-cid-37fxchfa><a href="/contact/" data-astro-cid-37fxchfa>联系</a></li><li data-astro-cid-37fxchfa><a href="/rss.xml" data-astro-cid-37fxchfa>RSS</a></li> </ul> <ul class="social-list" aria-label="社交链接" data-astro-cid-37fxchfa> <li data-astro-cid-37fxchfa><a href="https://github.com/Umamed26/UEnt26-Blog" data-astro-cid-37fxchfa>GitHub</a></li> </ul> </div> </footer> <script>
+      (() => {
+        const STORAGE_KEY = "uent26-theme";
+        const LIGHT = "light";
+        const DARK = "dark";
+        const root = document.documentElement;
+        const toggle = document.querySelector("[data-theme-toggle]");
+        const toggleLabel = document.querySelector("[data-theme-toggle-label]");
+        const themeColorMeta = document.querySelector("meta[data-theme-color]");
+        const LIGHT_THEME_COLOR = themeColorMeta?.getAttribute("data-light-theme-color") ?? "#c45237";
+        const DARK_THEME_COLOR = themeColorMeta?.getAttribute("data-dark-theme-color") ?? "#0f151c";
+
+        if (!(toggle instanceof HTMLButtonElement) || !(toggleLabel instanceof HTMLElement)) {
+          return;
+        }
+
+        const getStoredTheme = () => {
+          try {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored === LIGHT || stored === DARK) {
+              return stored;
+            }
+          } catch {}
+          return null;
+        };
+
+        const setStoredTheme = (theme) => {
+          try {
+            localStorage.setItem(STORAGE_KEY, theme);
+          } catch {}
+        };
+
+        const applyTheme = (theme) => {
+          const isDark = theme === DARK;
+          root.setAttribute("data-theme", theme);
+          toggle.setAttribute("aria-pressed", String(isDark));
+          toggle.setAttribute("aria-label", isDark ? "切换到日间模式" : "切换到夜间模式");
+          toggleLabel.textContent = isDark ? "日间" : "夜间";
+          if (themeColorMeta) {
+            themeColorMeta.setAttribute("content", isDark ? DARK_THEME_COLOR : LIGHT_THEME_COLOR);
+          }
+          window.dispatchEvent(new CustomEvent("theme:changed", { detail: { theme } }));
+        };
+
+        const initial = root.getAttribute("data-theme") === DARK ? DARK : LIGHT;
+        applyTheme(initial);
+
+        toggle.addEventListener("click", () => {
+          const next = root.getAttribute("data-theme") === DARK ? LIGHT : DARK;
+          setStoredTheme(next);
+          applyTheme(next);
+        });
+
+        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        const handleSystemChange = (event) => {
+          if (getStoredTheme()) {
+            return;
+          }
+          applyTheme(event.matches ? DARK : LIGHT);
+        };
+
+        if (typeof mediaQuery.addEventListener === "function") {
+          mediaQuery.addEventListener("change", handleSystemChange);
+        } else if (typeof mediaQuery.addListener === "function") {
+          mediaQuery.addListener(handleSystemChange);
+        }
+      })();
+    </script> <script>
+      (() => {
+        const shell = document.querySelector("[data-nav-shell]");
+        const nav = document.querySelector("[data-site-nav]");
+        const toggle = document.querySelector("[data-nav-toggle]");
+        const desktopMedia = window.matchMedia("(min-width: 901px)");
+
+        if (!(shell instanceof HTMLElement) || !(nav instanceof HTMLElement) || !(toggle instanceof HTMLButtonElement)) {
+          return;
+        }
+
+        const setOpen = (open) => {
+          shell.setAttribute("data-nav-open", String(open));
+          toggle.setAttribute("aria-expanded", String(open));
+          toggle.setAttribute("aria-label", open ? "收起导航" : "展开导航");
+        };
+
+        const syncMenuState = () => {
+          if (desktopMedia.matches) {
+            shell.setAttribute("data-nav-open", "true");
+            toggle.setAttribute("aria-expanded", "false");
+            return;
+          }
+
+          setOpen(false);
+        };
+
+        toggle.addEventListener("click", () => {
+          const next = shell.getAttribute("data-nav-open") !== "true";
+          setOpen(next);
+        });
+
+        nav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            if (!desktopMedia.matches) {
+              setOpen(false);
+            }
+          });
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && shell.getAttribute("data-nav-open") === "true" && !desktopMedia.matches) {
+            setOpen(false);
+            toggle.focus();
+          }
+        });
+
+        if (typeof desktopMedia.addEventListener === "function") {
+          desktopMedia.addEventListener("change", syncMenuState);
+        } else if (typeof desktopMedia.addListener === "function") {
+          desktopMedia.addListener(syncMenuState);
+        }
+
+        syncMenuState();
+      })();
+    </script>  <script>
+  (() => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const revealNodes = [...document.querySelectorAll("[data-reveal]")];
+
+    if (revealNodes.length > 0) {
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealNodes.forEach((node) => node.setAttribute("data-revealed", "true"));
+      } else {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (!entry.isIntersecting) {
+                continue;
+              }
+              entry.target.setAttribute("data-revealed", "true");
+              observer.unobserve(entry.target);
+            }
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+        );
+
+        revealNodes.forEach((node) => observer.observe(node));
+      }
+    }
+
+    const progressRoot = document.querySelector("[data-reading-root]");
+    const progressWrap = document.querySelector("[data-reading-progress]");
+    const progressBar = document.querySelector("[data-reading-progress-bar]");
+
+    if (!progressWrap || !progressBar) {
+      return;
+    }
+
+    if (!progressRoot) {
+      progressWrap.classList.remove("is-active");
+      progressBar.style.transform = "scaleX(0)";
+      return;
+    }
+
+    progressWrap.classList.add("is-active");
+
+    const updateReadingProgress = () => {
+      const rootRect = progressRoot.getBoundingClientRect();
+      const viewport = window.innerHeight || document.documentElement.clientHeight;
+      const total = Math.max(progressRoot.scrollHeight - viewport * 0.7, 1);
+      const current = Math.min(Math.max(-rootRect.top, 0), total);
+      const ratio = total === 0 ? 0 : current / total;
+      progressBar.style.transform = `scaleX(${Math.max(0, Math.min(1, ratio))})`;
+    };
+
+    updateReadingProgress();
+    window.addEventListener("scroll", updateReadingProgress, { passive: true });
+    window.addEventListener("resize", updateReadingProgress, { passive: true });
+  })();
+</script> </body></html> 

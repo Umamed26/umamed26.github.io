@@ -1,0 +1,635 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.0"><meta name="description" content="技术写作、游戏项目与个人实验的混合型个人站。"><meta property="og:type" content="website"><meta property="og:title" content="控制台 | UEnt26 Blog"><meta property="og:description" content="技术写作、游戏项目与个人实验的混合型个人站。"><meta property="og:url" content="https://umamed26.github.io/console/"><meta property="og:site_name" content="UEnt26 Blog"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="控制台 | UEnt26 Blog"><meta name="twitter:description" content="技术写作、游戏项目与个人实验的混合型个人站。"><meta name="theme-color" content="#c45237" data-theme-color data-light-theme-color="#c45237" data-dark-theme-color="#0f151c"><link rel="canonical" href="https://umamed26.github.io/console/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><script>
+      (() => {
+        const STORAGE_KEY = "uent26-theme";
+        const LIGHT = "light";
+        const DARK = "dark";
+        const root = document.documentElement;
+        const themeColorMeta = document.querySelector("meta[data-theme-color]");
+        const LIGHT_THEME_COLOR = themeColorMeta?.getAttribute("data-light-theme-color") ?? "#c45237";
+        const DARK_THEME_COLOR = themeColorMeta?.getAttribute("data-dark-theme-color") ?? "#0f151c";
+
+        const getStoredTheme = () => {
+          try {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored === LIGHT || stored === DARK) {
+              return stored;
+            }
+          } catch {}
+          return null;
+        };
+
+        const storedTheme = getStoredTheme();
+        const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+        const theme = storedTheme ?? preferredTheme;
+        root.setAttribute("data-theme", theme);
+        if (themeColorMeta) {
+          themeColorMeta.setAttribute("content", theme === DARK ? DARK_THEME_COLOR : LIGHT_THEME_COLOR);
+        }
+      })();
+    </script><title>控制台 | UEnt26 Blog</title><link rel="stylesheet" href="/_astro/console.Bom737HQ.css">
+<link rel="stylesheet" href="/_astro/about.DvsY5t4q.css"></head> <body data-astro-cid-37fxchfa> <a class="skip-link" href="#main-content" data-astro-cid-37fxchfa>跳到正文</a> <div class="reading-progress" data-reading-progress aria-hidden="true" data-astro-cid-37fxchfa> <span class="reading-progress-bar" data-reading-progress-bar data-astro-cid-37fxchfa></span> </div> <div class="site-decor" aria-hidden="true" data-astro-cid-37fxchfa> <span class="wash wash-a" data-astro-cid-37fxchfa></span> <span class="wash wash-b" data-astro-cid-37fxchfa></span> <span class="line-overlay" data-astro-cid-37fxchfa></span> <span class="noise-overlay" data-astro-cid-37fxchfa></span> </div> <header class="site-header" data-astro-cid-37fxchfa> <div class="container nav-wrap" data-nav-shell data-nav-open="false" data-astro-cid-37fxchfa> <a class="brand" href="/" data-astro-cid-37fxchfa> <strong data-astro-cid-37fxchfa>UEnt26</strong> <span data-astro-cid-37fxchfa>Notes from the Frontend Desk</span> </a> <div class="header-actions" data-astro-cid-37fxchfa> <a class="header-tool" href="/search/" data-astro-cid-37fxchfa>搜索</a> <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换到夜间模式" aria-pressed="false" data-astro-cid-37fxchfa> <span class="theme-toggle-dot" aria-hidden="true" data-astro-cid-37fxchfa></span> <span data-theme-toggle-label data-astro-cid-37fxchfa>夜间</span> </button> <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu" aria-label="展开导航" data-astro-cid-37fxchfa> <span class="nav-toggle-bars" aria-hidden="true" data-astro-cid-37fxchfa> <span data-astro-cid-37fxchfa></span> <span data-astro-cid-37fxchfa></span> <span data-astro-cid-37fxchfa></span> </span> <span class="nav-toggle-label" data-astro-cid-37fxchfa>菜单</span> </button> </div> <nav id="site-menu" class="site-nav" aria-label="主导航" data-site-nav data-astro-cid-37fxchfa> <ul class="nav-list" data-astro-cid-37fxchfa> <li data-astro-cid-37fxchfa> <a class="nav-link" href="/" data-astro-cid-37fxchfa> 首页 </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/archive/" data-astro-cid-37fxchfa> 文章 </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/projects/" data-astro-cid-37fxchfa> 项目 </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/now/" data-astro-cid-37fxchfa> Now </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/about/" data-astro-cid-37fxchfa> 关于 </a> </li> </ul> </nav> </div> </header> <main id="main-content" tabindex="-1" class="container page-content" data-astro-cid-37fxchfa>  <section class="surface console-page" data-reveal data-astro-cid-56a7qlwg> <header class="console-head" data-astro-cid-56a7qlwg> <p class="section-kicker" data-astro-cid-56a7qlwg>Console Navigator</p> <h1 class="page-title" data-astro-cid-56a7qlwg>文章控制台</h1> <p class="muted" data-astro-cid-56a7qlwg>
+像终端一样浏览文章。支持分页、搜索、标签过滤、跳页和直接打开文章。
+</p> </header> <div class="console-shell" data-console-shell data-astro-cid-56a7qlwg> <div class="console-top-bar" data-astro-cid-56a7qlwg> <span class="dot" data-astro-cid-56a7qlwg></span> <span class="dot" data-astro-cid-56a7qlwg></span> <span class="dot" data-astro-cid-56a7qlwg></span> <span class="bar-title" data-astro-cid-56a7qlwg>UEnt26 Terminal</span> </div> <div class="console-output" data-console-output aria-live="polite" data-astro-cid-56a7qlwg></div> <form class="console-input-row" data-console-form data-astro-cid-56a7qlwg> <label for="console-input" class="prompt" data-astro-cid-56a7qlwg>uent26@blog:~$</label> <input id="console-input" type="text" autocomplete="off" spellcheck="false" placeholder="输入 help 查看命令" data-console-input data-astro-cid-56a7qlwg> <button type="submit" class="run-btn" data-astro-cid-56a7qlwg>执行</button> </form> <div class="console-footer" data-astro-cid-56a7qlwg> <div class="quick-list" data-astro-cid-56a7qlwg> <button type="button" data-console-command="help" data-astro-cid-56a7qlwg>help</button> <button type="button" data-console-command="list" data-astro-cid-56a7qlwg>list</button> <button type="button" data-console-command="read 1" data-astro-cid-56a7qlwg>read 1</button> <button type="button" data-console-command="next" data-astro-cid-56a7qlwg>next</button> <button type="button" data-console-command="prev" data-astro-cid-56a7qlwg>prev</button> <button type="button" data-console-command="reset" data-astro-cid-56a7qlwg>reset</button> <button type="button" data-console-command="count" data-astro-cid-56a7qlwg>count</button> </div> <p class="muted status" data-console-status data-astro-cid-56a7qlwg>
+已载入 3 篇文章。
+</p> </div> </div> <noscript> <div class="surface noscript-fallback" data-astro-cid-56a7qlwg> <p class="muted" data-astro-cid-56a7qlwg>已关闭 JavaScript，以下展示静态文章列表：</p> <ul data-astro-cid-56a7qlwg> <li data-astro-cid-56a7qlwg> <a href="/posts/hello-astro/" data-astro-cid-56a7qlwg>站点重构日志：内容和项目开始合流</a> </li><li data-astro-cid-56a7qlwg> <a href="/posts/unlock-clue/" data-astro-cid-56a7qlwg>解锁线索：ALPHA-42</a> </li><li data-astro-cid-56a7qlwg> <a href="/posts/我的跨平台写作方案obsidian-坚果云/" data-astro-cid-56a7qlwg>我的跨平台写作方案：Obsidian + 坚果云</a> </li> </ul> </div> </noscript> <script type="application/json" id="console-posts">[{"slug":"hello-astro","href":"/posts/hello-astro/","title":"站点重构日志：内容和项目开始合流","description":"记录这次把博客升级成“内容品牌 + 项目作品集 + 实验入口”个人站的起点。","dateISO":"2026-03-08T00:00:00.000Z","dateLabel":"2026/3/8","updatedLabel":null,"timestamp":1772928000000,"tags":["tags"],"body":"这篇文章用来记录一个新的起点：\n\n- 文章不再只是零散堆着，而是开始按技术、游戏、站点三个方向归类。\n- 项目也不再只是首页旁边的一页卡片墙，而是变成可独立查看、可继续写日志的内容集合。\n- 首页的目标也变了——先让第一次来的人快速看懂这里是什么，再慢慢加入更有个性的实验入口。\n\n后面这个站会继续往“清晰但不无聊”的方向走。"},{"slug":"unlock-clue","href":"/posts/unlock-clue/","title":"解锁线索：ALPHA-42","description":"一段公开文章，包含隐藏文章的解锁码。","dateISO":"2026-03-05T00:00:00.000Z","dateLabel":"2026/3/5","updatedLabel":null,"timestamp":1772668800000,"tags":["unlock","guide"],"body":"这是一篇公开文章，用来投递隐藏文章的解锁码。\n\n解锁码已经放在文末的提示卡片里，复制后前往控制台输入：\n\n`unlock ALPHA-42`\n\n然后返回对应的隐藏文章页，就能解锁并阅读正文。"},{"slug":"我的跨平台写作方案obsidian-坚果云","href":"/posts/我的跨平台写作方案obsidian-坚果云/","title":"我的跨平台写作方案：Obsidian + 坚果云","description":"怎么做到随时随地创作。","dateISO":"2026-03-05T00:00:00.000Z","dateLabel":"2026/3/5","updatedLabel":null,"timestamp":1772668800000,"tags":["tools"],"body":"# 1. 写作的痛点：灵感总在不该来的时候来\n\n作为一名半桶水的创作者，我偶尔最大的困扰从来不是没灵感，而是灵感来了，但笔记不在身边。\n\n- 坐在电脑前想写的时候，脑子一片空白。\n- 好不容易躺平在床上，或者在地铁里被挤成照片时，脑子里突然冒出绝妙的对话或情节转折——然后掏出手机打开某款App发现和电脑上的文稿完全割裂，的灵感已经在解锁屏幕的瞬间蒸发了一半。\n- 用U盘来回拷贝？石器时代的操作。同步盘冲突文件比我的草稿还多。而在Windows上跑iCloud就像去南极随便抓一只凑企鹅学飞行，勉强扑腾两下就摔了。\n\n我需要的，是一个**打开就能写，写完不用管，换设备继续写**的无缝环境。——一个能包容我懒癌晚期、拖延症末期以及间歇性码字冲动的智能保姆。\n\n于是，我搭建了一套基于Obsidian + 坚果云的跨平台写作系统。它不一定最酷，但足够稳定、足够自由，而且**完全免费**（如果你利用好Obsidian的同步插件生态并且愿意花5分钟动动手指的话）。\n\n# 2. 为什么是这个组合？\n\n在选择工具时，我对比过几种方案：\n\n- **Obsidian官方同步服务：** 体验很丝滑，但需要付费订阅，对学生党/月卡党不太友好。（每月几美元省下来够我买几箱可乐了。）\n- **iCloud：** 苹果用户的心头好，但在Windows上表现得像个蹒跚学步的婴儿，且容易因同步机制导致笔记冲突或丢失。~~何况我也没那套全家桶。~~\n- **Git：** 适合那些即使写个言情小说也要搞Branch和Pull Request的硬核人士。~~毕竟我只是想写东西，不想思考如何解决合并冲突。。~~\n\n最终我选择了 **Obsidian（负责写）+ 坚果云（负责传）+ Remotely Save 插件（负责连接）** 的组合。\n\n**为什么是坚果云？**\n- **速度快：** 国内服务器，上传下载基本跑满带宽。\n- **稳定：** 很少遇到同步冲突。\n- **便宜量大：** 免费版的带宽对个人来讲够用了。\n- **WebDAV协议：** 这是关键。它像一个通用语言，让Obsidian插件能和坚果云顺畅对话。不需要学什么复杂的API，也不用看那些把文档写得像天书一样的开发指南。\n\n# 3. 手把手配置指南\n\n如果你也想搭建这套系统，跟着下面几步走就好。\n\n## 第一步：安装核心插件——Remotely Save\n在Obsidian的社区插件市场里，搜索并安装 **Remotely Save**。\n*（如果你无法访问插件市场，可以从 GitHub 手动下载安装。）*\n\n## 第二步：获取坚果云的“第三方应用密码”\n这是最容易被卡住的一步，但其实很简单。\n1.  登录坚果云网页版，进入【账户信息】。\n2.  点击【安全选项】，找到【第三方应用管理】。\n3.  点击【添加应用】，随便起个名字（比如“怎么防止自己挖一万个坑不填”）。\n4.  系统会生成一串**服务器地址、账号、应用密码**。注意：这里生成的是**应用密码**，不是你的登录密码。把它复制下来，保存好。丢了也没事，无非是再生成一次。\n\n## 第三步：配置 Remotely Save 插件\n1.  回到 Obsidian，打开 Remotely Save 的设置。\n2.  **远程服务类型：** 选择 “WebDAV”。\n3.  **WebDAV 链接：** 粘贴刚才复制的**服务器地址**。\n4.  **用户名：** 粘贴刚才复制的**账号**（通常是你的坚果云邮箱）。\n5.  **密码：** 粘贴刚才复制的**应用密码**（不是你的邮箱密码，真的。）。\n6.  点击【检查】，如果提示“成功”，说明配置好了。\n7.  在【同步设置】里，建议开启 **“定时自动同步”**（比如每5分钟一次），并打开 **“启动时同步”** 和 **“关闭时同步”**。这样基本可以做到无感同步。\n\n## 第四步：在手机上配置\n在手机端（iOS或Android）安装Obsidian，新建一个空库，然后安装Remotely Save插件，填入完全一样的信息。稍等片刻，你的小说库就会从云端下载到手机里。\n\n# 4. 一些实用的小建议\n\n使用这套方案几个月后，我总结了几点经验，也许对你有帮助：\n\n1.  **关于同步频率：** 不建议设置“实时同步”（如果插件支持的话），每1-5分钟同步一次足够了。写作时疯狂同步反而会干扰思路，甚至可能造成性能问题或者烧流量。除非你喜欢看着右下角的通知不停冒，并以此为乐。\n2.  **关于冲突：** 虽然坚果云+Remotely Save很稳定，但偶尔（比如在信号不好的地方）可能会出现同步冲突。Obsidian会自动生成冲突文件（如“文件名 的冲突副本”）。我一般每周清理一次库，检查有没有这类文件，确认无误后删除。\n3.  **关于备份：** 坚果云本身有文件历史版本功能，可以找回30天内修改过的版本。这相当于多了一层保险。如果写得不满意想回退，去坚果云网页版找回旧版本就行。（这个功能救过我很多次，让我有勇气把第一章删了重写二十遍。是的，我还在写第一章。）\n4.  **关于手机写作体验：** 手机端只适合记录“那个人死了”这种突发灵感。至于他怎么死的，死状如何，周围人的心理描写，请滚回电脑前写。毕竟很显然，手机能做的，电脑能做的更好，而手机做得最出色的是让你在想写作时点开短视频。\n\n# 5. 结语\n\n这套Obsidian + 坚果云的方案，没有华丽的界面，也没有昂贵的订阅费，它只是安静地待在那里，让我的小说库始终处于最新状态，让我在任何想写的时候都能立刻开始。\n\n如果你也是 Obsidian 用户，并且正在寻找一套跨平台同步方案，不妨试试这个组合。如果你有更好的写作工具搭配，欢迎在评论区交流。\n\n如果你在配置过程中遇到了问题，也可以留言，我会在能力范围内帮你解答——不过大概率我只会回一句“重启试试”。"}]</script> <script>
+      (() => {
+        const dataNode = document.getElementById("console-posts");
+        const output = document.querySelector("[data-console-output]");
+        const form = document.querySelector("[data-console-form]");
+        const input = document.querySelector("[data-console-input]");
+        const status = document.querySelector("[data-console-status]");
+        const quickButtons = [...document.querySelectorAll("[data-console-command]")];
+
+        if (
+          !(dataNode instanceof HTMLScriptElement) ||
+          !(output instanceof HTMLElement) ||
+          !(form instanceof HTMLFormElement) ||
+          !(input instanceof HTMLInputElement) ||
+          !(status instanceof HTMLElement)
+        ) {
+          return;
+        }
+
+        let allPosts = [];
+        try {
+          allPosts = JSON.parse(dataNode.textContent || "[]");
+        } catch {
+          return;
+        }
+
+        if (!Array.isArray(allPosts)) {
+          return;
+        }
+
+        const STORAGE_KEY = "uent26-unlock-codes";
+        const normalizeCode = (value) => String(value ?? "").trim().toLowerCase();
+        const getStoredCodes = () => {
+          try {
+            const raw = localStorage.getItem(STORAGE_KEY);
+            if (!raw) {
+              return new Set();
+            }
+            const parsed = JSON.parse(raw);
+            if (!Array.isArray(parsed)) {
+              return new Set();
+            }
+            return new Set(parsed.map((item) => normalizeCode(item)).filter(Boolean));
+          } catch {
+            return new Set();
+          }
+        };
+        const setStoredCodes = (codes) => {
+          try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify([...codes]));
+          } catch {}
+        };
+
+        let visiblePosts = [...allPosts];
+
+        const PAGE_SIZE = 5;
+        const state = {
+          page: 1,
+          keyword: "",
+          tag: "",
+          filtered: visiblePosts
+        };
+
+        const clampPage = () => {
+          const totalPages = Math.max(1, Math.ceil(state.filtered.length / PAGE_SIZE));
+          state.page = Math.max(1, Math.min(totalPages, state.page));
+          return totalPages;
+        };
+
+        const escapeText = (value) => {
+          const span = document.createElement("span");
+          span.textContent = value;
+          return span.textContent || "";
+        };
+
+        const appendLine = (text, kind = "info") => {
+          const line = document.createElement("div");
+          line.className = `line line-${kind}`;
+          line.textContent = text;
+          if (kind === "error") {
+            line.setAttribute("role", "alert");
+          }
+          output.append(line);
+          if (output.childElementCount > 220) {
+            output.firstElementChild?.remove();
+          }
+          output.scrollTop = output.scrollHeight;
+        };
+
+        const appendHtmlLine = (prefix, post) => {
+          const line = document.createElement("div");
+          line.className = "line line-link";
+
+          const text = document.createElement("span");
+          text.textContent = prefix;
+          const link = document.createElement("a");
+          link.href = post.href;
+          link.textContent = post.title;
+
+          line.append(text, link);
+          output.append(line);
+          if (output.childElementCount > 220) {
+            output.firstElementChild?.remove();
+          }
+          output.scrollTop = output.scrollHeight;
+        };
+
+        const updateStatus = () => {
+          const totalPages = Math.max(1, Math.ceil(state.filtered.length / PAGE_SIZE));
+          const activeKeyword = state.keyword ? `关键词: "${state.keyword}"` : "";
+          const activeTag = state.tag ? `标签: #${state.tag}` : "";
+          const filters = [activeKeyword, activeTag].filter(Boolean).join(" | ");
+          status.textContent = `当前第 ${state.page}/${totalPages} 页，每页 ${PAGE_SIZE} 条。匹配 ${state.filtered.length}/${visiblePosts.length} 篇${
+            filters ? `（${filters}）` : ""
+          }。`;
+        };
+
+        const applyFilters = () => {
+          const keyword = state.keyword.trim().toLowerCase();
+          const tag = state.tag.trim().toLowerCase();
+
+          state.filtered = visiblePosts.filter((post) => {
+            if (tag && !post.tags.includes(tag)) {
+              return false;
+            }
+            if (!keyword) {
+              return true;
+            }
+            return (
+              post.title.toLowerCase().includes(keyword) ||
+              (post.description || "").toLowerCase().includes(keyword) ||
+              post.slug.toLowerCase().includes(keyword) ||
+              post.tags.some((item) => item.includes(keyword))
+            );
+          });
+
+          clampPage();
+          updateStatus();
+        };
+
+        const attemptUnlock = (rawInput) => {
+          const code = normalizeCode(rawInput);
+          if (!code) {
+            appendLine("用法: unlock <解锁码>", "error");
+            return true;
+          }
+
+          const storedCodes = getStoredCodes();
+          if (storedCodes.has(code)) {
+            appendLine("该解锁码已经记住。", "meta");
+            return true;
+          }
+
+          storedCodes.add(code);
+          setStoredCodes(storedCodes);
+          appendLine("已记住解锁码。回到彩蛋文章页时会自动尝试解锁。", "meta");
+          window.dispatchEvent(new CustomEvent("unlock:changed"));
+          return true;
+        };
+
+        const printList = () => {
+          const totalPages = clampPage();
+          if (state.filtered.length === 0) {
+            appendLine("没有匹配文章，试试 reset 或 search 新关键词。", "error");
+            updateStatus();
+            return;
+          }
+
+          const start = (state.page - 1) * PAGE_SIZE;
+          const slice = state.filtered.slice(start, start + PAGE_SIZE);
+          appendLine(`Page ${state.page}/${totalPages} · 显示 ${start + 1}-${start + slice.length}`, "meta");
+
+          for (const [idx, post] of slice.entries()) {
+            const globalIndex = start + idx + 1;
+            const dateInfo = post.updatedLabel
+              ? `${post.dateLabel} | 更新 ${post.updatedLabel}`
+              : post.dateLabel;
+            const prefix = `[${globalIndex}] ${dateInfo} `;
+            appendHtmlLine(prefix, post);
+            if (post.description) {
+              appendLine(`  摘要: ${post.description}`, "meta");
+            }
+            if (Array.isArray(post.tags) && post.tags.length > 0) {
+              appendLine(`  标签: ${post.tags.map((item) => `#${item}`).join(" ")}`, "meta");
+            }
+          }
+
+          updateStatus();
+        };
+
+        const resolveTarget = (arg) => {
+          if (!arg) {
+            return null;
+          }
+
+          let target = null;
+          if (/^\d+$/.test(arg)) {
+            const index = Number(arg) - 1;
+            target = state.filtered[index] ?? null;
+          } else {
+            const slug = arg.toLowerCase().trim();
+            target = state.filtered.find((post) => post.slug.toLowerCase() === slug) ?? null;
+          }
+
+          return target;
+        };
+
+        const openPost = (arg) => {
+          if (!arg) {
+            appendLine("用法: open <序号|slug>", "error");
+            return;
+          }
+
+          const target = resolveTarget(arg);
+          if (!target) {
+            appendLine(`未找到文章: ${arg}`, "error");
+            return;
+          }
+
+          appendHtmlLine("打开文章 -> ", target);
+          if (target.description) {
+            appendLine(`  摘要: ${target.description}`, "meta");
+          }
+          if (Array.isArray(target.tags) && target.tags.length > 0) {
+            appendLine(`  标签: ${target.tags.map((item) => `#${item}`).join(" ")}`, "meta");
+          }
+        };
+
+        const readPost = (arg) => {
+          if (!arg) {
+            appendLine("用法: read <序号|slug>", "error");
+            return;
+          }
+
+          const target = resolveTarget(arg);
+          if (!target) {
+            appendLine(`未找到文章: ${arg}`, "error");
+            return;
+          }
+
+          appendLine(`----- ${target.title} -----`, "meta");
+          appendLine(
+            `slug: ${target.slug} | 发布: ${target.dateLabel}${target.updatedLabel ? ` | 更新: ${target.updatedLabel}` : ""}`,
+            "meta"
+          );
+          if (Array.isArray(target.tags) && target.tags.length > 0) {
+            appendLine(`tags: ${target.tags.map((item) => `#${item}`).join(" ")}`, "meta");
+          }
+
+          const body = (target.body || "").trim();
+          if (!body) {
+            appendLine("正文为空。", "error");
+            appendLine(`----- END ${target.slug} -----`, "meta");
+            return;
+          }
+
+          for (const line of body.split(/\r?\n/)) {
+            appendLine(line.length ? `  ${line}` : " ");
+          }
+          appendLine(`----- END ${target.slug} -----`, "meta");
+        };
+
+        const printHelp = () => {
+          appendLine("可用命令：", "meta");
+          appendLine("help | h                      显示帮助", "meta");
+          appendLine("list | ls                     列出当前页文章（标题/摘要/标签）", "meta");
+          appendLine("next | n                      下一页", "meta");
+          appendLine("prev | p                      上一页", "meta");
+          appendLine("page <数字>                   跳转到指定页", "meta");
+          appendLine("open <序号|slug>              打开文章", "meta");
+          appendLine("read <序号|slug>              在控制台显示正文", "meta");
+          appendLine("cat/view <序号|slug>          read 命令别名", "meta");
+          appendLine("search <关键词>               标题/摘要/标签搜索", "meta");
+          appendLine("tag <标签>                    按标签过滤，如 tag astro", "meta");
+          appendLine("unlock <解锁码>               在当前浏览器记住一个解锁码", "meta");
+          appendLine("count                         查看当前匹配统计", "meta");
+          appendLine("reset                         清空筛选并回到第一页", "meta");
+          appendLine("clear                         清空屏幕输出", "meta");
+        };
+
+        const execute = (rawInput, fromQuick = false) => {
+          const commandText = rawInput.trim();
+          if (!commandText) {
+            return;
+          }
+
+          if (!fromQuick) {
+            appendLine(`$ ${commandText}`, "command");
+          }
+
+          const [cmdRaw, ...rest] = commandText.split(/\s+/);
+          const cmd = cmdRaw.toLowerCase();
+          const arg = rest.join(" ").trim();
+
+          if (cmd === "help" || cmd === "h") {
+            printHelp();
+            return;
+          }
+
+          if (cmd === "list" || cmd === "ls") {
+            printList();
+            return;
+          }
+
+          if (cmd === "next" || cmd === "n") {
+            state.page += 1;
+            const totalPages = clampPage();
+            if (state.page >= totalPages && totalPages === clampPage()) {
+              state.page = totalPages;
+            }
+            printList();
+            return;
+          }
+
+          if (cmd === "prev" || cmd === "p") {
+            state.page -= 1;
+            if (state.page < 1) {
+              state.page = 1;
+            }
+            printList();
+            return;
+          }
+
+          if (cmd === "page") {
+            const target = Number(arg);
+            if (!arg || Number.isNaN(target) || target < 1) {
+              appendLine("用法: page <正整数>", "error");
+              return;
+            }
+            state.page = target;
+            clampPage();
+            printList();
+            return;
+          }
+
+          if (cmd === "open") {
+            openPost(arg);
+            return;
+          }
+
+          if (cmd === "read" || cmd === "cat" || cmd === "view") {
+            readPost(arg);
+            return;
+          }
+
+          if (cmd === "search") {
+            state.keyword = arg;
+            state.page = 1;
+            applyFilters();
+            appendLine(`已更新关键词搜索: ${arg || "(空)"}`, "meta");
+            printList();
+            return;
+          }
+
+          if (cmd === "tag") {
+            state.tag = arg.replace(/^#/, "");
+            state.page = 1;
+            applyFilters();
+            appendLine(`已更新标签过滤: ${state.tag || "(空)"}`, "meta");
+            printList();
+            return;
+          }
+
+          if (cmd === "unlock") {
+            attemptUnlock(arg);
+            return;
+          }
+
+          if (cmd === "count") {
+            updateStatus();
+            appendLine(status.textContent || "暂无统计。", "meta");
+            return;
+          }
+
+          if (cmd === "reset") {
+            state.page = 1;
+            state.keyword = "";
+            state.tag = "";
+            applyFilters();
+            appendLine("已重置筛选。", "meta");
+            printList();
+            return;
+          }
+
+          if (cmd === "clear") {
+            output.replaceChildren();
+            appendLine("已清空屏幕。输入 help 查看命令。", "meta");
+            updateStatus();
+            return;
+          }
+
+          if (attemptUnlock(commandText)) {
+            return;
+          }
+
+          appendLine(`未知命令: ${escapeText(commandText)}。输入 help 查看命令。`, "error");
+        };
+
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          execute(input.value);
+          input.value = "";
+        });
+
+        for (const button of quickButtons) {
+          if (!(button instanceof HTMLButtonElement)) {
+            continue;
+          }
+          button.addEventListener("click", () => {
+            const command = button.dataset.consoleCommand || "";
+            execute(command, true);
+            input.focus();
+          });
+        }
+
+        applyFilters();
+        appendLine(
+          `Console ready. 已载入 ${allPosts.length} 篇文章。`,
+          "meta"
+        );
+        appendLine("输入 help 查看命令，输入 list 浏览第一页。", "meta");
+        printList();
+        input.focus();
+      })();
+    </script> </section>  </main> <footer class="site-footer" data-astro-cid-37fxchfa> <div class="container footer-wrap" data-astro-cid-37fxchfa> <div class="footer-copy" data-astro-cid-37fxchfa> <p class="copyright" data-astro-cid-37fxchfa>© 2026 UEnt26. All rights reserved.</p> <p class="footer-note" data-astro-cid-37fxchfa>文章优先，项目与实验作为延伸入口。</p> </div> <ul class="footer-links" aria-label="站点入口" data-astro-cid-37fxchfa> <li data-astro-cid-37fxchfa><a href="/search/" data-astro-cid-37fxchfa>搜索</a></li><li data-astro-cid-37fxchfa><a href="/tags/" data-astro-cid-37fxchfa>标签</a></li><li data-astro-cid-37fxchfa><a href="/guestbook/" data-astro-cid-37fxchfa>留言</a></li><li data-astro-cid-37fxchfa><a href="/contact/" data-astro-cid-37fxchfa>联系</a></li><li data-astro-cid-37fxchfa><a href="/rss.xml" data-astro-cid-37fxchfa>RSS</a></li> </ul> <ul class="social-list" aria-label="社交链接" data-astro-cid-37fxchfa> <li data-astro-cid-37fxchfa><a href="https://github.com/Umamed26/UEnt26-Blog" data-astro-cid-37fxchfa>GitHub</a></li> </ul> </div> </footer> <script>
+      (() => {
+        const STORAGE_KEY = "uent26-theme";
+        const LIGHT = "light";
+        const DARK = "dark";
+        const root = document.documentElement;
+        const toggle = document.querySelector("[data-theme-toggle]");
+        const toggleLabel = document.querySelector("[data-theme-toggle-label]");
+        const themeColorMeta = document.querySelector("meta[data-theme-color]");
+        const LIGHT_THEME_COLOR = themeColorMeta?.getAttribute("data-light-theme-color") ?? "#c45237";
+        const DARK_THEME_COLOR = themeColorMeta?.getAttribute("data-dark-theme-color") ?? "#0f151c";
+
+        if (!(toggle instanceof HTMLButtonElement) || !(toggleLabel instanceof HTMLElement)) {
+          return;
+        }
+
+        const getStoredTheme = () => {
+          try {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored === LIGHT || stored === DARK) {
+              return stored;
+            }
+          } catch {}
+          return null;
+        };
+
+        const setStoredTheme = (theme) => {
+          try {
+            localStorage.setItem(STORAGE_KEY, theme);
+          } catch {}
+        };
+
+        const applyTheme = (theme) => {
+          const isDark = theme === DARK;
+          root.setAttribute("data-theme", theme);
+          toggle.setAttribute("aria-pressed", String(isDark));
+          toggle.setAttribute("aria-label", isDark ? "切换到日间模式" : "切换到夜间模式");
+          toggleLabel.textContent = isDark ? "日间" : "夜间";
+          if (themeColorMeta) {
+            themeColorMeta.setAttribute("content", isDark ? DARK_THEME_COLOR : LIGHT_THEME_COLOR);
+          }
+          window.dispatchEvent(new CustomEvent("theme:changed", { detail: { theme } }));
+        };
+
+        const initial = root.getAttribute("data-theme") === DARK ? DARK : LIGHT;
+        applyTheme(initial);
+
+        toggle.addEventListener("click", () => {
+          const next = root.getAttribute("data-theme") === DARK ? LIGHT : DARK;
+          setStoredTheme(next);
+          applyTheme(next);
+        });
+
+        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        const handleSystemChange = (event) => {
+          if (getStoredTheme()) {
+            return;
+          }
+          applyTheme(event.matches ? DARK : LIGHT);
+        };
+
+        if (typeof mediaQuery.addEventListener === "function") {
+          mediaQuery.addEventListener("change", handleSystemChange);
+        } else if (typeof mediaQuery.addListener === "function") {
+          mediaQuery.addListener(handleSystemChange);
+        }
+      })();
+    </script> <script>
+      (() => {
+        const shell = document.querySelector("[data-nav-shell]");
+        const nav = document.querySelector("[data-site-nav]");
+        const toggle = document.querySelector("[data-nav-toggle]");
+        const desktopMedia = window.matchMedia("(min-width: 901px)");
+
+        if (!(shell instanceof HTMLElement) || !(nav instanceof HTMLElement) || !(toggle instanceof HTMLButtonElement)) {
+          return;
+        }
+
+        const setOpen = (open) => {
+          shell.setAttribute("data-nav-open", String(open));
+          toggle.setAttribute("aria-expanded", String(open));
+          toggle.setAttribute("aria-label", open ? "收起导航" : "展开导航");
+        };
+
+        const syncMenuState = () => {
+          if (desktopMedia.matches) {
+            shell.setAttribute("data-nav-open", "true");
+            toggle.setAttribute("aria-expanded", "false");
+            return;
+          }
+
+          setOpen(false);
+        };
+
+        toggle.addEventListener("click", () => {
+          const next = shell.getAttribute("data-nav-open") !== "true";
+          setOpen(next);
+        });
+
+        nav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            if (!desktopMedia.matches) {
+              setOpen(false);
+            }
+          });
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && shell.getAttribute("data-nav-open") === "true" && !desktopMedia.matches) {
+            setOpen(false);
+            toggle.focus();
+          }
+        });
+
+        if (typeof desktopMedia.addEventListener === "function") {
+          desktopMedia.addEventListener("change", syncMenuState);
+        } else if (typeof desktopMedia.addListener === "function") {
+          desktopMedia.addListener(syncMenuState);
+        }
+
+        syncMenuState();
+      })();
+    </script>  <script>
+  (() => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const revealNodes = [...document.querySelectorAll("[data-reveal]")];
+
+    if (revealNodes.length > 0) {
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealNodes.forEach((node) => node.setAttribute("data-revealed", "true"));
+      } else {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (!entry.isIntersecting) {
+                continue;
+              }
+              entry.target.setAttribute("data-revealed", "true");
+              observer.unobserve(entry.target);
+            }
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+        );
+
+        revealNodes.forEach((node) => observer.observe(node));
+      }
+    }
+
+    const progressRoot = document.querySelector("[data-reading-root]");
+    const progressWrap = document.querySelector("[data-reading-progress]");
+    const progressBar = document.querySelector("[data-reading-progress-bar]");
+
+    if (!progressWrap || !progressBar) {
+      return;
+    }
+
+    if (!progressRoot) {
+      progressWrap.classList.remove("is-active");
+      progressBar.style.transform = "scaleX(0)";
+      return;
+    }
+
+    progressWrap.classList.add("is-active");
+
+    const updateReadingProgress = () => {
+      const rootRect = progressRoot.getBoundingClientRect();
+      const viewport = window.innerHeight || document.documentElement.clientHeight;
+      const total = Math.max(progressRoot.scrollHeight - viewport * 0.7, 1);
+      const current = Math.min(Math.max(-rootRect.top, 0), total);
+      const ratio = total === 0 ? 0 : current / total;
+      progressBar.style.transform = `scaleX(${Math.max(0, Math.min(1, ratio))})`;
+    };
+
+    updateReadingProgress();
+    window.addEventListener("scroll", updateReadingProgress, { passive: true });
+    window.addEventListener("resize", updateReadingProgress, { passive: true });
+  })();
+</script> </body></html> 

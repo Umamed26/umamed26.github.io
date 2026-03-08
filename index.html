@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.0"><meta name="description" content="技术写作、游戏项目与个人实验的混合型个人站。"><meta property="og:type" content="website"><meta property="og:title" content="UEnt26 Blog"><meta property="og:description" content="技术写作、游戏项目与个人实验的混合型个人站。"><meta property="og:url" content="https://umamed26.github.io/"><meta property="og:site_name" content="UEnt26 Blog"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="UEnt26 Blog"><meta name="twitter:description" content="技术写作、游戏项目与个人实验的混合型个人站。"><meta name="theme-color" content="#c45237" data-theme-color data-light-theme-color="#c45237" data-dark-theme-color="#0f151c"><link rel="canonical" href="https://umamed26.github.io/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><script>
+      (() => {
+        const STORAGE_KEY = "uent26-theme";
+        const LIGHT = "light";
+        const DARK = "dark";
+        const root = document.documentElement;
+        const themeColorMeta = document.querySelector("meta[data-theme-color]");
+        const LIGHT_THEME_COLOR = themeColorMeta?.getAttribute("data-light-theme-color") ?? "#c45237";
+        const DARK_THEME_COLOR = themeColorMeta?.getAttribute("data-dark-theme-color") ?? "#0f151c";
+
+        const getStoredTheme = () => {
+          try {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored === LIGHT || stored === DARK) {
+              return stored;
+            }
+          } catch {}
+          return null;
+        };
+
+        const storedTheme = getStoredTheme();
+        const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+        const theme = storedTheme ?? preferredTheme;
+        root.setAttribute("data-theme", theme);
+        if (themeColorMeta) {
+          themeColorMeta.setAttribute("content", theme === DARK ? DARK_THEME_COLOR : LIGHT_THEME_COLOR);
+        }
+      })();
+    </script><title>UEnt26 Blog</title><link rel="stylesheet" href="/_astro/index.BGXvivsT.css">
+<link rel="stylesheet" href="/_astro/index.NRRqSjlh.css">
+<link rel="stylesheet" href="/_astro/index.C-g6O8mG.css">
+<style>.tag-pill[data-astro-cid-marlabwr]{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:.35rem;font-size:.82rem;color:var(--accent-cyan);border:1px solid rgba(31,120,117,.24);background:linear-gradient(120deg,#1f78751a,#1f78750a);border-radius:999px;padding:.27rem .68rem;line-height:1.2;transition:transform .24s var(--ease-out),border-color .24s var(--ease-out),box-shadow .24s var(--ease-out)}.tag-pill[data-astro-cid-marlabwr]:before{content:"";position:absolute;inset:0;transform:translate(-110%);background:linear-gradient(120deg,transparent,rgba(31,120,117,.2),transparent);transition:transform .42s var(--ease-out);pointer-events:none}a[data-astro-cid-marlabwr].tag-pill:hover{transform:translateY(-1px);border-color:#1f787570;box-shadow:0 8px 18px #4c382024}a[data-astro-cid-marlabwr].tag-pill:hover:before{transform:translate(110%)}.tag-pill[data-astro-cid-marlabwr] small[data-astro-cid-marlabwr]{color:var(--text-soft)}html[data-theme=dark] .tag-pill[data-astro-cid-marlabwr]{border-color:#56c6c24d;background:linear-gradient(120deg,#56c6c229,#56c6c212);color:var(--accent-cyan-soft)}html[data-theme=dark] .tag-pill[data-astro-cid-marlabwr]:before{background:linear-gradient(120deg,transparent,rgba(86,198,194,.28),transparent)}html[data-theme=dark] a[data-astro-cid-marlabwr].tag-pill:hover{border-color:#56c6c280;box-shadow:0 8px 18px #00000052}
+</style>
+<link rel="stylesheet" href="/_astro/about.DvsY5t4q.css">
+<link rel="stylesheet" href="/_astro/index.BVK6hRcJ.css"></head> <body data-astro-cid-37fxchfa> <a class="skip-link" href="#main-content" data-astro-cid-37fxchfa>跳到正文</a> <div class="reading-progress" data-reading-progress aria-hidden="true" data-astro-cid-37fxchfa> <span class="reading-progress-bar" data-reading-progress-bar data-astro-cid-37fxchfa></span> </div> <div class="site-decor" aria-hidden="true" data-astro-cid-37fxchfa> <span class="wash wash-a" data-astro-cid-37fxchfa></span> <span class="wash wash-b" data-astro-cid-37fxchfa></span> <span class="line-overlay" data-astro-cid-37fxchfa></span> <span class="noise-overlay" data-astro-cid-37fxchfa></span> </div> <header class="site-header" data-astro-cid-37fxchfa> <div class="container nav-wrap" data-nav-shell data-nav-open="false" data-astro-cid-37fxchfa> <a class="brand" href="/" data-astro-cid-37fxchfa> <strong data-astro-cid-37fxchfa>UEnt26</strong> <span data-astro-cid-37fxchfa>Notes from the Frontend Desk</span> </a> <div class="header-actions" data-astro-cid-37fxchfa> <a class="header-tool" href="/search/" data-astro-cid-37fxchfa>搜索</a> <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换到夜间模式" aria-pressed="false" data-astro-cid-37fxchfa> <span class="theme-toggle-dot" aria-hidden="true" data-astro-cid-37fxchfa></span> <span data-theme-toggle-label data-astro-cid-37fxchfa>夜间</span> </button> <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu" aria-label="展开导航" data-astro-cid-37fxchfa> <span class="nav-toggle-bars" aria-hidden="true" data-astro-cid-37fxchfa> <span data-astro-cid-37fxchfa></span> <span data-astro-cid-37fxchfa></span> <span data-astro-cid-37fxchfa></span> </span> <span class="nav-toggle-label" data-astro-cid-37fxchfa>菜单</span> </button> </div> <nav id="site-menu" class="site-nav" aria-label="主导航" data-site-nav data-astro-cid-37fxchfa> <ul class="nav-list" data-astro-cid-37fxchfa> <li data-astro-cid-37fxchfa> <a class="nav-link active" href="/" data-astro-cid-37fxchfa> 首页 </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/archive/" data-astro-cid-37fxchfa> 文章 </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/projects/" data-astro-cid-37fxchfa> 项目 </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/now/" data-astro-cid-37fxchfa> Now </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/about/" data-astro-cid-37fxchfa> 关于 </a> </li> </ul> </nav> </div> </header> <main id="main-content" tabindex="-1" class="container page-content" data-astro-cid-37fxchfa>  <div class="home-page stack" data-astro-cid-j7pv25f6> <section class="surface hero" data-reveal data-astro-cid-j7pv25f6> <div class="hero-main stack" data-astro-cid-j7pv25f6> <p class="section-kicker" data-astro-cid-j7pv25f6>Personal Site / Writing / Projects</p> <h1 class="page-title" data-astro-cid-j7pv25f6>UEnt26 Blog</h1> <p class="muted intro" data-astro-cid-j7pv25f6>
+这里先是一个值得读的个人博客，然后才是项目索引和实验游乐场。先把内容讲清楚，再把能力和个性慢慢展开。
+</p> <div class="hero-links" data-astro-cid-j7pv25f6> <a class="hero-primary" href="/archive/" data-astro-cid-j7pv25f6>先看文章</a> <a class="hero-secondary" href="/projects/" data-astro-cid-j7pv25f6>再看项目</a> </div> </div> <aside class="hero-panel" aria-label="站点概览" data-astro-cid-j7pv25f6> <p class="panel-title" data-astro-cid-j7pv25f6>站点概览</p> <dl class="hero-stats" data-astro-cid-j7pv25f6> <div class="stat-item" data-astro-cid-j7pv25f6> <dt data-astro-cid-j7pv25f6>文章数量</dt> <dd data-astro-cid-j7pv25f6>03</dd> </div><div class="stat-item" data-astro-cid-j7pv25f6> <dt data-astro-cid-j7pv25f6>项目数量</dt> <dd data-astro-cid-j7pv25f6>07</dd> </div><div class="stat-item" data-astro-cid-j7pv25f6> <dt data-astro-cid-j7pv25f6>最近更新</dt> <dd data-astro-cid-j7pv25f6>2026/3/8</dd> </div> </dl> <div class="hero-panel-links" data-astro-cid-j7pv25f6> <a href="/search/" data-astro-cid-j7pv25f6>搜索内容</a> <a href="/now/" data-astro-cid-j7pv25f6>查看近况</a> </div> </aside> </section> <section class="home-band stack" aria-labelledby="featured-title" data-reveal style="--reveal-delay: 60ms;" data-astro-cid-j7pv25f6> <div class="section-head" data-astro-cid-j7pv25f6> <div data-astro-cid-j7pv25f6> <p class="section-kicker" data-astro-cid-j7pv25f6>Featured Dispatches</p> <h2 id="featured-title" class="section-title" data-astro-cid-j7pv25f6>精选文章</h2> </div> <a class="link" href="/archive/" data-astro-cid-j7pv25f6>全部文章</a> </div> <div class="featured-grid" data-astro-cid-j7pv25f6> <div class="featured-main" data-astro-cid-j7pv25f6> <article class="surface card featured-main" data-astro-cid-iyiqi2so> <div class="cover placeholder" aria-hidden="true" data-astro-cid-iyiqi2so></div> <div class="content" data-astro-cid-iyiqi2so> <p class="meta muted" data-astro-cid-iyiqi2so> <time datetime="2026-03-08T00:00:00.000Z" data-astro-cid-iyiqi2so> 2026/3/8 </time>  </p> <div class="meta-pills" data-astro-cid-iyiqi2so> <span class="meta-pill" data-astro-cid-iyiqi2so>站点</span>   <a class="meta-pill meta-pill-link" href="/projects/uent26-blog/" data-astro-cid-iyiqi2so>
+项目 · UEnt26 Blog </a> </div> <h2 data-astro-cid-iyiqi2so> <a href="/posts/hello-astro/" data-astro-cid-iyiqi2so>站点重构日志：内容和项目开始合流</a> </h2> <p class="muted summary" data-astro-cid-iyiqi2so>记录这次把博客升级成“内容品牌 + 项目作品集 + 实验入口”个人站的起点。</p> <div class="tags" aria-label="文章标签" data-astro-cid-iyiqi2so> <a class="tag-pill" href="/tags/tags/" data-astro-cid-marlabwr><span data-astro-cid-marlabwr>#tags</span></a> </div> <a class="read-more" href="/posts/hello-astro/" data-astro-cid-iyiqi2so>阅读全文</a> </div> </article>  </div> <article class="surface card featured-side" data-astro-cid-iyiqi2so> <div class="cover placeholder" aria-hidden="true" data-astro-cid-iyiqi2so></div> <div class="content" data-astro-cid-iyiqi2so> <p class="meta muted" data-astro-cid-iyiqi2so> <time datetime="2026-03-05T00:00:00.000Z" data-astro-cid-iyiqi2so> 2026/3/5 </time>  </p> <div class="meta-pills" data-astro-cid-iyiqi2so> <span class="meta-pill" data-astro-cid-iyiqi2so>技术</span>  <span class="meta-pill meta-pill-soft" data-astro-cid-iyiqi2so>系列 · workflow</span>  </div> <h2 data-astro-cid-iyiqi2so> <a href="/posts/我的跨平台写作方案obsidian-坚果云/" data-astro-cid-iyiqi2so>我的跨平台写作方案：Obsidian + 坚果云</a> </h2> <p class="muted summary" data-astro-cid-iyiqi2so>怎么做到随时随地创作。</p> <div class="tags" aria-label="文章标签" data-astro-cid-iyiqi2so> <a class="tag-pill" href="/tags/tools/" data-astro-cid-marlabwr><span data-astro-cid-marlabwr>#tools</span></a> </div> <a class="read-more" href="/posts/我的跨平台写作方案obsidian-坚果云/" data-astro-cid-iyiqi2so>阅读全文</a> </div> </article> <article class="surface card featured-side" data-astro-cid-iyiqi2so> <div class="cover placeholder" aria-hidden="true" data-astro-cid-iyiqi2so></div> <div class="content" data-astro-cid-iyiqi2so> <p class="meta muted" data-astro-cid-iyiqi2so> <time datetime="2026-03-05T00:00:00.000Z" data-astro-cid-iyiqi2so> 2026/3/5 </time>  </p> <div class="meta-pills" data-astro-cid-iyiqi2so> <span class="meta-pill" data-astro-cid-iyiqi2so>站点</span>  <span class="meta-pill meta-pill-soft" data-astro-cid-iyiqi2so>系列 · unlock-demo</span> <a class="meta-pill meta-pill-link" href="/projects/uent26-blog/" data-astro-cid-iyiqi2so>
+项目 · UEnt26 Blog </a> </div> <h2 data-astro-cid-iyiqi2so> <a href="/posts/unlock-clue/" data-astro-cid-iyiqi2so>解锁线索：ALPHA-42</a> </h2> <p class="muted summary" data-astro-cid-iyiqi2so>一段公开文章，包含隐藏文章的解锁码。</p> <div class="tags" aria-label="文章标签" data-astro-cid-iyiqi2so> <a class="tag-pill" href="/tags/unlock/" data-astro-cid-marlabwr><span data-astro-cid-marlabwr>#unlock</span></a><a class="tag-pill" href="/tags/guide/" data-astro-cid-marlabwr><span data-astro-cid-marlabwr>#guide</span></a> </div> <a class="read-more" href="/posts/unlock-clue/" data-astro-cid-iyiqi2so>阅读全文</a> </div> </article>  </div> </section>  <section class="home-band stack" data-reveal style="--reveal-delay: 160ms;" data-astro-cid-j7pv25f6> <div class="section-head" data-astro-cid-j7pv25f6> <div data-astro-cid-j7pv25f6> <p class="section-kicker" data-astro-cid-j7pv25f6>Recent Projects</p> <h2 class="section-title" data-astro-cid-j7pv25f6>近期项目</h2> </div> <a class="link" href="/projects/" data-astro-cid-j7pv25f6>全部项目</a> </div> <div class="project-grid" data-astro-cid-j7pv25f6> <article class="surface project-card compact" data-astro-cid-mspuyifq> <div class="card-head" data-astro-cid-mspuyifq> <div class="title-wrap" data-astro-cid-mspuyifq> <p class="status-pill status-active" data-astro-cid-mspuyifq>进行中</p> <h3 data-astro-cid-mspuyifq> <a href="/projects/uent26-blog/" data-astro-cid-mspuyifq>UEnt26 Blog</a> </h3> </div> <p class="meta" data-astro-cid-mspuyifq>更新于 2026/3/7</p> </div> <p class="muted summary" data-astro-cid-mspuyifq>本站本体：用 Astro 搭起来的个人内容站，兼做项目展示、写作实验和站点游乐场。</p> <p class="muted status-desc" data-astro-cid-mspuyifq>当前仍在持续推进，适合优先查看。</p> <div class="chip-row" aria-label="项目技术栈" data-astro-cid-mspuyifq> <span class="chip" data-astro-cid-mspuyifq>Astro</span><span class="chip" data-astro-cid-mspuyifq>TypeScript</span><span class="chip" data-astro-cid-mspuyifq>Markdown</span><span class="chip" data-astro-cid-mspuyifq>Giscus</span> </div> <ul class="highlight-list" data-astro-cid-mspuyifq> <li data-astro-cid-mspuyifq>内容与项目双入口</li><li data-astro-cid-mspuyifq>搜索、归档、标签与隐藏文章机制</li> </ul> <div class="link-row" data-astro-cid-mspuyifq> <a class="primary-link" href="/projects/uent26-blog/" data-astro-cid-mspuyifq>查看详情</a> <a href="/" data-astro-cid-mspuyifq>查看首页</a> </div> </article> <article class="surface project-card compact" data-astro-cid-mspuyifq> <div class="card-head" data-astro-cid-mspuyifq> <div class="title-wrap" data-astro-cid-mspuyifq> <p class="status-pill status-active" data-astro-cid-mspuyifq>进行中</p> <h3 data-astro-cid-mspuyifq> <a href="/projects/path-to-dishonor/" data-astro-cid-mspuyifq>Path to Dishonor</a> </h3> </div> <p class="meta" data-astro-cid-mspuyifq>更新于 2026/3/5</p> </div> <p class="muted summary" data-astro-cid-mspuyifq>一个用 Python 制作的 classic roguelike 游戏原型，重点在系统感和逐步迭代。</p> <p class="muted status-desc" data-astro-cid-mspuyifq>当前仍在持续推进，适合优先查看。</p> <div class="chip-row" aria-label="项目技术栈" data-astro-cid-mspuyifq> <span class="chip" data-astro-cid-mspuyifq>Python</span> </div> <ul class="highlight-list" data-astro-cid-mspuyifq> <li data-astro-cid-mspuyifq>已推进到 v0.6</li><li data-astro-cid-mspuyifq>有明确的原型迭代节奏</li> </ul> <div class="link-row" data-astro-cid-mspuyifq> <a class="primary-link" href="/projects/path-to-dishonor/" data-astro-cid-mspuyifq>查看详情</a>  </div> </article> <article class="surface project-card compact" data-astro-cid-mspuyifq> <div class="card-head" data-astro-cid-mspuyifq> <div class="title-wrap" data-astro-cid-mspuyifq> <p class="status-pill status-maintain" data-astro-cid-mspuyifq>维护中</p> <h3 data-astro-cid-mspuyifq> <a href="/projects/pixel-workshop/" data-astro-cid-mspuyifq>Pixel Workshop</a> </h3> </div> <p class="meta" data-astro-cid-mspuyifq>更新于 2026/3/6</p> </div> <p class="muted summary" data-astro-cid-mspuyifq>一个把普通图片转换为像素风格的小工具站，主打实时预览和参数可调。</p> <p class="muted status-desc" data-astro-cid-mspuyifq>功能已经可用，目前以维护和细节打磨为主。</p> <div class="chip-row" aria-label="项目技术栈" data-astro-cid-mspuyifq> <span class="chip" data-astro-cid-mspuyifq>React</span><span class="chip" data-astro-cid-mspuyifq>TypeScript</span><span class="chip" data-astro-cid-mspuyifq>Vite</span> </div> <ul class="highlight-list" data-astro-cid-mspuyifq> <li data-astro-cid-mspuyifq>多种像素化参数组合</li><li data-astro-cid-mspuyifq>实时预览与快速导出</li> </ul> <div class="link-row" data-astro-cid-mspuyifq> <a class="primary-link" href="/projects/pixel-workshop/" data-astro-cid-mspuyifq>查看详情</a> <a href="https://umamed26.github.io/Pixel_Converter/" data-astro-cid-mspuyifq>访问网站</a> </div> </article>  </div> </section> <section class="surface now-panel" data-reveal style="--reveal-delay: 210ms;" data-astro-cid-j7pv25f6> <div class="section-head now-head" data-astro-cid-j7pv25f6> <div data-astro-cid-j7pv25f6> <p class="section-kicker" data-astro-cid-j7pv25f6>Now Snapshot</p> <h2 class="section-title" data-astro-cid-j7pv25f6>最近在推进什么</h2> </div> <a class="link" href="/now/" data-astro-cid-j7pv25f6>完整 Now</a> </div> <p class="muted now-copy" data-astro-cid-j7pv25f6>如果你是第一次来，这页可以快速告诉你最近值得看的内容，以及接下来会补什么。</p> <div class="now-grid" data-astro-cid-j7pv25f6> <section class="now-card" data-astro-cid-j7pv25f6> <p class="now-label" data-astro-cid-j7pv25f6>当前重心</p> <div class="now-focus-list" data-astro-cid-j7pv25f6> <article data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>适合先看的内容</h3> <p class="muted" data-astro-cid-j7pv25f6>最近优先在补技术文章、工具流和更容易连续追更的主题。</p> </article><article data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>项目更新节奏</h3> <p class="muted" data-astro-cid-j7pv25f6>项目页不再只是放一张卡片，而是会逐步补进展、复盘和过程记录。</p> </article> </div> </section> <section class="now-card" data-astro-cid-j7pv25f6> <p class="now-label" data-astro-cid-j7pv25f6>正在推进</p> <ul class="now-list" data-astro-cid-j7pv25f6> <li data-astro-cid-j7pv25f6>最近把首页改成更清晰的双入口结构，让文章和项目都更容易找到。</li><li data-astro-cid-j7pv25f6>项目页正在补更多真实进展，不再只停留在一句状态描述。</li><li data-astro-cid-j7pv25f6>近期文章会继续集中在 Astro、工具链、写作工作流这些更稳定更新的主题。</li> </ul> </section> <section class="now-card" data-astro-cid-j7pv25f6> <p class="now-label" data-astro-cid-j7pv25f6>下一步</p> <ul class="now-list" data-astro-cid-j7pv25f6> <li data-astro-cid-j7pv25f6>继续补项目过程记录和阶段性复盘。</li><li data-astro-cid-j7pv25f6>让 Now 页和首页能更直观地反映最近的更新节奏。</li><li data-astro-cid-j7pv25f6>继续打磨搜索、标签和实验区，让整站更顺手。</li> </ul> </section> </div> <div class="now-links" data-astro-cid-j7pv25f6> <a href="/archive/" data-astro-cid-j7pv25f6>看全部文章</a><a href="/projects/" data-astro-cid-j7pv25f6>看项目</a><a href="/tags/" data-astro-cid-j7pv25f6>逛标签</a> </div> </section> <section class="home-bottom" data-reveal style="--reveal-delay: 260ms;" data-astro-cid-j7pv25f6> <section class="surface stack tags-panel" data-astro-cid-j7pv25f6> <div class="section-head" data-astro-cid-j7pv25f6> <div data-astro-cid-j7pv25f6> <p class="section-kicker" data-astro-cid-j7pv25f6>Hot Tags</p> <h2 class="section-title" data-astro-cid-j7pv25f6>热门标签</h2> </div> <a class="link" href="/tags/" data-astro-cid-j7pv25f6>全部标签</a> </div> <div class="tag-cloud tag-cloud-home" aria-label="热门标签" data-astro-cid-6pyqhcr2> <a class="tag-cloud-item tag-cloud-item-home" href="/tags/unlock/" style="--tag-accent-opacity:0.22;--tag-border-opacity:0.38" data-astro-cid-6pyqhcr2> <span class="tag-cloud-main" data-astro-cid-6pyqhcr2> <span class="tag-cloud-hash" data-astro-cid-6pyqhcr2>#</span> <span class="tag-cloud-name" data-astro-cid-6pyqhcr2>unlock</span> </span> <span class="tag-cloud-meta" data-astro-cid-6pyqhcr2> <span class="tag-cloud-count" data-astro-cid-6pyqhcr2>2 篇</span> <span class="tag-cloud-hint" data-astro-cid-6pyqhcr2>查看主题</span> </span> </a><a class="tag-cloud-item tag-cloud-item-home" href="/tags/guide/" style="--tag-accent-opacity:0.10;--tag-border-opacity:0.22" data-astro-cid-6pyqhcr2> <span class="tag-cloud-main" data-astro-cid-6pyqhcr2> <span class="tag-cloud-hash" data-astro-cid-6pyqhcr2>#</span> <span class="tag-cloud-name" data-astro-cid-6pyqhcr2>guide</span> </span> <span class="tag-cloud-meta" data-astro-cid-6pyqhcr2> <span class="tag-cloud-count" data-astro-cid-6pyqhcr2>1 篇</span> <span class="tag-cloud-hint" data-astro-cid-6pyqhcr2>查看主题</span> </span> </a><a class="tag-cloud-item tag-cloud-item-home" href="/tags/secret/" style="--tag-accent-opacity:0.10;--tag-border-opacity:0.22" data-astro-cid-6pyqhcr2> <span class="tag-cloud-main" data-astro-cid-6pyqhcr2> <span class="tag-cloud-hash" data-astro-cid-6pyqhcr2>#</span> <span class="tag-cloud-name" data-astro-cid-6pyqhcr2>secret</span> </span> <span class="tag-cloud-meta" data-astro-cid-6pyqhcr2> <span class="tag-cloud-count" data-astro-cid-6pyqhcr2>1 篇</span> <span class="tag-cloud-hint" data-astro-cid-6pyqhcr2>查看主题</span> </span> </a><a class="tag-cloud-item tag-cloud-item-home" href="/tags/tags/" style="--tag-accent-opacity:0.10;--tag-border-opacity:0.22" data-astro-cid-6pyqhcr2> <span class="tag-cloud-main" data-astro-cid-6pyqhcr2> <span class="tag-cloud-hash" data-astro-cid-6pyqhcr2>#</span> <span class="tag-cloud-name" data-astro-cid-6pyqhcr2>tags</span> </span> <span class="tag-cloud-meta" data-astro-cid-6pyqhcr2> <span class="tag-cloud-count" data-astro-cid-6pyqhcr2>1 篇</span> <span class="tag-cloud-hint" data-astro-cid-6pyqhcr2>查看主题</span> </span> </a><a class="tag-cloud-item tag-cloud-item-home" href="/tags/tools/" style="--tag-accent-opacity:0.10;--tag-border-opacity:0.22" data-astro-cid-6pyqhcr2> <span class="tag-cloud-main" data-astro-cid-6pyqhcr2> <span class="tag-cloud-hash" data-astro-cid-6pyqhcr2>#</span> <span class="tag-cloud-name" data-astro-cid-6pyqhcr2>tools</span> </span> <span class="tag-cloud-meta" data-astro-cid-6pyqhcr2> <span class="tag-cloud-count" data-astro-cid-6pyqhcr2>1 篇</span> <span class="tag-cloud-hint" data-astro-cid-6pyqhcr2>查看主题</span> </span> </a> </div>  </section> <section class="surface stack experiment-panel" data-astro-cid-j7pv25f6> <div data-astro-cid-j7pv25f6> <p class="section-kicker" data-astro-cid-j7pv25f6>Experiments</p> <h2 class="section-title" data-astro-cid-j7pv25f6>实验入口</h2> </div> <div class="experiment-list" data-astro-cid-j7pv25f6> <article class="experiment-item" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>Console</h3> <p class="muted" data-astro-cid-j7pv25f6>终端风格的文章导航器。现在保留为实验入口，不再放在主导航里。</p> <a href="/console/" data-astro-cid-j7pv25f6>打开实验</a> </article><article class="experiment-item" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>Guestbook</h3> <p class="muted" data-astro-cid-j7pv25f6>如果你是回访用户，留言板仍然是最快的反馈入口。</p> <a href="/guestbook/" data-astro-cid-j7pv25f6>去留言</a> </article><article class="experiment-item" data-astro-cid-j7pv25f6> <h3 data-astro-cid-j7pv25f6>RSS</h3> <p class="muted" data-astro-cid-j7pv25f6>更新节奏稳定以后，订阅会比偶遇首页更可靠。</p> <a href="/rss.xml" data-astro-cid-j7pv25f6>订阅更新</a> </article> </div> </section> </section> </div>  </main> <footer class="site-footer" data-astro-cid-37fxchfa> <div class="container footer-wrap" data-astro-cid-37fxchfa> <div class="footer-copy" data-astro-cid-37fxchfa> <p class="copyright" data-astro-cid-37fxchfa>© 2026 UEnt26. All rights reserved.</p> <p class="footer-note" data-astro-cid-37fxchfa>文章优先，项目与实验作为延伸入口。</p> </div> <ul class="footer-links" aria-label="站点入口" data-astro-cid-37fxchfa> <li data-astro-cid-37fxchfa><a href="/search/" data-astro-cid-37fxchfa>搜索</a></li><li data-astro-cid-37fxchfa><a href="/tags/" data-astro-cid-37fxchfa>标签</a></li><li data-astro-cid-37fxchfa><a href="/guestbook/" data-astro-cid-37fxchfa>留言</a></li><li data-astro-cid-37fxchfa><a href="/contact/" data-astro-cid-37fxchfa>联系</a></li><li data-astro-cid-37fxchfa><a href="/rss.xml" data-astro-cid-37fxchfa>RSS</a></li> </ul> <ul class="social-list" aria-label="社交链接" data-astro-cid-37fxchfa> <li data-astro-cid-37fxchfa><a href="https://github.com/Umamed26/UEnt26-Blog" data-astro-cid-37fxchfa>GitHub</a></li> </ul> </div> </footer> <script>
+      (() => {
+        const STORAGE_KEY = "uent26-theme";
+        const LIGHT = "light";
+        const DARK = "dark";
+        const root = document.documentElement;
+        const toggle = document.querySelector("[data-theme-toggle]");
+        const toggleLabel = document.querySelector("[data-theme-toggle-label]");
+        const themeColorMeta = document.querySelector("meta[data-theme-color]");
+        const LIGHT_THEME_COLOR = themeColorMeta?.getAttribute("data-light-theme-color") ?? "#c45237";
+        const DARK_THEME_COLOR = themeColorMeta?.getAttribute("data-dark-theme-color") ?? "#0f151c";
+
+        if (!(toggle instanceof HTMLButtonElement) || !(toggleLabel instanceof HTMLElement)) {
+          return;
+        }
+
+        const getStoredTheme = () => {
+          try {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored === LIGHT || stored === DARK) {
+              return stored;
+            }
+          } catch {}
+          return null;
+        };
+
+        const setStoredTheme = (theme) => {
+          try {
+            localStorage.setItem(STORAGE_KEY, theme);
+          } catch {}
+        };
+
+        const applyTheme = (theme) => {
+          const isDark = theme === DARK;
+          root.setAttribute("data-theme", theme);
+          toggle.setAttribute("aria-pressed", String(isDark));
+          toggle.setAttribute("aria-label", isDark ? "切换到日间模式" : "切换到夜间模式");
+          toggleLabel.textContent = isDark ? "日间" : "夜间";
+          if (themeColorMeta) {
+            themeColorMeta.setAttribute("content", isDark ? DARK_THEME_COLOR : LIGHT_THEME_COLOR);
+          }
+          window.dispatchEvent(new CustomEvent("theme:changed", { detail: { theme } }));
+        };
+
+        const initial = root.getAttribute("data-theme") === DARK ? DARK : LIGHT;
+        applyTheme(initial);
+
+        toggle.addEventListener("click", () => {
+          const next = root.getAttribute("data-theme") === DARK ? LIGHT : DARK;
+          setStoredTheme(next);
+          applyTheme(next);
+        });
+
+        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        const handleSystemChange = (event) => {
+          if (getStoredTheme()) {
+            return;
+          }
+          applyTheme(event.matches ? DARK : LIGHT);
+        };
+
+        if (typeof mediaQuery.addEventListener === "function") {
+          mediaQuery.addEventListener("change", handleSystemChange);
+        } else if (typeof mediaQuery.addListener === "function") {
+          mediaQuery.addListener(handleSystemChange);
+        }
+      })();
+    </script> <script>
+      (() => {
+        const shell = document.querySelector("[data-nav-shell]");
+        const nav = document.querySelector("[data-site-nav]");
+        const toggle = document.querySelector("[data-nav-toggle]");
+        const desktopMedia = window.matchMedia("(min-width: 901px)");
+
+        if (!(shell instanceof HTMLElement) || !(nav instanceof HTMLElement) || !(toggle instanceof HTMLButtonElement)) {
+          return;
+        }
+
+        const setOpen = (open) => {
+          shell.setAttribute("data-nav-open", String(open));
+          toggle.setAttribute("aria-expanded", String(open));
+          toggle.setAttribute("aria-label", open ? "收起导航" : "展开导航");
+        };
+
+        const syncMenuState = () => {
+          if (desktopMedia.matches) {
+            shell.setAttribute("data-nav-open", "true");
+            toggle.setAttribute("aria-expanded", "false");
+            return;
+          }
+
+          setOpen(false);
+        };
+
+        toggle.addEventListener("click", () => {
+          const next = shell.getAttribute("data-nav-open") !== "true";
+          setOpen(next);
+        });
+
+        nav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            if (!desktopMedia.matches) {
+              setOpen(false);
+            }
+          });
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && shell.getAttribute("data-nav-open") === "true" && !desktopMedia.matches) {
+            setOpen(false);
+            toggle.focus();
+          }
+        });
+
+        if (typeof desktopMedia.addEventListener === "function") {
+          desktopMedia.addEventListener("change", syncMenuState);
+        } else if (typeof desktopMedia.addListener === "function") {
+          desktopMedia.addListener(syncMenuState);
+        }
+
+        syncMenuState();
+      })();
+    </script>  <script>
+  (() => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const revealNodes = [...document.querySelectorAll("[data-reveal]")];
+
+    if (revealNodes.length > 0) {
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealNodes.forEach((node) => node.setAttribute("data-revealed", "true"));
+      } else {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (!entry.isIntersecting) {
+                continue;
+              }
+              entry.target.setAttribute("data-revealed", "true");
+              observer.unobserve(entry.target);
+            }
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+        );
+
+        revealNodes.forEach((node) => observer.observe(node));
+      }
+    }
+
+    const progressRoot = document.querySelector("[data-reading-root]");
+    const progressWrap = document.querySelector("[data-reading-progress]");
+    const progressBar = document.querySelector("[data-reading-progress-bar]");
+
+    if (!progressWrap || !progressBar) {
+      return;
+    }
+
+    if (!progressRoot) {
+      progressWrap.classList.remove("is-active");
+      progressBar.style.transform = "scaleX(0)";
+      return;
+    }
+
+    progressWrap.classList.add("is-active");
+
+    const updateReadingProgress = () => {
+      const rootRect = progressRoot.getBoundingClientRect();
+      const viewport = window.innerHeight || document.documentElement.clientHeight;
+      const total = Math.max(progressRoot.scrollHeight - viewport * 0.7, 1);
+      const current = Math.min(Math.max(-rootRect.top, 0), total);
+      const ratio = total === 0 ? 0 : current / total;
+      progressBar.style.transform = `scaleX(${Math.max(0, Math.min(1, ratio))})`;
+    };
+
+    updateReadingProgress();
+    window.addEventListener("scroll", updateReadingProgress, { passive: true });
+    window.addEventListener("resize", updateReadingProgress, { passive: true });
+  })();
+</script> </body></html> 

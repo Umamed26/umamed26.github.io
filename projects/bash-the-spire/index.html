@@ -1,0 +1,221 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.0"><meta name="description" content="如果把《杀戮尖塔》的卡组构筑体验搬进终端，会是什么样子。"><meta property="og:type" content="website"><meta property="og:title" content="Bash the Spire | UEnt26 Blog"><meta property="og:description" content="如果把《杀戮尖塔》的卡组构筑体验搬进终端，会是什么样子。"><meta property="og:url" content="https://umamed26.github.io/projects/bash-the-spire/"><meta property="og:site_name" content="UEnt26 Blog"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Bash the Spire | UEnt26 Blog"><meta name="twitter:description" content="如果把《杀戮尖塔》的卡组构筑体验搬进终端，会是什么样子。"><meta name="theme-color" content="#c45237" data-theme-color data-light-theme-color="#c45237" data-dark-theme-color="#0f151c"><link rel="canonical" href="https://umamed26.github.io/projects/bash-the-spire/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><script>
+      (() => {
+        const STORAGE_KEY = "uent26-theme";
+        const LIGHT = "light";
+        const DARK = "dark";
+        const root = document.documentElement;
+        const themeColorMeta = document.querySelector("meta[data-theme-color]");
+        const LIGHT_THEME_COLOR = themeColorMeta?.getAttribute("data-light-theme-color") ?? "#c45237";
+        const DARK_THEME_COLOR = themeColorMeta?.getAttribute("data-dark-theme-color") ?? "#0f151c";
+
+        const getStoredTheme = () => {
+          try {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored === LIGHT || stored === DARK) {
+              return stored;
+            }
+          } catch {}
+          return null;
+        };
+
+        const storedTheme = getStoredTheme();
+        const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+        const theme = storedTheme ?? preferredTheme;
+        root.setAttribute("data-theme", theme);
+        if (themeColorMeta) {
+          themeColorMeta.setAttribute("content", theme === DARK ? DARK_THEME_COLOR : LIGHT_THEME_COLOR);
+        }
+      })();
+    </script><title>Bash the Spire | UEnt26 Blog</title><style>.code-block-wrapper[data-astro-cid-m4nqdpfe]{padding:clamp(.95rem,1.4vw,1.25rem);border-radius:22px;border:1px solid rgba(218,205,184,.92);background:radial-gradient(circle at 95% 4%,rgba(31,120,117,.14),transparent 26%),linear-gradient(160deg,#fffffff5,#f6eedfeb);box-shadow:inset 0 0 0 1px #ffffff7a,0 20px 46px #4c38201f}.code-block-wrapper[data-astro-cid-m4nqdpfe] pre{box-shadow:inset 0 0 0 1px #ffffff1f}html[data-theme=dark] .code-block-wrapper[data-astro-cid-m4nqdpfe]{border-color:#2d3b4bf2;background:radial-gradient(circle at 95% 4%,rgba(86,198,194,.16),transparent 28%),linear-gradient(160deg,#18232ef5,#111923eb);box-shadow:inset 0 0 0 1px #56c6c21f,0 20px 46px #00000057}html[data-theme=dark] .code-block-wrapper[data-astro-cid-m4nqdpfe] pre{box-shadow:inset 0 0 0 1px #56c6c233}
+</style>
+<link rel="stylesheet" href="/_astro/index.C-g6O8mG.css">
+<style>.tag-pill[data-astro-cid-marlabwr]{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:.35rem;font-size:.82rem;color:var(--accent-cyan);border:1px solid rgba(31,120,117,.24);background:linear-gradient(120deg,#1f78751a,#1f78750a);border-radius:999px;padding:.27rem .68rem;line-height:1.2;transition:transform .24s var(--ease-out),border-color .24s var(--ease-out),box-shadow .24s var(--ease-out)}.tag-pill[data-astro-cid-marlabwr]:before{content:"";position:absolute;inset:0;transform:translate(-110%);background:linear-gradient(120deg,transparent,rgba(31,120,117,.2),transparent);transition:transform .42s var(--ease-out);pointer-events:none}a[data-astro-cid-marlabwr].tag-pill:hover{transform:translateY(-1px);border-color:#1f787570;box-shadow:0 8px 18px #4c382024}a[data-astro-cid-marlabwr].tag-pill:hover:before{transform:translate(110%)}.tag-pill[data-astro-cid-marlabwr] small[data-astro-cid-marlabwr]{color:var(--text-soft)}html[data-theme=dark] .tag-pill[data-astro-cid-marlabwr]{border-color:#56c6c24d;background:linear-gradient(120deg,#56c6c229,#56c6c212);color:var(--accent-cyan-soft)}html[data-theme=dark] .tag-pill[data-astro-cid-marlabwr]:before{background:linear-gradient(120deg,transparent,rgba(86,198,194,.28),transparent)}html[data-theme=dark] a[data-astro-cid-marlabwr].tag-pill:hover{border-color:#56c6c280;box-shadow:0 8px 18px #00000052}
+.project-detail[data-astro-cid-ovxcmftc]{gap:1.2rem}.hero[data-astro-cid-ovxcmftc],.prose-card[data-astro-cid-ovxcmftc],.sidebar-card[data-astro-cid-ovxcmftc]{padding:clamp(1rem,2.4vw,1.4rem);border-radius:var(--radius-lg)}.summary[data-astro-cid-ovxcmftc]{margin:0;max-width:64ch}.meta-row[data-astro-cid-ovxcmftc]{display:flex;flex-wrap:wrap;gap:.5rem}.meta-pill[data-astro-cid-ovxcmftc]{border-radius:999px;border:1px solid rgba(196,82,55,.28);background:#c4523714;color:var(--accent-strong);padding:.16rem .56rem;font-size:.8rem}.meta-pill-soft[data-astro-cid-ovxcmftc]{border-color:#64748b42;background:#64748b14;color:var(--text-soft)}.meta-pill-link[data-astro-cid-ovxcmftc]{border-color:#1f787547;background:#1f787514;color:var(--accent-cyan)}.meta-pill-link[data-astro-cid-ovxcmftc]:hover{border-color:#1f78757a;background:#1f787524;color:var(--accent-cyan)}.detail-layout[data-astro-cid-ovxcmftc]{display:grid;gap:1rem;align-items:start}.main-column[data-astro-cid-ovxcmftc],.sidebar[data-astro-cid-ovxcmftc],.related-section[data-astro-cid-ovxcmftc]{gap:1rem}.chip-row[data-astro-cid-ovxcmftc],.link-row[data-astro-cid-ovxcmftc]{display:flex;flex-wrap:wrap;gap:.45rem}.chip[data-astro-cid-ovxcmftc],.link-row[data-astro-cid-ovxcmftc] a[data-astro-cid-ovxcmftc]{border-radius:999px;border:1px solid rgba(31,120,117,.28);background:#1f787514;color:var(--accent-cyan);padding:.18rem .55rem;font-size:.8rem}.link-row[data-astro-cid-ovxcmftc] a[data-astro-cid-ovxcmftc]:hover{border-color:#1f78757a;background:#1f787524;color:var(--accent-cyan)}.bullet-list[data-astro-cid-ovxcmftc]{margin:0;padding-left:1.1rem;display:grid;gap:.45rem}.bullet-list[data-astro-cid-ovxcmftc] li[data-astro-cid-ovxcmftc]{line-height:1.55;color:var(--text)}.related-grid[data-astro-cid-ovxcmftc]{display:grid;gap:.9rem}@media(min-width:920px){.detail-layout[data-astro-cid-ovxcmftc]{grid-template-columns:minmax(0,1.7fr) minmax(280px,.9fr)}.related-grid[data-astro-cid-ovxcmftc]{grid-template-columns:repeat(2,minmax(0,1fr))}}html[data-theme=dark] .meta-pill[data-astro-cid-ovxcmftc]{border-color:#f18d5557;background:#f18d551f}html[data-theme=dark] .meta-pill-soft[data-astro-cid-ovxcmftc]{border-color:#64748b80;background:#64748b33;color:#b7c4d8}html[data-theme=dark] .meta-pill-link[data-astro-cid-ovxcmftc],html[data-theme=dark] .chip[data-astro-cid-ovxcmftc],html[data-theme=dark] .link-row[data-astro-cid-ovxcmftc] a[data-astro-cid-ovxcmftc]{border-color:#56c6c257;background:#56c6c21f;color:var(--accent-cyan-soft)}
+</style>
+<link rel="stylesheet" href="/_astro/about.DvsY5t4q.css"></head> <body data-astro-cid-37fxchfa> <a class="skip-link" href="#main-content" data-astro-cid-37fxchfa>跳到正文</a> <div class="reading-progress" data-reading-progress aria-hidden="true" data-astro-cid-37fxchfa> <span class="reading-progress-bar" data-reading-progress-bar data-astro-cid-37fxchfa></span> </div> <div class="site-decor" aria-hidden="true" data-astro-cid-37fxchfa> <span class="wash wash-a" data-astro-cid-37fxchfa></span> <span class="wash wash-b" data-astro-cid-37fxchfa></span> <span class="line-overlay" data-astro-cid-37fxchfa></span> <span class="noise-overlay" data-astro-cid-37fxchfa></span> </div> <header class="site-header" data-astro-cid-37fxchfa> <div class="container nav-wrap" data-nav-shell data-nav-open="false" data-astro-cid-37fxchfa> <a class="brand" href="/" data-astro-cid-37fxchfa> <strong data-astro-cid-37fxchfa>UEnt26</strong> <span data-astro-cid-37fxchfa>Notes from the Frontend Desk</span> </a> <div class="header-actions" data-astro-cid-37fxchfa> <a class="header-tool" href="/search/" data-astro-cid-37fxchfa>搜索</a> <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换到夜间模式" aria-pressed="false" data-astro-cid-37fxchfa> <span class="theme-toggle-dot" aria-hidden="true" data-astro-cid-37fxchfa></span> <span data-theme-toggle-label data-astro-cid-37fxchfa>夜间</span> </button> <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu" aria-label="展开导航" data-astro-cid-37fxchfa> <span class="nav-toggle-bars" aria-hidden="true" data-astro-cid-37fxchfa> <span data-astro-cid-37fxchfa></span> <span data-astro-cid-37fxchfa></span> <span data-astro-cid-37fxchfa></span> </span> <span class="nav-toggle-label" data-astro-cid-37fxchfa>菜单</span> </button> </div> <nav id="site-menu" class="site-nav" aria-label="主导航" data-site-nav data-astro-cid-37fxchfa> <ul class="nav-list" data-astro-cid-37fxchfa> <li data-astro-cid-37fxchfa> <a class="nav-link" href="/" data-astro-cid-37fxchfa> 首页 </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/archive/" data-astro-cid-37fxchfa> 文章 </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link active" href="/projects/" data-astro-cid-37fxchfa> 项目 </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/now/" data-astro-cid-37fxchfa> Now </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/about/" data-astro-cid-37fxchfa> 关于 </a> </li> </ul> </nav> </div> </header> <main id="main-content" tabindex="-1" class="container page-content" data-astro-cid-37fxchfa>  <article class="stack project-detail" data-astro-cid-ovxcmftc> <header class="surface hero" data-reveal data-astro-cid-ovxcmftc> <p class="section-kicker" data-astro-cid-ovxcmftc>Project Detail</p> <h1 class="page-title" data-astro-cid-ovxcmftc>Bash the Spire</h1> <p class="muted summary" data-astro-cid-ovxcmftc>如果把《杀戮尖塔》的卡组构筑体验搬进终端，会是什么样子。</p> <div class="meta-row" data-astro-cid-ovxcmftc> <span class="meta-pill" data-astro-cid-ovxcmftc>规划中</span> <span class="meta-pill meta-pill-soft" data-astro-cid-ovxcmftc>更新于 2026/3/4</span> <a class="meta-pill meta-pill-link" href="/projects/" data-astro-cid-ovxcmftc>返回项目索引</a> </div> </header> <section class="detail-layout" data-reveal style="--reveal-delay: 70ms;" data-astro-cid-ovxcmftc> <div class="stack main-column" data-astro-cid-ovxcmftc> <section class="surface prose-card" data-astro-cid-ovxcmftc> <div class="prose code-block-wrapper" data-astro-cid-m4nqdpfe>  <h2 id="项目想法">项目想法</h2>
+<p>这是一个明显偏实验性质的点子：保留卡组构筑、事件选择和风险收益判断，但把表现全部收束进终端界面里。</p>
+<h2 id="目前卡住的地方">目前卡住的地方</h2>
+<ul>
+<li>如何在简洁终端 UI 里保留足够的信息密度。</li>
+<li>如何定义最小可玩的战斗循环。</li>
+<li>怎么避免它只剩下“概念很有趣”，却没有真正可玩的版本。</li>
+</ul>
+<h2 id="适合的推进方式">适合的推进方式</h2>
+<p>先做一个很小的垂直切片，再决定值不值得继续扩展。</p>  </div>  </section>  </div> <aside class="stack sidebar" data-astro-cid-ovxcmftc> <section class="surface sidebar-card" data-astro-cid-ovxcmftc> <p class="section-kicker" data-astro-cid-ovxcmftc>Stack</p> <h2 class="section-title" data-astro-cid-ovxcmftc>技术栈</h2> <div class="chip-row" data-astro-cid-ovxcmftc> <span class="chip" data-astro-cid-ovxcmftc>Python</span><span class="chip" data-astro-cid-ovxcmftc>Terminal UI</span> </div> </section> <section class="surface sidebar-card" data-astro-cid-ovxcmftc> <p class="section-kicker" data-astro-cid-ovxcmftc>Highlights</p> <h2 class="section-title" data-astro-cid-ovxcmftc>当前重点</h2> <ul class="bullet-list" data-astro-cid-ovxcmftc> <li data-astro-cid-ovxcmftc>终端交互方向</li><li data-astro-cid-ovxcmftc>适合做高辨识度实验项目</li><li data-astro-cid-ovxcmftc>目前仍处于概念阶段</li> </ul> </section> <section class="surface sidebar-card" data-astro-cid-ovxcmftc> <p class="section-kicker" data-astro-cid-ovxcmftc>Links</p> <h2 class="section-title" data-astro-cid-ovxcmftc>访问方式</h2> <p class="muted" data-astro-cid-ovxcmftc>当前还没有公开入口，后续会先通过站内日志继续记录进展。</p> </section> </aside> </section> </article>  </main> <footer class="site-footer" data-astro-cid-37fxchfa> <div class="container footer-wrap" data-astro-cid-37fxchfa> <div class="footer-copy" data-astro-cid-37fxchfa> <p class="copyright" data-astro-cid-37fxchfa>© 2026 UEnt26. All rights reserved.</p> <p class="footer-note" data-astro-cid-37fxchfa>文章优先，项目与实验作为延伸入口。</p> </div> <ul class="footer-links" aria-label="站点入口" data-astro-cid-37fxchfa> <li data-astro-cid-37fxchfa><a href="/search/" data-astro-cid-37fxchfa>搜索</a></li><li data-astro-cid-37fxchfa><a href="/tags/" data-astro-cid-37fxchfa>标签</a></li><li data-astro-cid-37fxchfa><a href="/guestbook/" data-astro-cid-37fxchfa>留言</a></li><li data-astro-cid-37fxchfa><a href="/contact/" data-astro-cid-37fxchfa>联系</a></li><li data-astro-cid-37fxchfa><a href="/rss.xml" data-astro-cid-37fxchfa>RSS</a></li> </ul> <ul class="social-list" aria-label="社交链接" data-astro-cid-37fxchfa> <li data-astro-cid-37fxchfa><a href="https://github.com/Umamed26/UEnt26-Blog" data-astro-cid-37fxchfa>GitHub</a></li> </ul> </div> </footer> <script>
+      (() => {
+        const STORAGE_KEY = "uent26-theme";
+        const LIGHT = "light";
+        const DARK = "dark";
+        const root = document.documentElement;
+        const toggle = document.querySelector("[data-theme-toggle]");
+        const toggleLabel = document.querySelector("[data-theme-toggle-label]");
+        const themeColorMeta = document.querySelector("meta[data-theme-color]");
+        const LIGHT_THEME_COLOR = themeColorMeta?.getAttribute("data-light-theme-color") ?? "#c45237";
+        const DARK_THEME_COLOR = themeColorMeta?.getAttribute("data-dark-theme-color") ?? "#0f151c";
+
+        if (!(toggle instanceof HTMLButtonElement) || !(toggleLabel instanceof HTMLElement)) {
+          return;
+        }
+
+        const getStoredTheme = () => {
+          try {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored === LIGHT || stored === DARK) {
+              return stored;
+            }
+          } catch {}
+          return null;
+        };
+
+        const setStoredTheme = (theme) => {
+          try {
+            localStorage.setItem(STORAGE_KEY, theme);
+          } catch {}
+        };
+
+        const applyTheme = (theme) => {
+          const isDark = theme === DARK;
+          root.setAttribute("data-theme", theme);
+          toggle.setAttribute("aria-pressed", String(isDark));
+          toggle.setAttribute("aria-label", isDark ? "切换到日间模式" : "切换到夜间模式");
+          toggleLabel.textContent = isDark ? "日间" : "夜间";
+          if (themeColorMeta) {
+            themeColorMeta.setAttribute("content", isDark ? DARK_THEME_COLOR : LIGHT_THEME_COLOR);
+          }
+          window.dispatchEvent(new CustomEvent("theme:changed", { detail: { theme } }));
+        };
+
+        const initial = root.getAttribute("data-theme") === DARK ? DARK : LIGHT;
+        applyTheme(initial);
+
+        toggle.addEventListener("click", () => {
+          const next = root.getAttribute("data-theme") === DARK ? LIGHT : DARK;
+          setStoredTheme(next);
+          applyTheme(next);
+        });
+
+        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        const handleSystemChange = (event) => {
+          if (getStoredTheme()) {
+            return;
+          }
+          applyTheme(event.matches ? DARK : LIGHT);
+        };
+
+        if (typeof mediaQuery.addEventListener === "function") {
+          mediaQuery.addEventListener("change", handleSystemChange);
+        } else if (typeof mediaQuery.addListener === "function") {
+          mediaQuery.addListener(handleSystemChange);
+        }
+      })();
+    </script> <script>
+      (() => {
+        const shell = document.querySelector("[data-nav-shell]");
+        const nav = document.querySelector("[data-site-nav]");
+        const toggle = document.querySelector("[data-nav-toggle]");
+        const desktopMedia = window.matchMedia("(min-width: 901px)");
+
+        if (!(shell instanceof HTMLElement) || !(nav instanceof HTMLElement) || !(toggle instanceof HTMLButtonElement)) {
+          return;
+        }
+
+        const setOpen = (open) => {
+          shell.setAttribute("data-nav-open", String(open));
+          toggle.setAttribute("aria-expanded", String(open));
+          toggle.setAttribute("aria-label", open ? "收起导航" : "展开导航");
+        };
+
+        const syncMenuState = () => {
+          if (desktopMedia.matches) {
+            shell.setAttribute("data-nav-open", "true");
+            toggle.setAttribute("aria-expanded", "false");
+            return;
+          }
+
+          setOpen(false);
+        };
+
+        toggle.addEventListener("click", () => {
+          const next = shell.getAttribute("data-nav-open") !== "true";
+          setOpen(next);
+        });
+
+        nav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            if (!desktopMedia.matches) {
+              setOpen(false);
+            }
+          });
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && shell.getAttribute("data-nav-open") === "true" && !desktopMedia.matches) {
+            setOpen(false);
+            toggle.focus();
+          }
+        });
+
+        if (typeof desktopMedia.addEventListener === "function") {
+          desktopMedia.addEventListener("change", syncMenuState);
+        } else if (typeof desktopMedia.addListener === "function") {
+          desktopMedia.addListener(syncMenuState);
+        }
+
+        syncMenuState();
+      })();
+    </script>  <script>
+  (() => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const revealNodes = [...document.querySelectorAll("[data-reveal]")];
+
+    if (revealNodes.length > 0) {
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealNodes.forEach((node) => node.setAttribute("data-revealed", "true"));
+      } else {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (!entry.isIntersecting) {
+                continue;
+              }
+              entry.target.setAttribute("data-revealed", "true");
+              observer.unobserve(entry.target);
+            }
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+        );
+
+        revealNodes.forEach((node) => observer.observe(node));
+      }
+    }
+
+    const progressRoot = document.querySelector("[data-reading-root]");
+    const progressWrap = document.querySelector("[data-reading-progress]");
+    const progressBar = document.querySelector("[data-reading-progress-bar]");
+
+    if (!progressWrap || !progressBar) {
+      return;
+    }
+
+    if (!progressRoot) {
+      progressWrap.classList.remove("is-active");
+      progressBar.style.transform = "scaleX(0)";
+      return;
+    }
+
+    progressWrap.classList.add("is-active");
+
+    const updateReadingProgress = () => {
+      const rootRect = progressRoot.getBoundingClientRect();
+      const viewport = window.innerHeight || document.documentElement.clientHeight;
+      const total = Math.max(progressRoot.scrollHeight - viewport * 0.7, 1);
+      const current = Math.min(Math.max(-rootRect.top, 0), total);
+      const ratio = total === 0 ? 0 : current / total;
+      progressBar.style.transform = `scaleX(${Math.max(0, Math.min(1, ratio))})`;
+    };
+
+    updateReadingProgress();
+    window.addEventListener("scroll", updateReadingProgress, { passive: true });
+    window.addEventListener("resize", updateReadingProgress, { passive: true });
+  })();
+</script> </body></html> 

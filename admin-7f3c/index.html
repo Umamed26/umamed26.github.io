@@ -1,0 +1,352 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.0"><meta name="description" content="技术写作、游戏项目与个人实验的混合型个人站。"><meta property="og:type" content="website"><meta property="og:title" content="管理员 | UEnt26 Blog"><meta property="og:description" content="技术写作、游戏项目与个人实验的混合型个人站。"><meta property="og:url" content="https://umamed26.github.io/admin-7f3c/"><meta property="og:site_name" content="UEnt26 Blog"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="管理员 | UEnt26 Blog"><meta name="twitter:description" content="技术写作、游戏项目与个人实验的混合型个人站。"><meta name="theme-color" content="#c45237" data-theme-color data-light-theme-color="#c45237" data-dark-theme-color="#0f151c"><link rel="canonical" href="https://umamed26.github.io/admin-7f3c/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><script>
+      (() => {
+        const STORAGE_KEY = "uent26-theme";
+        const LIGHT = "light";
+        const DARK = "dark";
+        const root = document.documentElement;
+        const themeColorMeta = document.querySelector("meta[data-theme-color]");
+        const LIGHT_THEME_COLOR = themeColorMeta?.getAttribute("data-light-theme-color") ?? "#c45237";
+        const DARK_THEME_COLOR = themeColorMeta?.getAttribute("data-dark-theme-color") ?? "#0f151c";
+
+        const getStoredTheme = () => {
+          try {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored === LIGHT || stored === DARK) {
+              return stored;
+            }
+          } catch {}
+          return null;
+        };
+
+        const storedTheme = getStoredTheme();
+        const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+        const theme = storedTheme ?? preferredTheme;
+        root.setAttribute("data-theme", theme);
+        if (themeColorMeta) {
+          themeColorMeta.setAttribute("content", theme === DARK ? DARK_THEME_COLOR : LIGHT_THEME_COLOR);
+        }
+      })();
+    </script><title>管理员 | UEnt26 Blog</title><link rel="stylesheet" href="/_astro/admin-7f3c.Bwae43SQ.css">
+<link rel="stylesheet" href="/_astro/about.DvsY5t4q.css"></head> <body data-astro-cid-37fxchfa> <a class="skip-link" href="#main-content" data-astro-cid-37fxchfa>跳到正文</a> <div class="reading-progress" data-reading-progress aria-hidden="true" data-astro-cid-37fxchfa> <span class="reading-progress-bar" data-reading-progress-bar data-astro-cid-37fxchfa></span> </div> <div class="site-decor" aria-hidden="true" data-astro-cid-37fxchfa> <span class="wash wash-a" data-astro-cid-37fxchfa></span> <span class="wash wash-b" data-astro-cid-37fxchfa></span> <span class="line-overlay" data-astro-cid-37fxchfa></span> <span class="noise-overlay" data-astro-cid-37fxchfa></span> </div> <header class="site-header" data-astro-cid-37fxchfa> <div class="container nav-wrap" data-nav-shell data-nav-open="false" data-astro-cid-37fxchfa> <a class="brand" href="/" data-astro-cid-37fxchfa> <strong data-astro-cid-37fxchfa>UEnt26</strong> <span data-astro-cid-37fxchfa>Notes from the Frontend Desk</span> </a> <div class="header-actions" data-astro-cid-37fxchfa> <a class="header-tool" href="/search/" data-astro-cid-37fxchfa>搜索</a> <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换到夜间模式" aria-pressed="false" data-astro-cid-37fxchfa> <span class="theme-toggle-dot" aria-hidden="true" data-astro-cid-37fxchfa></span> <span data-theme-toggle-label data-astro-cid-37fxchfa>夜间</span> </button> <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu" aria-label="展开导航" data-astro-cid-37fxchfa> <span class="nav-toggle-bars" aria-hidden="true" data-astro-cid-37fxchfa> <span data-astro-cid-37fxchfa></span> <span data-astro-cid-37fxchfa></span> <span data-astro-cid-37fxchfa></span> </span> <span class="nav-toggle-label" data-astro-cid-37fxchfa>菜单</span> </button> </div> <nav id="site-menu" class="site-nav" aria-label="主导航" data-site-nav data-astro-cid-37fxchfa> <ul class="nav-list" data-astro-cid-37fxchfa> <li data-astro-cid-37fxchfa> <a class="nav-link" href="/" data-astro-cid-37fxchfa> 首页 </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/archive/" data-astro-cid-37fxchfa> 文章 </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/projects/" data-astro-cid-37fxchfa> 项目 </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/now/" data-astro-cid-37fxchfa> Now </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/about/" data-astro-cid-37fxchfa> 关于 </a> </li> </ul> </nav> </div> </header> <main id="main-content" tabindex="-1" class="container page-content" data-astro-cid-37fxchfa>  <section class="surface admin-gate" data-admin-gate data-reveal data-astro-cid-veybz7kn> <div class="admin-gate-head" data-astro-cid-veybz7kn> <p class="section-kicker" data-astro-cid-veybz7kn>Admin Access</p> <h1 class="page-title" data-astro-cid-veybz7kn>管理员入口</h1> <p class="muted" data-astro-cid-veybz7kn>请输入管理员密码以访问后台操作。</p> </div> <form class="admin-form" data-admin-form data-astro-cid-veybz7kn> <label class="field" data-astro-cid-veybz7kn> <span data-astro-cid-veybz7kn>管理员密码</span> <input type="password" autocomplete="current-password" data-admin-input data-astro-cid-veybz7kn> </label> <div class="admin-form-actions" data-astro-cid-veybz7kn> <button class="primary-btn" type="submit" data-astro-cid-veybz7kn>进入</button> <p class="muted" data-admin-error data-astro-cid-veybz7kn></p> </div> </form> </section> <section class="stack admin-page" data-admin-page hidden data-astro-cid-veybz7kn> <header class="admin-head" data-reveal data-astro-cid-veybz7kn> <p class="section-kicker" data-astro-cid-veybz7kn>Admin Panel</p> <h1 class="page-title" data-astro-cid-veybz7kn>管理员页面</h1> <p class="muted" data-astro-cid-veybz7kn>用于管理本地解锁状态。清除后将隐藏所有已解锁文章。</p> </header> <section class="surface admin-card" data-reveal style="--reveal-delay: 60ms;" data-astro-cid-veybz7kn> <div class="admin-row" data-astro-cid-veybz7kn> <div data-astro-cid-veybz7kn> <h2 class="section-title" data-astro-cid-veybz7kn>解锁状态</h2> <p class="muted" data-admin-status data-astro-cid-veybz7kn>读取中...</p> </div> <div class="admin-actions" data-astro-cid-veybz7kn> <button class="danger-btn" type="button" data-admin-clear data-astro-cid-veybz7kn>清除所有解锁进度</button> <button class="ghost-btn" type="button" data-admin-logout data-astro-cid-veybz7kn>退出管理员</button> </div> </div> <div class="admin-list" data-admin-list aria-live="polite" data-astro-cid-veybz7kn></div> </section> <section class="surface admin-card" data-reveal style="--reveal-delay: 120ms;" data-astro-cid-veybz7kn> <h2 class="section-title" data-astro-cid-veybz7kn>说明</h2> <ul class="admin-notes" data-astro-cid-veybz7kn> <li data-astro-cid-veybz7kn>解锁状态存储在浏览器本地，不会同步到其他设备。</li> <li data-astro-cid-veybz7kn>清除后需要重新在控制台输入解锁码。</li> <li data-astro-cid-veybz7kn>管理员密码仅用于本地访问控制，源码中可见。</li> </ul> </section> </section> <script>
+    (() => {
+      const ADMIN_PASSWORD = "uent26-admin";
+      const ADMIN_AUTH_KEY = "uent26-admin-auth";
+      const UNLOCK_KEY = "uent26-unlock-codes";
+
+      const gate = document.querySelector("[data-admin-gate]");
+      const page = document.querySelector("[data-admin-page]");
+      const form = document.querySelector("[data-admin-form]");
+      const input = document.querySelector("[data-admin-input]");
+      const error = document.querySelector("[data-admin-error]");
+      const status = document.querySelector("[data-admin-status]");
+      const list = document.querySelector("[data-admin-list]");
+      const clearButton = document.querySelector("[data-admin-clear]");
+      const logoutButton = document.querySelector("[data-admin-logout]");
+
+      if (
+        !(gate instanceof HTMLElement) ||
+        !(page instanceof HTMLElement) ||
+        !(form instanceof HTMLFormElement) ||
+        !(input instanceof HTMLInputElement) ||
+        !(error instanceof HTMLElement) ||
+        !(status instanceof HTMLElement) ||
+        !(list instanceof HTMLElement) ||
+        !(clearButton instanceof HTMLButtonElement) ||
+        !(logoutButton instanceof HTMLButtonElement)
+      ) {
+        return;
+      }
+
+      const normalize = (value) => String(value ?? "").trim();
+      const isAuthed = () => {
+        try {
+          return localStorage.getItem(ADMIN_AUTH_KEY) === "true";
+        } catch {
+          return false;
+        }
+      };
+
+      const setAuthed = (value) => {
+        try {
+          if (value) {
+            localStorage.setItem(ADMIN_AUTH_KEY, "true");
+          } else {
+            localStorage.removeItem(ADMIN_AUTH_KEY);
+          }
+        } catch {}
+      };
+
+      const readCodes = () => {
+        try {
+          const raw = localStorage.getItem(UNLOCK_KEY);
+          if (!raw) {
+            return [];
+          }
+          const parsed = JSON.parse(raw);
+          if (!Array.isArray(parsed)) {
+            return [];
+          }
+          return parsed.map((item) => normalize(item)).filter(Boolean);
+        } catch {
+          return [];
+        }
+      };
+
+      const render = () => {
+        const codes = readCodes();
+        status.textContent = codes.length
+          ? `当前已解锁 ${codes.length} 个解锁码。`
+          : "当前没有任何解锁记录。";
+
+        list.replaceChildren();
+        if (codes.length === 0) {
+          const empty = document.createElement("p");
+          empty.className = "muted";
+          empty.textContent = "暂无解锁码。";
+          list.append(empty);
+          return;
+        }
+
+        const ul = document.createElement("ul");
+        ul.className = "code-list";
+        for (const code of codes) {
+          const li = document.createElement("li");
+          const chip = document.createElement("code");
+          chip.textContent = code;
+          li.append(chip);
+          ul.append(li);
+        }
+        list.append(ul);
+      };
+
+      const showAdmin = () => {
+        gate.setAttribute("hidden", "");
+        page.removeAttribute("hidden");
+        render();
+      };
+
+      const showGate = () => {
+        page.setAttribute("hidden", "");
+        gate.removeAttribute("hidden");
+        input.value = "";
+      };
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const value = normalize(input.value);
+        if (!value) {
+          error.textContent = "请输入管理员密码。";
+          return;
+        }
+        if (value !== ADMIN_PASSWORD) {
+          error.textContent = "密码错误。";
+          return;
+        }
+        error.textContent = "";
+        setAuthed(true);
+        showAdmin();
+      });
+
+      clearButton.addEventListener("click", () => {
+        try {
+          localStorage.removeItem(UNLOCK_KEY);
+        } catch {}
+        render();
+        window.dispatchEvent(new CustomEvent("unlock:changed"));
+      });
+
+      logoutButton.addEventListener("click", () => {
+        setAuthed(false);
+        showGate();
+      });
+
+      window.addEventListener("storage", (event) => {
+        if (event.key === UNLOCK_KEY && !page.hasAttribute("hidden")) {
+          render();
+        }
+      });
+
+      if (isAuthed()) {
+        showAdmin();
+      } else {
+        showGate();
+      }
+    })();
+  </script>  </main> <footer class="site-footer" data-astro-cid-37fxchfa> <div class="container footer-wrap" data-astro-cid-37fxchfa> <div class="footer-copy" data-astro-cid-37fxchfa> <p class="copyright" data-astro-cid-37fxchfa>© 2026 UEnt26. All rights reserved.</p> <p class="footer-note" data-astro-cid-37fxchfa>文章优先，项目与实验作为延伸入口。</p> </div> <ul class="footer-links" aria-label="站点入口" data-astro-cid-37fxchfa> <li data-astro-cid-37fxchfa><a href="/search/" data-astro-cid-37fxchfa>搜索</a></li><li data-astro-cid-37fxchfa><a href="/tags/" data-astro-cid-37fxchfa>标签</a></li><li data-astro-cid-37fxchfa><a href="/guestbook/" data-astro-cid-37fxchfa>留言</a></li><li data-astro-cid-37fxchfa><a href="/contact/" data-astro-cid-37fxchfa>联系</a></li><li data-astro-cid-37fxchfa><a href="/rss.xml" data-astro-cid-37fxchfa>RSS</a></li> </ul> <ul class="social-list" aria-label="社交链接" data-astro-cid-37fxchfa> <li data-astro-cid-37fxchfa><a href="https://github.com/Umamed26/UEnt26-Blog" data-astro-cid-37fxchfa>GitHub</a></li> </ul> </div> </footer> <script>
+      (() => {
+        const STORAGE_KEY = "uent26-theme";
+        const LIGHT = "light";
+        const DARK = "dark";
+        const root = document.documentElement;
+        const toggle = document.querySelector("[data-theme-toggle]");
+        const toggleLabel = document.querySelector("[data-theme-toggle-label]");
+        const themeColorMeta = document.querySelector("meta[data-theme-color]");
+        const LIGHT_THEME_COLOR = themeColorMeta?.getAttribute("data-light-theme-color") ?? "#c45237";
+        const DARK_THEME_COLOR = themeColorMeta?.getAttribute("data-dark-theme-color") ?? "#0f151c";
+
+        if (!(toggle instanceof HTMLButtonElement) || !(toggleLabel instanceof HTMLElement)) {
+          return;
+        }
+
+        const getStoredTheme = () => {
+          try {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored === LIGHT || stored === DARK) {
+              return stored;
+            }
+          } catch {}
+          return null;
+        };
+
+        const setStoredTheme = (theme) => {
+          try {
+            localStorage.setItem(STORAGE_KEY, theme);
+          } catch {}
+        };
+
+        const applyTheme = (theme) => {
+          const isDark = theme === DARK;
+          root.setAttribute("data-theme", theme);
+          toggle.setAttribute("aria-pressed", String(isDark));
+          toggle.setAttribute("aria-label", isDark ? "切换到日间模式" : "切换到夜间模式");
+          toggleLabel.textContent = isDark ? "日间" : "夜间";
+          if (themeColorMeta) {
+            themeColorMeta.setAttribute("content", isDark ? DARK_THEME_COLOR : LIGHT_THEME_COLOR);
+          }
+          window.dispatchEvent(new CustomEvent("theme:changed", { detail: { theme } }));
+        };
+
+        const initial = root.getAttribute("data-theme") === DARK ? DARK : LIGHT;
+        applyTheme(initial);
+
+        toggle.addEventListener("click", () => {
+          const next = root.getAttribute("data-theme") === DARK ? LIGHT : DARK;
+          setStoredTheme(next);
+          applyTheme(next);
+        });
+
+        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        const handleSystemChange = (event) => {
+          if (getStoredTheme()) {
+            return;
+          }
+          applyTheme(event.matches ? DARK : LIGHT);
+        };
+
+        if (typeof mediaQuery.addEventListener === "function") {
+          mediaQuery.addEventListener("change", handleSystemChange);
+        } else if (typeof mediaQuery.addListener === "function") {
+          mediaQuery.addListener(handleSystemChange);
+        }
+      })();
+    </script> <script>
+      (() => {
+        const shell = document.querySelector("[data-nav-shell]");
+        const nav = document.querySelector("[data-site-nav]");
+        const toggle = document.querySelector("[data-nav-toggle]");
+        const desktopMedia = window.matchMedia("(min-width: 901px)");
+
+        if (!(shell instanceof HTMLElement) || !(nav instanceof HTMLElement) || !(toggle instanceof HTMLButtonElement)) {
+          return;
+        }
+
+        const setOpen = (open) => {
+          shell.setAttribute("data-nav-open", String(open));
+          toggle.setAttribute("aria-expanded", String(open));
+          toggle.setAttribute("aria-label", open ? "收起导航" : "展开导航");
+        };
+
+        const syncMenuState = () => {
+          if (desktopMedia.matches) {
+            shell.setAttribute("data-nav-open", "true");
+            toggle.setAttribute("aria-expanded", "false");
+            return;
+          }
+
+          setOpen(false);
+        };
+
+        toggle.addEventListener("click", () => {
+          const next = shell.getAttribute("data-nav-open") !== "true";
+          setOpen(next);
+        });
+
+        nav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            if (!desktopMedia.matches) {
+              setOpen(false);
+            }
+          });
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && shell.getAttribute("data-nav-open") === "true" && !desktopMedia.matches) {
+            setOpen(false);
+            toggle.focus();
+          }
+        });
+
+        if (typeof desktopMedia.addEventListener === "function") {
+          desktopMedia.addEventListener("change", syncMenuState);
+        } else if (typeof desktopMedia.addListener === "function") {
+          desktopMedia.addListener(syncMenuState);
+        }
+
+        syncMenuState();
+      })();
+    </script>  <script>
+  (() => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const revealNodes = [...document.querySelectorAll("[data-reveal]")];
+
+    if (revealNodes.length > 0) {
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealNodes.forEach((node) => node.setAttribute("data-revealed", "true"));
+      } else {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (!entry.isIntersecting) {
+                continue;
+              }
+              entry.target.setAttribute("data-revealed", "true");
+              observer.unobserve(entry.target);
+            }
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+        );
+
+        revealNodes.forEach((node) => observer.observe(node));
+      }
+    }
+
+    const progressRoot = document.querySelector("[data-reading-root]");
+    const progressWrap = document.querySelector("[data-reading-progress]");
+    const progressBar = document.querySelector("[data-reading-progress-bar]");
+
+    if (!progressWrap || !progressBar) {
+      return;
+    }
+
+    if (!progressRoot) {
+      progressWrap.classList.remove("is-active");
+      progressBar.style.transform = "scaleX(0)";
+      return;
+    }
+
+    progressWrap.classList.add("is-active");
+
+    const updateReadingProgress = () => {
+      const rootRect = progressRoot.getBoundingClientRect();
+      const viewport = window.innerHeight || document.documentElement.clientHeight;
+      const total = Math.max(progressRoot.scrollHeight - viewport * 0.7, 1);
+      const current = Math.min(Math.max(-rootRect.top, 0), total);
+      const ratio = total === 0 ? 0 : current / total;
+      progressBar.style.transform = `scaleX(${Math.max(0, Math.min(1, ratio))})`;
+    };
+
+    updateReadingProgress();
+    window.addEventListener("scroll", updateReadingProgress, { passive: true });
+    window.addEventListener("resize", updateReadingProgress, { passive: true });
+  })();
+</script> </body></html> 

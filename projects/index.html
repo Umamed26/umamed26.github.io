@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.18.0"><meta name="description" content="技术写作、游戏项目与个人实验的混合型个人站。"><meta property="og:type" content="website"><meta property="og:title" content="Projects | UEnt26 Blog"><meta property="og:description" content="技术写作、游戏项目与个人实验的混合型个人站。"><meta property="og:url" content="https://umamed26.github.io/projects/"><meta property="og:site_name" content="UEnt26 Blog"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Projects | UEnt26 Blog"><meta name="twitter:description" content="技术写作、游戏项目与个人实验的混合型个人站。"><meta name="theme-color" content="#c45237" data-theme-color data-light-theme-color="#c45237" data-dark-theme-color="#0f151c"><link rel="canonical" href="https://umamed26.github.io/projects/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><script>
+      (() => {
+        const STORAGE_KEY = "uent26-theme";
+        const LIGHT = "light";
+        const DARK = "dark";
+        const root = document.documentElement;
+        const themeColorMeta = document.querySelector("meta[data-theme-color]");
+        const LIGHT_THEME_COLOR = themeColorMeta?.getAttribute("data-light-theme-color") ?? "#c45237";
+        const DARK_THEME_COLOR = themeColorMeta?.getAttribute("data-dark-theme-color") ?? "#0f151c";
+
+        const getStoredTheme = () => {
+          try {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored === LIGHT || stored === DARK) {
+              return stored;
+            }
+          } catch {}
+          return null;
+        };
+
+        const storedTheme = getStoredTheme();
+        const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT;
+        const theme = storedTheme ?? preferredTheme;
+        root.setAttribute("data-theme", theme);
+        if (themeColorMeta) {
+          themeColorMeta.setAttribute("content", theme === DARK ? DARK_THEME_COLOR : LIGHT_THEME_COLOR);
+        }
+      })();
+    </script><title>Projects | UEnt26 Blog</title><link rel="stylesheet" href="/_astro/index.BGXvivsT.css">
+<style>.projects-page[data-astro-cid-aid3sr62]{gap:1.2rem}.projects-hero[data-astro-cid-aid3sr62]{padding:clamp(1.1rem,2.8vw,1.5rem);border-radius:var(--radius-lg);display:grid;gap:1rem}.hero-copy[data-astro-cid-aid3sr62]{display:grid;gap:.7rem}.hero-copy[data-astro-cid-aid3sr62] p[data-astro-cid-aid3sr62]{margin:0;max-width:66ch}.stats-grid[data-astro-cid-aid3sr62]{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}.stat-card[data-astro-cid-aid3sr62]{border-radius:16px;padding:1.05rem;display:grid;gap:.3rem}.stat-value[data-astro-cid-aid3sr62],.stat-label[data-astro-cid-aid3sr62]{margin:0}.stat-value[data-astro-cid-aid3sr62]{font-size:1.7rem;font-family:Space Grotesk,IBM Plex Sans,sans-serif}.stat-label[data-astro-cid-aid3sr62]{color:var(--text-soft);font-size:.84rem;letter-spacing:.06em;text-transform:uppercase;font-family:IBM Plex Mono,monospace}.section-head[data-astro-cid-aid3sr62]{display:flex;align-items:end;justify-content:space-between;gap:1rem;flex-wrap:wrap}.section-note[data-astro-cid-aid3sr62]{margin:0;max-width:42ch}.project-layout[data-astro-cid-aid3sr62]{display:grid;gap:1rem;align-items:start}.all-projects[data-astro-cid-aid3sr62],.sidebar[data-astro-cid-aid3sr62]{gap:1rem}.project-grid[data-astro-cid-aid3sr62]{display:grid;gap:1.05rem}.sidebar-card[data-astro-cid-aid3sr62]{padding:1.1rem;border-radius:18px;display:grid;gap:.85rem}.meta-list[data-astro-cid-aid3sr62],.bullet-list[data-astro-cid-aid3sr62]{margin:0;padding-left:1.1rem;display:grid;gap:.55rem}.meta-list[data-astro-cid-aid3sr62] li[data-astro-cid-aid3sr62],.bullet-list[data-astro-cid-aid3sr62] li[data-astro-cid-aid3sr62]{color:var(--text);line-height:1.55}.meta-list[data-astro-cid-aid3sr62] strong[data-astro-cid-aid3sr62]{display:block;margin-top:.1rem;color:var(--accent-cyan);font-size:.84rem}@media(min-width:980px){.featured-grid[data-astro-cid-aid3sr62],.project-grid[data-astro-cid-aid3sr62]{grid-template-columns:repeat(2,minmax(0,1fr))}.project-layout[data-astro-cid-aid3sr62]{grid-template-columns:minmax(0,1.7fr) minmax(280px,.9fr)}}@media(min-width:1240px){.featured-grid[data-astro-cid-aid3sr62]{grid-template-columns:repeat(3,minmax(0,1fr))}}html[data-theme=dark] .stat-card[data-astro-cid-aid3sr62],html[data-theme=dark] .sidebar-card[data-astro-cid-aid3sr62]{border-color:#2d3b4bf2}
+</style>
+<link rel="stylesheet" href="/_astro/about.DvsY5t4q.css"></head> <body data-astro-cid-37fxchfa> <a class="skip-link" href="#main-content" data-astro-cid-37fxchfa>跳到正文</a> <div class="reading-progress" data-reading-progress aria-hidden="true" data-astro-cid-37fxchfa> <span class="reading-progress-bar" data-reading-progress-bar data-astro-cid-37fxchfa></span> </div> <div class="site-decor" aria-hidden="true" data-astro-cid-37fxchfa> <span class="wash wash-a" data-astro-cid-37fxchfa></span> <span class="wash wash-b" data-astro-cid-37fxchfa></span> <span class="line-overlay" data-astro-cid-37fxchfa></span> <span class="noise-overlay" data-astro-cid-37fxchfa></span> </div> <header class="site-header" data-astro-cid-37fxchfa> <div class="container nav-wrap" data-nav-shell data-nav-open="false" data-astro-cid-37fxchfa> <a class="brand" href="/" data-astro-cid-37fxchfa> <strong data-astro-cid-37fxchfa>UEnt26</strong> <span data-astro-cid-37fxchfa>Notes from the Frontend Desk</span> </a> <div class="header-actions" data-astro-cid-37fxchfa> <a class="header-tool" href="/search/" data-astro-cid-37fxchfa>搜索</a> <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换到夜间模式" aria-pressed="false" data-astro-cid-37fxchfa> <span class="theme-toggle-dot" aria-hidden="true" data-astro-cid-37fxchfa></span> <span data-theme-toggle-label data-astro-cid-37fxchfa>夜间</span> </button> <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-menu" aria-label="展开导航" data-astro-cid-37fxchfa> <span class="nav-toggle-bars" aria-hidden="true" data-astro-cid-37fxchfa> <span data-astro-cid-37fxchfa></span> <span data-astro-cid-37fxchfa></span> <span data-astro-cid-37fxchfa></span> </span> <span class="nav-toggle-label" data-astro-cid-37fxchfa>菜单</span> </button> </div> <nav id="site-menu" class="site-nav" aria-label="主导航" data-site-nav data-astro-cid-37fxchfa> <ul class="nav-list" data-astro-cid-37fxchfa> <li data-astro-cid-37fxchfa> <a class="nav-link" href="/" data-astro-cid-37fxchfa> 首页 </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/archive/" data-astro-cid-37fxchfa> 文章 </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link active" href="/projects/" data-astro-cid-37fxchfa> 项目 </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/now/" data-astro-cid-37fxchfa> Now </a> </li><li data-astro-cid-37fxchfa> <a class="nav-link" href="/about/" data-astro-cid-37fxchfa> 关于 </a> </li> </ul> </nav> </div> </header> <main id="main-content" tabindex="-1" class="container page-content" data-astro-cid-37fxchfa>  <section class="stack projects-page" data-reveal data-astro-cid-aid3sr62> <header class="surface projects-hero" data-astro-cid-aid3sr62> <div class="hero-copy" data-astro-cid-aid3sr62> <p class="section-kicker" data-astro-cid-aid3sr62>Projects</p> <h1 class="page-title" data-astro-cid-aid3sr62>项目</h1> <p class="muted" data-astro-cid-aid3sr62>
+这里收录我正在做、维护中、计划中以及已经停更但仍值得保留的项目。它们和文章一起，构成这个站的第二条主线。
+</p> </div> <div class="stats-grid" aria-label="项目状态概览" data-astro-cid-aid3sr62> <article class="surface stat-card" data-astro-cid-aid3sr62> <p class="stat-value" data-astro-cid-aid3sr62>02</p> <p class="stat-label" data-astro-cid-aid3sr62>进行中</p> </article><article class="surface stat-card" data-astro-cid-aid3sr62> <p class="stat-value" data-astro-cid-aid3sr62>01</p> <p class="stat-label" data-astro-cid-aid3sr62>维护中</p> </article><article class="surface stat-card" data-astro-cid-aid3sr62> <p class="stat-value" data-astro-cid-aid3sr62>03</p> <p class="stat-label" data-astro-cid-aid3sr62>规划中</p> </article><article class="surface stat-card" data-astro-cid-aid3sr62> <p class="stat-value" data-astro-cid-aid3sr62>01</p> <p class="stat-label" data-astro-cid-aid3sr62>已停更</p> </article> </div> </header> <section class="stack" data-reveal style="--reveal-delay: 70ms;" data-astro-cid-aid3sr62> <div class="section-head" data-astro-cid-aid3sr62> <div data-astro-cid-aid3sr62> <p class="section-kicker" data-astro-cid-aid3sr62>Current Focus</p> <h2 class="section-title" data-astro-cid-aid3sr62>当前重点</h2> </div> <p class="muted section-note" data-astro-cid-aid3sr62>优先展示现在最值得打开继续看的项目。</p> </div> <div class="project-grid featured-grid" data-astro-cid-aid3sr62> <article class="surface project-card default" data-astro-cid-mspuyifq> <div class="card-head" data-astro-cid-mspuyifq> <div class="title-wrap" data-astro-cid-mspuyifq> <p class="status-pill status-active" data-astro-cid-mspuyifq>进行中</p> <h3 data-astro-cid-mspuyifq> <a href="/projects/uent26-blog/" data-astro-cid-mspuyifq>UEnt26 Blog</a> </h3> </div> <p class="meta" data-astro-cid-mspuyifq>更新于 2026/3/7</p> </div> <p class="muted summary" data-astro-cid-mspuyifq>本站本体：用 Astro 搭起来的个人内容站，兼做项目展示、写作实验和站点游乐场。</p> <p class="muted status-desc" data-astro-cid-mspuyifq>当前仍在持续推进，适合优先查看。</p> <div class="chip-row" aria-label="项目技术栈" data-astro-cid-mspuyifq> <span class="chip" data-astro-cid-mspuyifq>Astro</span><span class="chip" data-astro-cid-mspuyifq>TypeScript</span><span class="chip" data-astro-cid-mspuyifq>Markdown</span><span class="chip" data-astro-cid-mspuyifq>Giscus</span> </div> <ul class="highlight-list" data-astro-cid-mspuyifq> <li data-astro-cid-mspuyifq>内容与项目双入口</li><li data-astro-cid-mspuyifq>搜索、归档、标签与隐藏文章机制</li><li data-astro-cid-mspuyifq>作为个人品牌与作品集的统一承载</li> </ul> <div class="link-row" data-astro-cid-mspuyifq> <a class="primary-link" href="/projects/uent26-blog/" data-astro-cid-mspuyifq>查看详情</a> <a href="/" data-astro-cid-mspuyifq>查看首页</a><a href="/archive/" data-astro-cid-mspuyifq>归档</a> </div> </article> <article class="surface project-card default" data-astro-cid-mspuyifq> <div class="card-head" data-astro-cid-mspuyifq> <div class="title-wrap" data-astro-cid-mspuyifq> <p class="status-pill status-active" data-astro-cid-mspuyifq>进行中</p> <h3 data-astro-cid-mspuyifq> <a href="/projects/path-to-dishonor/" data-astro-cid-mspuyifq>Path to Dishonor</a> </h3> </div> <p class="meta" data-astro-cid-mspuyifq>更新于 2026/3/5</p> </div> <p class="muted summary" data-astro-cid-mspuyifq>一个用 Python 制作的 classic roguelike 游戏原型，重点在系统感和逐步迭代。</p> <p class="muted status-desc" data-astro-cid-mspuyifq>当前仍在持续推进，适合优先查看。</p> <div class="chip-row" aria-label="项目技术栈" data-astro-cid-mspuyifq> <span class="chip" data-astro-cid-mspuyifq>Python</span> </div> <ul class="highlight-list" data-astro-cid-mspuyifq> <li data-astro-cid-mspuyifq>已推进到 v0.6</li><li data-astro-cid-mspuyifq>有明确的原型迭代节奏</li><li data-astro-cid-mspuyifq>适合作为开发日志型项目继续写</li> </ul> <div class="link-row" data-astro-cid-mspuyifq> <a class="primary-link" href="/projects/path-to-dishonor/" data-astro-cid-mspuyifq>查看详情</a>  </div> </article> <article class="surface project-card default" data-astro-cid-mspuyifq> <div class="card-head" data-astro-cid-mspuyifq> <div class="title-wrap" data-astro-cid-mspuyifq> <p class="status-pill status-maintain" data-astro-cid-mspuyifq>维护中</p> <h3 data-astro-cid-mspuyifq> <a href="/projects/pixel-workshop/" data-astro-cid-mspuyifq>Pixel Workshop</a> </h3> </div> <p class="meta" data-astro-cid-mspuyifq>更新于 2026/3/6</p> </div> <p class="muted summary" data-astro-cid-mspuyifq>一个把普通图片转换为像素风格的小工具站，主打实时预览和参数可调。</p> <p class="muted status-desc" data-astro-cid-mspuyifq>功能已经可用，目前以维护和细节打磨为主。</p> <div class="chip-row" aria-label="项目技术栈" data-astro-cid-mspuyifq> <span class="chip" data-astro-cid-mspuyifq>React</span><span class="chip" data-astro-cid-mspuyifq>TypeScript</span><span class="chip" data-astro-cid-mspuyifq>Vite</span> </div> <ul class="highlight-list" data-astro-cid-mspuyifq> <li data-astro-cid-mspuyifq>多种像素化参数组合</li><li data-astro-cid-mspuyifq>实时预览与快速导出</li><li data-astro-cid-mspuyifq>适合做轻量图像实验</li> </ul> <div class="link-row" data-astro-cid-mspuyifq> <a class="primary-link" href="/projects/pixel-workshop/" data-astro-cid-mspuyifq>查看详情</a> <a href="https://umamed26.github.io/Pixel_Converter/" data-astro-cid-mspuyifq>访问网站</a> </div> </article>  </div> </section> <section class="project-layout" data-reveal style="--reveal-delay: 110ms;" data-astro-cid-aid3sr62> <div class="stack all-projects" data-astro-cid-aid3sr62> <div class="section-head" data-astro-cid-aid3sr62> <div data-astro-cid-aid3sr62> <p class="section-kicker" data-astro-cid-aid3sr62>Full Index</p> <h2 class="section-title" data-astro-cid-aid3sr62>全部项目</h2> </div> <p class="muted section-note" data-astro-cid-aid3sr62>项目详情页会继续沉淀背景、阶段目标和相关文章。</p> </div> <div class="project-grid" data-astro-cid-aid3sr62> <article class="surface project-card default" data-astro-cid-mspuyifq> <div class="card-head" data-astro-cid-mspuyifq> <div class="title-wrap" data-astro-cid-mspuyifq> <p class="status-pill status-active" data-astro-cid-mspuyifq>进行中</p> <h3 data-astro-cid-mspuyifq> <a href="/projects/uent26-blog/" data-astro-cid-mspuyifq>UEnt26 Blog</a> </h3> </div> <p class="meta" data-astro-cid-mspuyifq>更新于 2026/3/7</p> </div> <p class="muted summary" data-astro-cid-mspuyifq>本站本体：用 Astro 搭起来的个人内容站，兼做项目展示、写作实验和站点游乐场。</p> <p class="muted status-desc" data-astro-cid-mspuyifq>当前仍在持续推进，适合优先查看。</p> <div class="chip-row" aria-label="项目技术栈" data-astro-cid-mspuyifq> <span class="chip" data-astro-cid-mspuyifq>Astro</span><span class="chip" data-astro-cid-mspuyifq>TypeScript</span><span class="chip" data-astro-cid-mspuyifq>Markdown</span><span class="chip" data-astro-cid-mspuyifq>Giscus</span> </div> <ul class="highlight-list" data-astro-cid-mspuyifq> <li data-astro-cid-mspuyifq>内容与项目双入口</li><li data-astro-cid-mspuyifq>搜索、归档、标签与隐藏文章机制</li><li data-astro-cid-mspuyifq>作为个人品牌与作品集的统一承载</li> </ul> <div class="link-row" data-astro-cid-mspuyifq> <a class="primary-link" href="/projects/uent26-blog/" data-astro-cid-mspuyifq>查看详情</a> <a href="/" data-astro-cid-mspuyifq>查看首页</a><a href="/archive/" data-astro-cid-mspuyifq>归档</a> </div> </article> <article class="surface project-card default" data-astro-cid-mspuyifq> <div class="card-head" data-astro-cid-mspuyifq> <div class="title-wrap" data-astro-cid-mspuyifq> <p class="status-pill status-active" data-astro-cid-mspuyifq>进行中</p> <h3 data-astro-cid-mspuyifq> <a href="/projects/path-to-dishonor/" data-astro-cid-mspuyifq>Path to Dishonor</a> </h3> </div> <p class="meta" data-astro-cid-mspuyifq>更新于 2026/3/5</p> </div> <p class="muted summary" data-astro-cid-mspuyifq>一个用 Python 制作的 classic roguelike 游戏原型，重点在系统感和逐步迭代。</p> <p class="muted status-desc" data-astro-cid-mspuyifq>当前仍在持续推进，适合优先查看。</p> <div class="chip-row" aria-label="项目技术栈" data-astro-cid-mspuyifq> <span class="chip" data-astro-cid-mspuyifq>Python</span> </div> <ul class="highlight-list" data-astro-cid-mspuyifq> <li data-astro-cid-mspuyifq>已推进到 v0.6</li><li data-astro-cid-mspuyifq>有明确的原型迭代节奏</li><li data-astro-cid-mspuyifq>适合作为开发日志型项目继续写</li> </ul> <div class="link-row" data-astro-cid-mspuyifq> <a class="primary-link" href="/projects/path-to-dishonor/" data-astro-cid-mspuyifq>查看详情</a>  </div> </article> <article class="surface project-card default" data-astro-cid-mspuyifq> <div class="card-head" data-astro-cid-mspuyifq> <div class="title-wrap" data-astro-cid-mspuyifq> <p class="status-pill status-maintain" data-astro-cid-mspuyifq>维护中</p> <h3 data-astro-cid-mspuyifq> <a href="/projects/pixel-workshop/" data-astro-cid-mspuyifq>Pixel Workshop</a> </h3> </div> <p class="meta" data-astro-cid-mspuyifq>更新于 2026/3/6</p> </div> <p class="muted summary" data-astro-cid-mspuyifq>一个把普通图片转换为像素风格的小工具站，主打实时预览和参数可调。</p> <p class="muted status-desc" data-astro-cid-mspuyifq>功能已经可用，目前以维护和细节打磨为主。</p> <div class="chip-row" aria-label="项目技术栈" data-astro-cid-mspuyifq> <span class="chip" data-astro-cid-mspuyifq>React</span><span class="chip" data-astro-cid-mspuyifq>TypeScript</span><span class="chip" data-astro-cid-mspuyifq>Vite</span> </div> <ul class="highlight-list" data-astro-cid-mspuyifq> <li data-astro-cid-mspuyifq>多种像素化参数组合</li><li data-astro-cid-mspuyifq>实时预览与快速导出</li><li data-astro-cid-mspuyifq>适合做轻量图像实验</li> </ul> <div class="link-row" data-astro-cid-mspuyifq> <a class="primary-link" href="/projects/pixel-workshop/" data-astro-cid-mspuyifq>查看详情</a> <a href="https://umamed26.github.io/Pixel_Converter/" data-astro-cid-mspuyifq>访问网站</a> </div> </article> <article class="surface project-card default" data-astro-cid-mspuyifq> <div class="card-head" data-astro-cid-mspuyifq> <div class="title-wrap" data-astro-cid-mspuyifq> <p class="status-pill status-plan" data-astro-cid-mspuyifq>规划中</p> <h3 data-astro-cid-mspuyifq> <a href="/projects/dystatic/" data-astro-cid-mspuyifq>Dystatic（稳态失衡）</a> </h3> </div> <p class="meta" data-astro-cid-mspuyifq>更新于 2026/3/8</p> </div> <p class="muted summary" data-astro-cid-mspuyifq>一个受 CDDA 气质启发的生存向游戏项目，重点会放在状态压力、资源管理和系统连锁反应上。</p> <p class="muted status-desc" data-astro-cid-mspuyifq>已经进入构思或预研阶段，还没有对外版本。</p>  <ul class="highlight-list" data-astro-cid-mspuyifq> <li data-astro-cid-mspuyifq>从可玩的生存核心循环开始做原型</li><li data-astro-cid-mspuyifq>强调状态叠加、资源紧缺和长期决策后果</li><li data-astro-cid-mspuyifq>目标不是照搬 CDDA，而是提炼那种持续失衡的生存压力</li> </ul> <div class="link-row" data-astro-cid-mspuyifq> <a class="primary-link" href="/projects/dystatic/" data-astro-cid-mspuyifq>查看详情</a>  </div> </article> <article class="surface project-card default" data-astro-cid-mspuyifq> <div class="card-head" data-astro-cid-mspuyifq> <div class="title-wrap" data-astro-cid-mspuyifq> <p class="status-pill status-plan" data-astro-cid-mspuyifq>规划中</p> <h3 data-astro-cid-mspuyifq> <a href="/projects/bash-the-spire/" data-astro-cid-mspuyifq>Bash the Spire</a> </h3> </div> <p class="meta" data-astro-cid-mspuyifq>更新于 2026/3/4</p> </div> <p class="muted summary" data-astro-cid-mspuyifq>如果把《杀戮尖塔》的卡组构筑体验搬进终端，会是什么样子。</p> <p class="muted status-desc" data-astro-cid-mspuyifq>已经进入构思或预研阶段，还没有对外版本。</p> <div class="chip-row" aria-label="项目技术栈" data-astro-cid-mspuyifq> <span class="chip" data-astro-cid-mspuyifq>Python</span><span class="chip" data-astro-cid-mspuyifq>Terminal UI</span> </div> <ul class="highlight-list" data-astro-cid-mspuyifq> <li data-astro-cid-mspuyifq>终端交互方向</li><li data-astro-cid-mspuyifq>适合做高辨识度实验项目</li><li data-astro-cid-mspuyifq>目前仍处于概念阶段</li> </ul> <div class="link-row" data-astro-cid-mspuyifq> <a class="primary-link" href="/projects/bash-the-spire/" data-astro-cid-mspuyifq>查看详情</a>  </div> </article> <article class="surface project-card default" data-astro-cid-mspuyifq> <div class="card-head" data-astro-cid-mspuyifq> <div class="title-wrap" data-astro-cid-mspuyifq> <p class="status-pill status-plan" data-astro-cid-mspuyifq>规划中</p> <h3 data-astro-cid-mspuyifq> <a href="/projects/unnamedos-rebirth/" data-astro-cid-mspuyifq>UnnamedOS: Rebirth</a> </h3> </div> <p class="meta" data-astro-cid-mspuyifq>更新于 2026/3/2</p> </div> <p class="muted summary" data-astro-cid-mspuyifq>对 UnnamedOS 的重制构想，希望把原来的气质保留住，同时换一套更稳的技术底座。</p> <p class="muted status-desc" data-astro-cid-mspuyifq>已经进入构思或预研阶段，还没有对外版本。</p> <div class="chip-row" aria-label="项目技术栈" data-astro-cid-mspuyifq> <span class="chip" data-astro-cid-mspuyifq>Python</span><span class="chip" data-astro-cid-mspuyifq>Rust</span> </div> <ul class="highlight-list" data-astro-cid-mspuyifq> <li data-astro-cid-mspuyifq>继承旧项目气质</li><li data-astro-cid-mspuyifq>重做系统结构与交互模型</li><li data-astro-cid-mspuyifq>目前还在重新定义范围</li> </ul> <div class="link-row" data-astro-cid-mspuyifq> <a class="primary-link" href="/projects/unnamedos-rebirth/" data-astro-cid-mspuyifq>查看详情</a>  </div> </article> <article class="surface project-card default" data-astro-cid-mspuyifq> <div class="card-head" data-astro-cid-mspuyifq> <div class="title-wrap" data-astro-cid-mspuyifq> <p class="status-pill status-inactive" data-astro-cid-mspuyifq>已停更</p> <h3 data-astro-cid-mspuyifq> <a href="/projects/unnamedos/" data-astro-cid-mspuyifq>UnnamedOS</a> </h3> </div> <p class="meta" data-astro-cid-mspuyifq>更新于 2025/11/18</p> </div> <p class="muted summary" data-astro-cid-mspuyifq>一个受 Hacknet 气质启发的网页交互实验，目前保留为已停更的旧项目记录。</p> <p class="muted status-desc" data-astro-cid-mspuyifq>项目暂时停更，但仍保留阶段性记录。</p> <div class="chip-row" aria-label="项目技术栈" data-astro-cid-mspuyifq> <span class="chip" data-astro-cid-mspuyifq>HTML</span><span class="chip" data-astro-cid-mspuyifq>CSS</span><span class="chip" data-astro-cid-mspuyifq>JavaScript</span> </div> <ul class="highlight-list" data-astro-cid-mspuyifq> <li data-astro-cid-mspuyifq>偏终端和叙事氛围</li><li data-astro-cid-mspuyifq>早期网页游戏实验</li><li data-astro-cid-mspuyifq>目前仅保留档案价值</li> </ul> <div class="link-row" data-astro-cid-mspuyifq> <a class="primary-link" href="/projects/unnamedos/" data-astro-cid-mspuyifq>查看详情</a>  </div> </article>  </div> </div> <aside class="stack sidebar" data-astro-cid-aid3sr62> <section class="surface sidebar-card" data-astro-cid-aid3sr62> <p class="section-kicker" data-astro-cid-aid3sr62>Writing Bridge</p> <h2 class="section-title" data-astro-cid-aid3sr62>项目和文章的连接</h2> <ul class="meta-list" data-astro-cid-aid3sr62> <li data-astro-cid-aid3sr62> <span data-astro-cid-aid3sr62>UEnt26 Blog</span> <strong data-astro-cid-aid3sr62>2 篇关联文章</strong> </li><li data-astro-cid-aid3sr62> <span data-astro-cid-aid3sr62>Path to Dishonor</span> <strong data-astro-cid-aid3sr62>0 篇关联文章</strong> </li><li data-astro-cid-aid3sr62> <span data-astro-cid-aid3sr62>Pixel Workshop</span> <strong data-astro-cid-aid3sr62>0 篇关联文章</strong> </li><li data-astro-cid-aid3sr62> <span data-astro-cid-aid3sr62>Dystatic（稳态失衡）</span> <strong data-astro-cid-aid3sr62>0 篇关联文章</strong> </li><li data-astro-cid-aid3sr62> <span data-astro-cid-aid3sr62>Bash the Spire</span> <strong data-astro-cid-aid3sr62>0 篇关联文章</strong> </li><li data-astro-cid-aid3sr62> <span data-astro-cid-aid3sr62>UnnamedOS: Rebirth</span> <strong data-astro-cid-aid3sr62>0 篇关联文章</strong> </li><li data-astro-cid-aid3sr62> <span data-astro-cid-aid3sr62>UnnamedOS</span> <strong data-astro-cid-aid3sr62>0 篇关联文章</strong> </li> </ul> </section> <section class="surface sidebar-card" data-astro-cid-aid3sr62> <p class="section-kicker" data-astro-cid-aid3sr62>How I Work</p> <h2 class="section-title" data-astro-cid-aid3sr62>项目页会记录什么</h2> <ul class="bullet-list" data-astro-cid-aid3sr62> <li data-astro-cid-aid3sr62>这个项目为什么值得做。</li> <li data-astro-cid-aid3sr62>它现在处于什么阶段。</li> <li data-astro-cid-aid3sr62>后续相关开发日志或站内文章。</li> </ul> </section> </aside> </section> </section>  </main> <footer class="site-footer" data-astro-cid-37fxchfa> <div class="container footer-wrap" data-astro-cid-37fxchfa> <div class="footer-copy" data-astro-cid-37fxchfa> <p class="copyright" data-astro-cid-37fxchfa>© 2026 UEnt26. All rights reserved.</p> <p class="footer-note" data-astro-cid-37fxchfa>文章优先，项目与实验作为延伸入口。</p> </div> <ul class="footer-links" aria-label="站点入口" data-astro-cid-37fxchfa> <li data-astro-cid-37fxchfa><a href="/search/" data-astro-cid-37fxchfa>搜索</a></li><li data-astro-cid-37fxchfa><a href="/tags/" data-astro-cid-37fxchfa>标签</a></li><li data-astro-cid-37fxchfa><a href="/guestbook/" data-astro-cid-37fxchfa>留言</a></li><li data-astro-cid-37fxchfa><a href="/contact/" data-astro-cid-37fxchfa>联系</a></li><li data-astro-cid-37fxchfa><a href="/rss.xml" data-astro-cid-37fxchfa>RSS</a></li> </ul> <ul class="social-list" aria-label="社交链接" data-astro-cid-37fxchfa> <li data-astro-cid-37fxchfa><a href="https://github.com/Umamed26/UEnt26-Blog" data-astro-cid-37fxchfa>GitHub</a></li> </ul> </div> </footer> <script>
+      (() => {
+        const STORAGE_KEY = "uent26-theme";
+        const LIGHT = "light";
+        const DARK = "dark";
+        const root = document.documentElement;
+        const toggle = document.querySelector("[data-theme-toggle]");
+        const toggleLabel = document.querySelector("[data-theme-toggle-label]");
+        const themeColorMeta = document.querySelector("meta[data-theme-color]");
+        const LIGHT_THEME_COLOR = themeColorMeta?.getAttribute("data-light-theme-color") ?? "#c45237";
+        const DARK_THEME_COLOR = themeColorMeta?.getAttribute("data-dark-theme-color") ?? "#0f151c";
+
+        if (!(toggle instanceof HTMLButtonElement) || !(toggleLabel instanceof HTMLElement)) {
+          return;
+        }
+
+        const getStoredTheme = () => {
+          try {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored === LIGHT || stored === DARK) {
+              return stored;
+            }
+          } catch {}
+          return null;
+        };
+
+        const setStoredTheme = (theme) => {
+          try {
+            localStorage.setItem(STORAGE_KEY, theme);
+          } catch {}
+        };
+
+        const applyTheme = (theme) => {
+          const isDark = theme === DARK;
+          root.setAttribute("data-theme", theme);
+          toggle.setAttribute("aria-pressed", String(isDark));
+          toggle.setAttribute("aria-label", isDark ? "切换到日间模式" : "切换到夜间模式");
+          toggleLabel.textContent = isDark ? "日间" : "夜间";
+          if (themeColorMeta) {
+            themeColorMeta.setAttribute("content", isDark ? DARK_THEME_COLOR : LIGHT_THEME_COLOR);
+          }
+          window.dispatchEvent(new CustomEvent("theme:changed", { detail: { theme } }));
+        };
+
+        const initial = root.getAttribute("data-theme") === DARK ? DARK : LIGHT;
+        applyTheme(initial);
+
+        toggle.addEventListener("click", () => {
+          const next = root.getAttribute("data-theme") === DARK ? LIGHT : DARK;
+          setStoredTheme(next);
+          applyTheme(next);
+        });
+
+        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        const handleSystemChange = (event) => {
+          if (getStoredTheme()) {
+            return;
+          }
+          applyTheme(event.matches ? DARK : LIGHT);
+        };
+
+        if (typeof mediaQuery.addEventListener === "function") {
+          mediaQuery.addEventListener("change", handleSystemChange);
+        } else if (typeof mediaQuery.addListener === "function") {
+          mediaQuery.addListener(handleSystemChange);
+        }
+      })();
+    </script> <script>
+      (() => {
+        const shell = document.querySelector("[data-nav-shell]");
+        const nav = document.querySelector("[data-site-nav]");
+        const toggle = document.querySelector("[data-nav-toggle]");
+        const desktopMedia = window.matchMedia("(min-width: 901px)");
+
+        if (!(shell instanceof HTMLElement) || !(nav instanceof HTMLElement) || !(toggle instanceof HTMLButtonElement)) {
+          return;
+        }
+
+        const setOpen = (open) => {
+          shell.setAttribute("data-nav-open", String(open));
+          toggle.setAttribute("aria-expanded", String(open));
+          toggle.setAttribute("aria-label", open ? "收起导航" : "展开导航");
+        };
+
+        const syncMenuState = () => {
+          if (desktopMedia.matches) {
+            shell.setAttribute("data-nav-open", "true");
+            toggle.setAttribute("aria-expanded", "false");
+            return;
+          }
+
+          setOpen(false);
+        };
+
+        toggle.addEventListener("click", () => {
+          const next = shell.getAttribute("data-nav-open") !== "true";
+          setOpen(next);
+        });
+
+        nav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            if (!desktopMedia.matches) {
+              setOpen(false);
+            }
+          });
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && shell.getAttribute("data-nav-open") === "true" && !desktopMedia.matches) {
+            setOpen(false);
+            toggle.focus();
+          }
+        });
+
+        if (typeof desktopMedia.addEventListener === "function") {
+          desktopMedia.addEventListener("change", syncMenuState);
+        } else if (typeof desktopMedia.addListener === "function") {
+          desktopMedia.addListener(syncMenuState);
+        }
+
+        syncMenuState();
+      })();
+    </script>  <script>
+  (() => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const revealNodes = [...document.querySelectorAll("[data-reveal]")];
+
+    if (revealNodes.length > 0) {
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealNodes.forEach((node) => node.setAttribute("data-revealed", "true"));
+      } else {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (!entry.isIntersecting) {
+                continue;
+              }
+              entry.target.setAttribute("data-revealed", "true");
+              observer.unobserve(entry.target);
+            }
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+        );
+
+        revealNodes.forEach((node) => observer.observe(node));
+      }
+    }
+
+    const progressRoot = document.querySelector("[data-reading-root]");
+    const progressWrap = document.querySelector("[data-reading-progress]");
+    const progressBar = document.querySelector("[data-reading-progress-bar]");
+
+    if (!progressWrap || !progressBar) {
+      return;
+    }
+
+    if (!progressRoot) {
+      progressWrap.classList.remove("is-active");
+      progressBar.style.transform = "scaleX(0)";
+      return;
+    }
+
+    progressWrap.classList.add("is-active");
+
+    const updateReadingProgress = () => {
+      const rootRect = progressRoot.getBoundingClientRect();
+      const viewport = window.innerHeight || document.documentElement.clientHeight;
+      const total = Math.max(progressRoot.scrollHeight - viewport * 0.7, 1);
+      const current = Math.min(Math.max(-rootRect.top, 0), total);
+      const ratio = total === 0 ? 0 : current / total;
+      progressBar.style.transform = `scaleX(${Math.max(0, Math.min(1, ratio))})`;
+    };
+
+    updateReadingProgress();
+    window.addEventListener("scroll", updateReadingProgress, { passive: true });
+    window.addEventListener("resize", updateReadingProgress, { passive: true });
+  })();
+</script> </body></html> 
